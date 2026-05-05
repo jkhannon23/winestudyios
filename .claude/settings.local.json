@@ -1,0 +1,37 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python3 -c \"import json; data=json.load\\(open\\(''/Users/JillHannon/Documents/winestudy/winestudyios/winestudyios/questions.json''\\)\\); print\\(f''Total questions: {len\\(data\\)}''\\); print\\(f''Answer counts: {[len\\(q[\"\"answers\"\"]\\) for q in data[:20]]}''\\)\")",
+      "Bash(python3 -c \"import json; data=json.load\\(open\\(''/Users/JillHannon/Documents/winestudy/winestudyios/winestudyios/questions.json''\\)\\); print\\(f''Total questions: {len\\(data\\)}''\\); bad=[i for i,q in enumerate\\(data\\) if len\\(q[''answers'']\\)!=4]; print\\(f''Questions without 4 answers: {bad}''\\)\")",
+      "Bash(python3 -c \":*)",
+      "Bash(grep -E \"\\\\.\\(swift|storyboard|xib|plist|json\\)$\")",
+      "Bash(curl -L -o /tmp/Nunito.zip \"https://fonts.google.com/download?family=Nunito\")",
+      "Bash(unzip -o /tmp/Nunito.zip -d /tmp/Nunito)",
+      "Bash(curl -L -o /tmp/Nunito.zip \"https://github.com/googlefonts/nunito/releases/download/v3.504/Nunito-v3.504.zip\")",
+      "Bash(gh api:*)",
+      "Bash(curl -s https://api.github.com/repos/googlefonts/nunito/releases/latest)",
+      "Bash(python3 -c \"import sys,json; data=json.load\\(sys.stdin\\); [print\\(a[''''browser_download_url'''']\\) for a in data.get\\(''''assets'''',[]\\)]\")",
+      "Bash(curl -s \"https://api.github.com/repos/googlefonts/nunito/releases\")",
+      "Bash(curl -sL \"https://raw.githubusercontent.com/googlefonts/nunito/main/fonts/variable/Nunito%5Bwght%5D.ttf\" -o /tmp/Nunito-Variable.ttf)",
+      "Read(//tmp/**)",
+      "Bash(curl -sL \"https://raw.githubusercontent.com/googlefonts/nunito/main/fonts/variable/Nunito-Italic%5Bwght%5D.ttf\" -o /tmp/Nunito-Italic-Variable.ttf)",
+      "Bash(curl -sL \"https://raw.githubusercontent.com/googlefonts/nunito/main/fonts/ttf/Nunito-Regular.ttf\")",
+      "Bash(python3:*)",
+      "Bash(grep -v \"^Assets.xcassets$\")",
+      "Bash(grep -v \"^$\")",
+      "Bash(json_file=\"/Users/JillHannon/Documents/winestudy/winestudyios/winestudyios/questions.json\")",
+      "Bash(grep -r \"import AVFoundation\\\\|import SoundKit\\\\|AudioSession\\\\|AVAudioPlayer\" /Users/JillHannon/Documents/winestudy/winestudyios/winestudyios/*.swift)",
+      "Bash(ls -la /Users/JillHannon/Documents/winestudy/winestudyios/winestudyios/*.wav)",
+      "Bash(xcodebuild -project winestudyios.xcodeproj -scheme winestudyios -destination 'platform=iOS Simulator,name=iPhone 16' build)",
+      "Bash(xcodebuild -project winestudyios.xcodeproj -scheme winestudyios -destination 'platform=iOS Simulator,name=iPhone 17 Pro' build)",
+      "Bash(xcodebuild -scheme winestudyios -destination 'platform=iOS Simulator,name=iPhone 16' build)",
+      "Bash(xcodebuild -scheme winestudyios -destination 'platform=iOS Simulator,name=iPhone 16,OS=18.4' build)",
+      "Bash(xcodebuild -scheme winestudyios -destination 'platform=iOS Simulator,name=iPhone 17 Pro Max' build)",
+      "Bash(ls /Users/JillHannon/Documents/winestudy/winestudyios/winestudyios/*.wav /Users/JillHannon/Documents/winestudy/winestudyios/winestudyios/*.mp3 /Users/JillHannon/Documents/winestudy/winestudyios/winestudyios/*.m4a)",
+      "WebSearch",
+      "Bash(xcodebuild -project winestudyios.xcodeproj -scheme winestudyios -sdk iphonesimulator -destination 'generic/platform=iOS Simulator' -quiet build)",
+      "Bash(xcodebuild -project winestudyios.xcodeproj -scheme winestudyios -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 15' build)",
+      "Bash(xcodebuild -project winestudyios.xcodeproj -scheme winestudyios -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 17' build)"
+    ]
+  }
+}
