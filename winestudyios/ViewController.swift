@@ -43,14 +43,27 @@ class ViewController: UIViewController {
     // MARK: - Font Helpers
 
     private static func nunito(_ size: CGFloat, weight: String = "Regular") -> UIFont {
-        let uiWeight: UIFont.Weight = .black
-        guard let baseFont = UIFont(name: "Nunito", size: size) else {
-            return UIFontMetrics.default.scaledFont(for: .systemFont(ofSize: size, weight: .black))
+        let wght: CGFloat
+        let uiWeight: UIFont.Weight
+        switch weight {
+        case "Bold":     wght = 700; uiWeight = .bold
+        case "SemiBold": wght = 600; uiWeight = .semibold
+        case "Medium":   wght = 500; uiWeight = .medium
+        case "Black":    wght = 900; uiWeight = .black
+        default:         wght = 400; uiWeight = .regular
         }
-        let descriptor = baseFont.fontDescriptor.addingAttributes([
-            .traits: [UIFontDescriptor.TraitKey.weight: uiWeight]
+        // Variable font: drive the 'wght' axis directly so the requested weight
+        // actually renders (UIFontDescriptor traits are unreliable for variable fonts).
+        let wghtAxis = 0x77676874  // 'wght' as a four-char code
+        let descriptor = UIFontDescriptor(fontAttributes: [
+            .name: "Nunito",
+            UIFontDescriptor.AttributeName(rawValue: kCTFontVariationAttribute as String): [wghtAxis: wght]
         ])
         let base = UIFont(descriptor: descriptor, size: size)
+        // If the custom font failed to load, fall back to a system font of the same weight.
+        if base.familyName != "Nunito" {
+            return UIFontMetrics.default.scaledFont(for: .systemFont(ofSize: size, weight: uiWeight))
+        }
         return UIFontMetrics.default.scaledFont(for: base)
     }
 
@@ -208,9 +221,20 @@ class ViewController: UIViewController {
     // --- Quiz screen ---
     private let quizContainerView: UIView = {
         let view = UIView()
-        view.backgroundColor = UIColor(red: 227/255, green: 59/255, blue: 142/255, alpha: 1)
+        view.backgroundColor = .white
         view.translatesAutoresizingMaskIntoConstraints = false
         view.alpha = 0
+        return view
+    }()
+
+    // Pink wave header image that fills the top portion of the quiz screen behind the question.
+    // Plain UIView with the image painted via CALayer.contents so it has no intrinsic content
+    // size — its frame is fully determined by the autolayout constraints.
+    private let quizPinkHeaderView: UIView = {
+        let view = UIView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.layer.contents = UIImage(named: "pinkwave2")?.cgImage
+        view.layer.contentsGravity = .resize
         return view
     }()
 
@@ -304,8 +328,8 @@ class ViewController: UIViewController {
 
     private let feedbackLabel: UILabel = {
         let label = UILabel()
-        label.font = nunito(15, weight: "Bold")
-        label.textColor = .white
+        label.font = nunito(15, weight: "SemiBold")
+        label.textColor = UIColor(red: 33/255, green: 33/255, blue: 33/255, alpha: 1)
         label.numberOfLines = 0
         label.textAlignment = .center
         label.adjustsFontForContentSizeCategory = true
@@ -325,18 +349,18 @@ class ViewController: UIViewController {
         let button = UIButton(type: .custom)
         let attrs: [NSAttributedString.Key: Any] = [
             .font: nunito(18, weight: "Bold"),
-            .foregroundColor: UIColor(red: 227/255, green: 59/255, blue: 142/255, alpha: 1)
+            .foregroundColor: UIColor.white
         ]
         button.setAttributedTitle(NSAttributedString(string: "Next question \u{2192}", attributes: attrs), for: .normal)
-        button.backgroundColor = .white
+        button.backgroundColor = UIColor(red: 227/255, green: 59/255, blue: 142/255, alpha: 1)
         button.layer.cornerRadius = 24
         button.clipsToBounds = false
         button.translatesAutoresizingMaskIntoConstraints = false
         button.isHidden = true
         button.layer.shadowColor = UIColor.black.cgColor
-        button.layer.shadowOpacity = 0.45
-        button.layer.shadowOffset = CGSize(width: 0, height: 2)
-        button.layer.shadowRadius = 1
+        button.layer.shadowOpacity = 0.25
+        button.layer.shadowOffset = CGSize(width: 0, height: 3)
+        button.layer.shadowRadius = 6
         return button
     }()
 
@@ -499,23 +523,23 @@ class ViewController: UIViewController {
             dot.layer.cornerRadius = i == currentIndex ? 5 : 4
 
             if i < currentIndex {
-                // Completed: solid white small dot
-                dot.backgroundColor = .white
+                // Completed: solid pink small dot
+                dot.backgroundColor = hotPink
                 NSLayoutConstraint.activate([
                     dot.widthAnchor.constraint(equalToConstant: 8),
                     dot.heightAnchor.constraint(equalToConstant: 8)
                 ])
             } else if i == currentIndex {
-                // Current: bigger solid white circle
-                dot.backgroundColor = .white
+                // Current: bigger solid pink circle
+                dot.backgroundColor = hotPink
                 dot.layer.cornerRadius = 7
                 NSLayoutConstraint.activate([
                     dot.widthAnchor.constraint(equalToConstant: 14),
                     dot.heightAnchor.constraint(equalToConstant: 14)
                 ])
             } else {
-                // Upcoming: small faded dot
-                dot.backgroundColor = UIColor.white.withAlphaComponent(0.4)
+                // Upcoming: small faded pink dot
+                dot.backgroundColor = hotPink.withAlphaComponent(0.3)
                 NSLayoutConstraint.activate([
                     dot.widthAnchor.constraint(equalToConstant: 8),
                     dot.heightAnchor.constraint(equalToConstant: 8)
@@ -539,10 +563,10 @@ class ViewController: UIViewController {
             button.addTarget(self, action: #selector(answerTouchUp(_:)), for: [.touchUpInside, .touchUpOutside, .touchCancel])
             button.translatesAutoresizingMaskIntoConstraints = false
             button.tintAdjustmentMode = .normal
-            button.backgroundColor = .white
+            button.backgroundColor = hotPink
             button.layer.cornerRadius = 16
-            button.setTitleColor(UIColor(red: 227/255, green: 59/255, blue: 142/255, alpha: 1), for: .normal)
-            button.titleLabel?.font = ViewController.nunito(15, weight: "Bold")
+            button.setTitleColor(.white, for: .normal)
+            button.titleLabel?.font = ViewController.nunito(19, weight: "Bold")
             button.titleLabel?.numberOfLines = 2
             button.titleLabel?.lineBreakMode = .byTruncatingTail
             button.titleLabel?.adjustsFontSizeToFitWidth = true
@@ -550,9 +574,9 @@ class ViewController: UIViewController {
             button.contentHorizontalAlignment = .center
             button.contentVerticalAlignment = .center
             button.layer.shadowColor = UIColor.black.cgColor
-            button.layer.shadowOpacity = 0.45
-            button.layer.shadowOffset = CGSize(width: 0, height: 2)
-            button.layer.shadowRadius = 1
+            button.layer.shadowOpacity = 0.25
+            button.layer.shadowOffset = CGSize(width: 0, height: 3)
+            button.layer.shadowRadius = 6
             button.clipsToBounds = false
             answerButtons.append(button)
             answersContainerView.addSubview(button)
@@ -595,17 +619,20 @@ class ViewController: UIViewController {
         // --- Quiz container ---
         quizContainerView.isHidden = true
         view.addSubview(quizContainerView)
+        quizContainerView.addSubview(quizPinkHeaderView)
         quizContainerView.addSubview(progressLabel)
         quizContainerView.addSubview(scoreCountLabel)
         quizContainerView.addSubview(quizScrollView)
         quizScrollView.addSubview(quizContentView)
+        // Z-order (back→front): pink header (in quizContainerView, behind scroll) →
+        // tail → speech bubble (covers tail's top) → answers/feedback → bird on top.
         quizContentView.addSubview(speechBubbleTail)
         quizContentView.addSubview(speechBubbleView)
         speechBubbleView.addSubview(questionLabel)
-        quizContentView.addSubview(quizBirdImageView)
         quizContentView.addSubview(answersContainerView)
         feedbackContainerView.addSubview(feedbackLabel)
         quizContentView.addSubview(feedbackContainerView)
+        quizContentView.addSubview(quizBirdImageView)
         quizContainerView.addSubview(nextButton)
         quizContainerView.addSubview(progressDotsStack)
 
@@ -675,6 +702,13 @@ class ViewController: UIViewController {
             quizContainerView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             quizContainerView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
 
+            // Pink header — fills top area behind the question, extending past the
+            // speech-bubble tail (tail extends ~42pt below the bubble).
+            quizPinkHeaderView.topAnchor.constraint(equalTo: quizContainerView.topAnchor),
+            quizPinkHeaderView.leadingAnchor.constraint(equalTo: quizContainerView.leadingAnchor),
+            quizPinkHeaderView.trailingAnchor.constraint(equalTo: quizContainerView.trailingAnchor),
+            quizPinkHeaderView.bottomAnchor.constraint(equalTo: speechBubbleView.bottomAnchor, constant: 140),
+
             // Progress label (top left) - in safe area
             progressLabel.topAnchor.constraint(equalTo: quizContainerView.safeAreaLayoutGuide.topAnchor, constant: 12),
             progressLabel.leadingAnchor.constraint(equalTo: quizContainerView.leadingAnchor, constant: 20),
@@ -721,7 +755,7 @@ class ViewController: UIViewController {
             quizBirdImageView.topAnchor.constraint(equalTo: speechBubbleView.bottomAnchor, constant: -40),
 
             // Answers stack below bubble
-            answersContainerView.topAnchor.constraint(equalTo: quizBirdImageView.bottomAnchor, constant: -70),
+            answersContainerView.topAnchor.constraint(equalTo: quizBirdImageView.bottomAnchor, constant: -30),
             answersContainerView.centerXAnchor.constraint(equalTo: quizContentView.centerXAnchor),
             answersContainerView.widthAnchor.constraint(equalTo: quizContentView.widthAnchor, multiplier: 0.9),
 
@@ -882,7 +916,8 @@ class ViewController: UIViewController {
         if isDailyChallenge {
             quizQuestions = DailyChallengeManager.questionsForToday(from: allQuestions, count: totalQuestions)
         } else {
-            quizQuestions = Array(allQuestions.shuffled().prefix(totalQuestions))
+            // Spaced-repetition: mix due-for-review weak items with new questions.
+            quizQuestions = QuestionStatsManager.selectQuiz(from: allQuestions, count: totalQuestions)
         }
         currentIndex = 0
         score = 0
@@ -919,13 +954,14 @@ class ViewController: UIViewController {
         shuffledAnswerIndices = Array(0..<question.answers.count).shuffled()
 
         for (i, button) in answerButtons.enumerated() {
-            // Reset to default white bg, pink text, no icon
+            // Reset to default pink bg, white text, no icon
             button.setTitle(question.answers[shuffledAnswerIndices[i]], for: .normal)
-            button.backgroundColor = .white
-            button.setTitleColor(hotPink, for: .normal)
+            button.backgroundColor = hotPink
+            button.setTitleColor(.white, for: .normal)
             button.setImage(nil, for: .normal)
             button.layer.cornerRadius = 16
             button.isEnabled = true
+            button.alpha = 1
             button.layer.removeAllAnimations()
             button.transform = .identity
             button.contentHorizontalAlignment = .center
@@ -933,9 +969,9 @@ class ViewController: UIViewController {
             button.viewWithTag(999)?.removeFromSuperview()
             // Reset shadow to consistent style
             button.layer.shadowColor = UIColor.black.cgColor
-            button.layer.shadowOpacity = 0.45
-            button.layer.shadowOffset = CGSize(width: 0, height: 2)
-            button.layer.shadowRadius = 1
+            button.layer.shadowOpacity = 0.25
+            button.layer.shadowOffset = CGSize(width: 0, height: 3)
+            button.layer.shadowRadius = 6
             button.clipsToBounds = false
         }
 
@@ -1011,6 +1047,9 @@ class ViewController: UIViewController {
     @objc private func answerTapped(_ sender: UIButton) {
         guard !hasAnswered else { return }
         hasAnswered = true
+        // The touchUp handler bails out once hasAnswered is true, so clear
+        // the touchDown scale here to keep the tapped button at full size.
+        sender.layer.removeAnimation(forKey: "touchDownScale")
 
         let question = quizQuestions[currentIndex]
         let selectedButton = sender.tag
@@ -1026,6 +1065,10 @@ class ViewController: UIViewController {
         } else {
             playWrongSound()
         }
+
+        // Spaced-repetition: record the result so the next non-daily quiz
+        // prioritises questions the user is struggling with.
+        QuestionStatsManager.recordAnswer(for: question, correct: isCorrect)
 
         // Color all buttons based on answer state
         for (i, button) in answerButtons.enumerated() {
@@ -1066,9 +1109,10 @@ class ViewController: UIViewController {
                     iconView.centerYAnchor.constraint(equalTo: button.centerYAnchor)
                 ])
             } else {
-                // Unselected: white bg at 30% opacity, full pink text, no shadow
-                button.backgroundColor = .white.withAlphaComponent(0.3)
-                button.setTitleColor(UIColor(red: 227/255, green: 59/255, blue: 142/255, alpha: 1), for: .normal)
+                // Unselected: faded pink bg, white text, no shadow
+                button.backgroundColor = hotPink
+                button.setTitleColor(.white, for: .normal)
+                button.alpha = 0.4
                 button.layer.shadowOpacity = 0
             }
 
@@ -1081,20 +1125,6 @@ class ViewController: UIViewController {
             }
         }
 
-        // Glow animation on correct answer button (no scale — keep all buttons same size)
-        let correctBtn = answerButtons[correctButton]
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.05) {
-            correctBtn.layer.shadowColor = self.correctGreen.cgColor
-            correctBtn.layer.shadowOpacity = 0.6
-            correctBtn.layer.shadowRadius = 12
-            correctBtn.layer.shadowOffset = .zero
-
-            UIView.animate(withDuration: 0.5, delay: 0.3, options: .curveEaseOut) {
-                correctBtn.layer.shadowOpacity = 0.15
-                correctBtn.layer.shadowRadius = 4
-            }
-        }
-
         // Shake animation + haptic on wrong answer button
         if !isCorrect {
             let haptic = UINotificationFeedbackGenerator()
@@ -1104,10 +1134,14 @@ class ViewController: UIViewController {
             }
         }
 
-        // Switch bird to listening pose in place, hide tail
-        self.speechBubbleTail.alpha = 0
-        UIView.transition(with: quizBirdImageView, duration: 0.8, options: .transitionCrossDissolve) {
+        // Switch bird to listening pose in place
+        UIView.animate(withDuration: 0.15, delay: 0.05, options: .curveEaseIn) {
+            self.quizBirdImageView.transform = CGAffineTransform(scaleX: 1.0, y: 0.93)
+        } completion: { _ in
             self.quizBirdImageView.image = UIImage(named: "bird-listen1")
+            UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.65, initialSpringVelocity: 0.5, options: []) {
+                self.quizBirdImageView.transform = .identity
+            }
         }
         UIView.animate(withDuration: 0.4, delay: 0.05, usingSpringWithDamping: 0.8, initialSpringVelocity: 0, options: .curveEaseOut) {
             self.answersContainerView.transform = CGAffineTransform(translationX: 0, y: -25)
@@ -1133,12 +1167,12 @@ class ViewController: UIViewController {
         // Show next button
         let nextAttrs: [NSAttributedString.Key: Any] = [
             .font: ViewController.nunito(18, weight: "Bold"),
-            .foregroundColor: hotPink
+            .foregroundColor: UIColor.white
         ]
         if currentIndex < totalQuestions - 1 {
             nextButton.setAttributedTitle(NSAttributedString(string: "Next question \u{2192}", attributes: nextAttrs), for: .normal)
         } else {
-            nextButton.setAttributedTitle(NSAttributedString(string: "See Results \u{2192}", attributes: nextAttrs), for: .normal)
+            nextButton.setAttributedTitle(NSAttributedString(string: "See results \u{2192}", attributes: nextAttrs), for: .normal)
         }
         nextButton.isHidden = false
 
@@ -1191,7 +1225,7 @@ class ViewController: UIViewController {
                 .font: ViewController.nunito(18, weight: "Bold"),
                 .foregroundColor: UIColor.white
             ]
-            restartButton.setAttributedTitle(NSAttributedString(string: "\u{21BB} Back to Menu", attributes: restartAttrs), for: .normal)
+            restartButton.setAttributedTitle(NSAttributedString(string: "\u{21BB} Back to menu", attributes: restartAttrs), for: .normal)
         } else {
             scoreSubtitleLabel.text = scoreMessage()
             let restartAttrs: [NSAttributedString.Key: Any] = [
