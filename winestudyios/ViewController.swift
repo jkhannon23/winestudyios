@@ -26,7 +26,6 @@ class ViewController: UIViewController {
 
     // MARK: - Theme Colors
     private let hotPink = UIColor(red: 227/255, green: 59/255, blue: 142/255, alpha: 1)     // #E33B8E
-    private let softPink = UIColor(red: 245/255, green: 198/255, blue: 208/255, alpha: 1)    // #F5C6D0
     private let correctGreen = UIColor(red: 2/255, green: 147/255, blue: 7/255, alpha: 1)    // #029307
     private let wrongRed = UIColor(red: 211/255, green: 47/255, blue: 47/255, alpha: 1)      // #D32F2F
 
@@ -82,7 +81,7 @@ class ViewController: UIViewController {
     private func preloadSounds() {
         try? AVAudioSession.sharedInstance().setCategory(.playback, mode: .default, options: .mixWithOthers)
         try? AVAudioSession.sharedInstance().setActive(true)
-        let soundFiles: [(String, String)] = [("tap", "wav"), ("correct", "mp3"), ("wrong", "mp3"), ("swoosh", "wav"), ("again", "mp3"), ("next", "mp3"), ("win", "mp3"), ("fail", "mp3")]
+        let soundFiles: [(String, String)] = [("correct", "mp3"), ("wrong", "mp3"), ("again", "mp3"), ("next", "mp3"), ("win", "mp3"), ("fail", "mp3")]
         for (name, ext) in soundFiles {
             guard let url = Bundle.main.url(forResource: name, withExtension: ext),
                   let player = try? AVAudioPlayer(contentsOf: url) else {
@@ -110,8 +109,6 @@ class ViewController: UIViewController {
 
     private func playCorrectSound() { playSound(named: "correct") }
     private func playWrongSound() { playSound(named: "wrong") }
-    private func playTapSound() { playSound(named: "tap") }
-    private func playSwooshSound() { playSound(named: "swoosh") }
     private func playNextSound() { playSound(named: "next") }
     private func playAgainSound() { playSound(named: "again", duration: 3.0) }
 
@@ -328,13 +325,21 @@ class ViewController: UIViewController {
 
     private let feedbackLabel: UILabel = {
         let label = UILabel()
-        label.font = nunito(15, weight: "SemiBold")
-        label.textColor = UIColor(red: 33/255, green: 33/255, blue: 33/255, alpha: 1)
+        label.font = nunito(15, weight: "Regular")
+        label.textColor = UIColor(red: 90/255, green: 90/255, blue: 90/255, alpha: 1)
         label.numberOfLines = 0
-        label.textAlignment = .center
+        label.textAlignment = .left
         label.adjustsFontForContentSizeCategory = true
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
+    }()
+
+    // Decorative hot-pink "!" image to the left of the feedback text.
+    private let feedbackExclamationImageView: UIImageView = {
+        let iv = UIImageView(image: UIImage(named: "exclamation"))
+        iv.contentMode = .scaleAspectFit
+        iv.translatesAutoresizingMaskIntoConstraints = false
+        return iv
     }()
 
     // We no longer use a separate pill view; feedback is shown directly on pink bg
@@ -483,10 +488,6 @@ class ViewController: UIViewController {
 
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        // Size the gradient layer on next button if needed
-        if let gradient = nextButton.layer.sublayers?.first(where: { $0 is CAGradientLayer }) {
-            gradient.frame = nextButton.bounds
-        }
         updateWelcomeStreak()
         updateDailyChallengeStatus()
     }
@@ -566,7 +567,7 @@ class ViewController: UIViewController {
             button.backgroundColor = hotPink
             button.layer.cornerRadius = 16
             button.setTitleColor(.white, for: .normal)
-            button.titleLabel?.font = ViewController.nunito(19, weight: "Bold")
+            button.titleLabel?.font = ViewController.nunito(24, weight: "Bold")
             button.titleLabel?.numberOfLines = 2
             button.titleLabel?.lineBreakMode = .byTruncatingTail
             button.titleLabel?.adjustsFontSizeToFitWidth = true
@@ -630,6 +631,7 @@ class ViewController: UIViewController {
         quizContentView.addSubview(speechBubbleView)
         speechBubbleView.addSubview(questionLabel)
         quizContentView.addSubview(answersContainerView)
+        feedbackContainerView.addSubview(feedbackExclamationImageView)
         feedbackContainerView.addSubview(feedbackLabel)
         quizContentView.addSubview(feedbackContainerView)
         quizContentView.addSubview(quizBirdImageView)
@@ -765,9 +767,17 @@ class ViewController: UIViewController {
             feedbackContainerView.trailingAnchor.constraint(equalTo: quizContentView.trailingAnchor, constant: -24),
             feedbackContainerView.bottomAnchor.constraint(equalTo: quizContentView.bottomAnchor, constant: -20),
 
-            // Feedback label inside container
+            // Decorative "!" image — fixed height, width follows the asset's
+            // aspect ratio (221:500 → ~0.442). Positioned to roughly align with
+            // the first line of feedback text.
+            feedbackExclamationImageView.leadingAnchor.constraint(equalTo: feedbackContainerView.leadingAnchor, constant: 8),
+            feedbackExclamationImageView.topAnchor.constraint(equalTo: feedbackContainerView.topAnchor, constant: 8),
+            feedbackExclamationImageView.heightAnchor.constraint(equalToConstant: 64),
+            feedbackExclamationImageView.widthAnchor.constraint(equalTo: feedbackExclamationImageView.heightAnchor, multiplier: 221.0/500.0),
+
+            // Feedback label sits to the right of the "!" mark, left-aligned text.
             feedbackLabel.topAnchor.constraint(equalTo: feedbackContainerView.topAnchor, constant: 8),
-            feedbackLabel.leadingAnchor.constraint(equalTo: feedbackContainerView.leadingAnchor, constant: 8),
+            feedbackLabel.leadingAnchor.constraint(equalTo: feedbackExclamationImageView.trailingAnchor, constant: 16),
             feedbackLabel.trailingAnchor.constraint(equalTo: feedbackContainerView.trailingAnchor, constant: -8),
             feedbackLabel.bottomAnchor.constraint(equalTo: feedbackContainerView.bottomAnchor, constant: -8),
 
@@ -1087,8 +1097,8 @@ class ViewController: UIViewController {
                 iconView.translatesAutoresizingMaskIntoConstraints = false
                 button.addSubview(iconView)
                 NSLayoutConstraint.activate([
-                    iconView.widthAnchor.constraint(equalToConstant: 22),
-                    iconView.heightAnchor.constraint(equalToConstant: 22),
+                    iconView.widthAnchor.constraint(equalToConstant: 36),
+                    iconView.heightAnchor.constraint(equalToConstant: 36),
                     iconView.trailingAnchor.constraint(equalTo: button.trailingAnchor, constant: -20),
                     iconView.centerYAnchor.constraint(equalTo: button.centerYAnchor)
                 ])
@@ -1103,8 +1113,8 @@ class ViewController: UIViewController {
                 iconView.translatesAutoresizingMaskIntoConstraints = false
                 button.addSubview(iconView)
                 NSLayoutConstraint.activate([
-                    iconView.widthAnchor.constraint(equalToConstant: 22),
-                    iconView.heightAnchor.constraint(equalToConstant: 22),
+                    iconView.widthAnchor.constraint(equalToConstant: 36),
+                    iconView.heightAnchor.constraint(equalToConstant: 36),
                     iconView.trailingAnchor.constraint(equalTo: button.trailingAnchor, constant: -20),
                     iconView.centerYAnchor.constraint(equalTo: button.centerYAnchor)
                 ])
@@ -1149,7 +1159,7 @@ class ViewController: UIViewController {
 
         // Show feedback text (white, bold, centered on pink bg)
         let fPara = NSMutableParagraphStyle()
-        fPara.lineSpacing = 6
+        fPara.lineSpacing = 2
         fPara.alignment = feedbackLabel.textAlignment
         feedbackLabel.attributedText = NSAttributedString(string: question.feedback, attributes: [
             .paragraphStyle: fPara,

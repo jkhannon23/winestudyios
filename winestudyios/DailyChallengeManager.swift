@@ -23,10 +23,20 @@ struct DailyChallengeManager {
     /// The same date always produces the same questions in the same order.
     static func questionsForToday(from allQuestions: [Question], count: Int = 10) -> [Question] {
         guard !allQuestions.isEmpty else { return [] }
-        let seed = todayString().hashValue
-        var rng = SeededRandomNumberGenerator(seed: UInt64(bitPattern: Int64(seed)))
+        var rng = SeededRandomNumberGenerator(seed: stableSeed(for: todayString()))
         let shuffled = allQuestions.shuffled(using: &rng)
         return Array(shuffled.prefix(count))
+    }
+
+    // Swift's String.hashValue is randomized per process, so it can't be used
+    // as a reproducible seed. FNV-1a 64-bit gives the same value every launch.
+    private static func stableSeed(for string: String) -> UInt64 {
+        var hash: UInt64 = 0xcbf29ce484222325
+        for byte in string.utf8 {
+            hash ^= UInt64(byte)
+            hash = hash &* 0x100000001b3
+        }
+        return hash
     }
 
     // MARK: - Completion Tracking

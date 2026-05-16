@@ -7,7 +7,7 @@
             "Beaujolais"
         ],
         "correctAnswerIndex": 1,
-        "feedback": "Rully is one of four village appellations in Côte Chalonnaise in Burgundy. More white than red wine is produced here and it is important for sparkling wines."
+        "feedback": "Rully is 1 of 4 village appellations in Burgundy's Côte Chalonnaise. More white (Chardonnay) than red wine (Pinot Noir) is produced here, and it is important for sparkling wines."
     },
     {
         "question": "Nantais in the Loire Valley has a reputation for wines made from which grape variety?",
@@ -18,7 +18,7 @@
             "Ugni Blanc"
         ],
         "correctAnswerIndex": 2,
-        "feedback": "Frost resistent, early ripening and suited for cool climates, most Melon Blanc (aka Muscadet or Melon de Bourgogne) is grown in the Nantais region."
+        "feedback": "Frost resistant, early ripening, and suited for cool climates, most Melon Blanc (aka Muscadet or Melon de Bourgogne) is grown in the Nantais region. The grape is used to produce the highly acidic and minerally Muscadet wine."
     },
     {
         "question": "In which region is the vineyard Les Monts Damnés located?",
@@ -29,7 +29,7 @@
             "Pouilly-Fumé"
         ],
         "correctAnswerIndex": 0,
-        "feedback": "Les Monts Damnés is located in Sancerre and has a reputation for highly expressive wines, some of which can benefit from bottle age, but most do not."
+        "feedback": "The renowned and steeply sloped vineyard, Les Monts Damnés ('The Damned Mountains'), is located in Chavignol within Sancerre and has a reputation for producing highly expressive wines from Sauvignon Blanc, some of which can benefit from bottle age."
     },
     {
         "question": "Which of the following is the most widely planted black grape variety in Bordeaux?",
@@ -40,7 +40,7 @@
             "Petit Verdot"
         ],
         "correctAnswerIndex": 2,
-        "feedback": "Merlot is the most widely planted grape variety in Bordeaux and can successfully grow in the cooler clay soils in Saint-Émilion and Pomerol."
+        "feedback": "Merlot is the most widely planted grape variety in Bordeaux and can grow in the cooler clay soils on the Right Bank in Saint-Émilion and Pomerol. It produces wines with plum and chocolate notes and can soften blends with Cabernet Sauvignon."
     },
     {
         "question": "Which of the following grape varieties is the most important for producing sweet wines in Bordeaux?",
@@ -51,7 +51,7 @@
             "Sauvignon Blanc"
         ],
         "correctAnswerIndex": 0,
-        "feedback": "Highly susceptible to noble rot and thin skinned, Sémillon is the most important variety for sweet wines in Bordeaux."
+        "feedback": "Highly susceptible to noble rot and thin skinned, Sémillon is the most important variety for sweet wines in Bordeaux, particularly in Sauternes and Barsac. It can also add body and longevity to dry white wines."
     },
     {
         "question": "How many grape varieties are permitted under the appellation regulations for Bordeaux?",
@@ -62,10 +62,32 @@
             "5"
         ],
         "correctAnswerIndex": 2,
-        "feedback": "13 grape varieties are permitted in the blends from Bordeaux where the weather varies. They ripen at different times and a xstorm or frost can't ruin an entire crop."
+        "feedback": "13 grape varieties are permitted in the blends from Bordeaux where the weather varies. They ripen at different times and a rainstorm or frost can't ruin an entire crop."
     },
     {
-        "question": "Beside Cabernet Sauvignon what are the other two most planted black grape vareities in Bordeaux?",
+        "question": "Which black grape variety is not one of the 13 grape varieties permitted under the appellation regulations for Bordeaux?",
+        "answers": [
+            "Cabernet Franc",
+            "Carménère",
+            "Pinot Noir",
+            "Malbec"
+        ],
+        "correctAnswerIndex": 2,
+        "feedback": "Pinot Noir is not one of the grape varieties permitted in Bordeaux. Permitted reds are Merlot, Cabernet Sauvignon, Cabernet Franc, Carménère, Malbec, and Petit Verdot."
+    },
+    {
+        "question": "Which white grape variety is not one of the 13 grape varieties permitted under the appellation regulations for Bordeaux?",
+        "answers": [
+            "Ugni Blanc",
+            "Colombard",
+            "Chardonnay",
+            "Sauvignon Gris"
+        ],
+        "correctAnswerIndex": 2,
+        "feedback": "Chardonnay is not one of the grape varieties permitted in Bordeaux. Permitted whites are Sémillon, Sauvignon Blanc, Muscadelle, Colombard, Merlot Blanc, Sauvignon Gris, and Ugni Blanc."
+    },
+    {
+        "question": "Beside Cabernet Sauvignon, what are the other two most planted black grape varieties in Bordeaux?",
         "answers": [
             "Merlot, Petit Verdot",
             "Cabernet Franc, Merlot",
@@ -73,7 +95,7 @@
             "Syrah, Cabernet Franc"
         ],
         "correctAnswerIndex": 1,
-        "feedback": "Cabernet Sauvignon, Cabernet Franc, and Merlot are the most planted black grape varieties in Bordeaux."
+        "feedback": "Merlot is the most planted black grape variety in Bordeaux, followed by Cabernet Sauvignon and Cabernet Franc."
     },
     {
         "question": "Which best describes wines produced from the Zweigelt grape variety?",
@@ -81,10 +103,10 @@
             "Medium tannins, high acidity",
             "Similar to Pinot Noir",
             "Deeply colored with soft tannins",
-            "Peppery wines with a sour cherry flavor."
+            "Peppery, sour cherry flavor"
         ],
         "correctAnswerIndex": 2,
-        "feedback": "A cross between Blaufränkisch and St. Laurent, Zweigelt produces deeply colored wines with soft tannins and flavors of bramble fruit."
+        "feedback": "A cross between Blaufränkisch and St. Laurent, the Austrian Zweigelt produces deeply colored wines with soft tannins and flavors of bramble fruit."
     },
     {
         "question": "What is the most planted black grape variety in Austria?",
@@ -98,15 +120,37 @@
         "feedback": "A cross between Blaufränkisch and St. Laurent, Zweigelt is the most planted black grape variety in Austria."
     },
     {
-        "question": "Barbaresco DOCG must be aged for how long before release?",
+        "question": "What is the second most planted grape variety in Austria after Zweigelt?",
         "answers": [
-            "5 yrs with 18 mos in oak",
-            "2 yrs with 9 mos in oak",
-            "3 yrs with 18 mos in oak",
-            "1 yr with 3 mos in oak"
+            "St. Laurent",
+            "Zweigelt",
+            "Blaufränkisch",
+            "Merlot"
+        ],
+        "correctAnswerIndex": 2,
+        "feedback": "The dark-skinned and late-ripening Blaufränkisch is the second most planted grape variety in Austria after Zweigelt and produces highly tannic wines that are often spicy."
+    },
+    {
+        "question": "In which of the following countries is St. Laurent primarily grown?",
+        "answers": [
+            "United States",
+            "Austria",
+            "France",
+            "Australia"
         ],
         "correctAnswerIndex": 1,
-        "feedback": "Made with Nebbiolo, the Barbaresco DOCG must be aged for 2 years before release, with 9 months in oak."
+        "feedback": "The highly aromatic and dark-skinned St. Laurent is primarily grown in cool climate regions in central Europe, including in Austria and the Czech Republic. It produces medium-bodied wines reminiscent of Pinot Noir."
+    },
+    {
+        "question": "Barbaresco DOCG must be aged for roughly how long before release?",
+        "answers": [
+            "5 years with 18 months in oak",
+            "2 years with 9 months in oak",
+            "3 years with 18 months in oak",
+            "1 year with 3 months in oak"
+        ],
+        "correctAnswerIndex": 1,
+        "feedback": "Made with Nebbiolo in Piedmont, Italy, the Barbaresco DOCG must be aged for 2 years (26 months) before release, with 9 months in oak."
     },
     {
         "question": "Which of the following is the most widely planted white grape variety in Australia?",
@@ -117,7 +161,18 @@
             "Semillon"
         ],
         "correctAnswerIndex": 0,
-        "feedback": "Chardonnay is the most widely planted grape in Australia and is used to produce wines in a wide range of styles."
+        "feedback": "Chardonnay is the most widely planted white grape in Australia and is used to produce wines in a wide range of styles. Australia is the 3rd biggest producer of Chardonnay after the USA and France."
+    },
+    {
+        "question": "Which country is the third biggest producer of Chardonnay after the USA and France?",
+        "answers": [
+            "Australia",
+            "South Africa",
+            "New Zealand",
+            "Chile"
+        ],
+        "correctAnswerIndex": 0,
+        "feedback": "Australia is the 3rd biggest producer of Chardonnay after the United States and France."
     },
     {
         "question": "Which region produces the most wine in Argentina?",
@@ -128,7 +183,7 @@
             "Mendoza"
         ],
         "correctAnswerIndex": 3,
-        "feedback": "Mendoza produces the most wine in Argentina in desert conditions, protected by the Andes Mountains and the Argentine Pampas."
+        "feedback": "Located in the eastern foothills of the Andes, Mendoza produces the most wine in Argentina in desert conditions, protected by the Andes Mountains and the Argentine Pampas."
     },
     {
         "question": "Pinotage is a cross between Pinot Noir and which grape variety?",
@@ -139,7 +194,7 @@
             "Carménère"
         ],
         "correctAnswerIndex": 0,
-        "feedback": "Pinotage is a cross between Pinot Noir and Cinsault. It was developed in South Africa and is rarely produced anywhere else in the world."
+        "feedback": "Pinotage is a cross between Pinot Noir and Cinsault. Developed in South Africa and rarely produced anywhere else in the world, it can be used to produce wines in a variety of styles."
     },
     {
         "question": "The town of Martinborough has a reputation for producing top quality wines with which grape variety?",
@@ -150,10 +205,10 @@
             "Cabernet Sauvignon"
         ],
         "correctAnswerIndex": 1,
-        "feedback": "Martinborough in Wairarapa has a reputation for Pinot Noir. Medium to full-bodied, the wines have flavors of dark plum and spice."
+        "feedback": "Martinborough in Wairarapa in the Wellington Region of the North Island has a reputation for high-quality Pinot Noirs. Medium to full-bodied, the wines have flavors of dark plum and spice."
     },
     {
-        "question": "Which is the warmest of the main grape growing areas in New Zealand",
+        "question": "Which is the warmest of the main grape growing areas in New Zealand?",
         "answers": [
             "Marlborough",
             "Wairarapa",
@@ -161,7 +216,7 @@
             "Hawke's Bay"
         ],
         "correctAnswerIndex": 3,
-        "feedback": "Located in the towns of Hastings and Napier on the North Island, Hawke's Bay is the warmest of the main grape growing regions in New Zealand."
+        "feedback": "Located in the towns of Hastings and Napier on the North Island, Hawke's Bay is the warmest of the main grape growing regions in New Zealand. Chardonnay is the dominant variety."
     },
     {
         "question": "Which is the wettest wine region in New Zealand?",
@@ -172,7 +227,7 @@
             "Auckland"
         ],
         "correctAnswerIndex": 3,
-        "feedback": "Located in the north of the North Island, Auckland is the wettest part of New Zealand. It is also warm and fungal disease is a problem."
+        "feedback": "Located on the north of the North Island and famous for Chardonnay and Bordeaux blends, Auckland is the wettest part of New Zealand. It has a warm maritime climate and fungal disease is a challenge."
     },
     {
         "question": "What are the most planted black grape varieties in Auckland, New Zealand?",
@@ -183,7 +238,7 @@
             "Merlot, Cabernet Franc"
         ],
         "correctAnswerIndex": 0,
-        "feedback": "Merlot and Syrah are the most planted black grape vareties in Auckland, New Zealand, while Chardonny is the most planted white."
+        "feedback": "Merlot and Syrah are the most planted black grape varieties in Auckland, New Zealand, while Chardonnay is the most planted white."
     },
     {
         "question": "Which New Zealand area has a growing reputation for premium reds?",
@@ -194,7 +249,7 @@
             "Gisborne"
         ],
         "correctAnswerIndex": 2,
-        "feedback": "The Waiheke Island in Auckland in the north of the North Island has a growing reputation for premium wines, especially reds."
+        "feedback": "The Waiheke Island in Auckland on the north of the North Island has a growing reputation for premium wines, especially reds."
     },
     {
         "question": "Which region of New Zealand does not have a maritime climate?",
@@ -216,18 +271,18 @@
             "Residual sugars"
         ],
         "correctAnswerIndex": 0,
-        "feedback": "The large diurnal range and strong sunglight in Central Otago results in highly alcoholic wines which are often made with Pinot Noir."
+        "feedback": "The large diurnal range and strong sunlight in Central Otago results in highly alcoholic wines which are often made with Pinot Noir."
     },
     {
         "question": "Beside Chardonnay, what other white grape varieties are important in Central Otago?",
         "answers": [
-            "Sauvignon Blanc, Riesling",
-            "Sauvignon Blanc, Gewurztraminer",
+            "Sauvignon Gris, Riesling",
+            "Sauvignon Blanc, Viognier",
             "Pinot Gris, Riesling",
             "Sauvignon Blanc, Gewurztraminer"
         ],
         "correctAnswerIndex": 2,
-        "feedback": "Pinot Noir is the most planted grape variety in Central Otago in New Zealand, but Pinot Gris, Riesling, and Chardonnay are also important."
+        "feedback": "While Pinot Noir is the most planted grape variety in Central Otago in New Zealand, Pinot Gris, Riesling, and Chardonnay are also important."
     },
     {
         "question": "What is the climate in Bordeaux?",
@@ -238,7 +293,7 @@
             "Cool maritime"
         ],
         "correctAnswerIndex": 1,
-        "feedback": "Bordeaux has a moderate maritime climate. The warming currents from the Gulf Stream extend the growing season and spring frosts are rare."
+        "feedback": "Bordeaux has a moderate maritime climate. The moderating influence of the Atlantic Ocean and the Gulf Stream extend the growing season and spring frosts are rare."
     },
     {
         "question": "Bergerac is a major appellation of which region?",
@@ -249,7 +304,7 @@
             "South West France"
         ],
         "correctAnswerIndex": 0,
-        "feedback": "Bergerac is a major appellation of Dordogne where both red and white Bordeaux grape varieties are used to make wines."
+        "feedback": "Bergerac is a major appellation of the Dordogne department of South West France. Both red and white Bordeaux grape varieties are used to make high-quality and often good value Bordeaux blends."
     },
     {
         "question": "The village of Pouilly-Fuissé is located in which region?",
@@ -260,7 +315,7 @@
             "Chablis"
         ],
         "correctAnswerIndex": 2,
-        "feedback": "Pouilly-Fuissé is a village in Mâconnais. Grapes are planted on limestone slopes and produce rich ripe wines with notes of tropical and stone fruits."
+        "feedback": "Pouilly-Fuissé is a village in the Mâconnais subregion of southern Burgundy. Grapes are planted on limestone slopes and produce rich ripe wines with notes of tropical and stone fruits."
     },
     {
         "question": "The village of Saint-Véran is located in which region?",
@@ -274,7 +329,7 @@
         "feedback": "Saint-Véran is a famous village in Mâconnais. The grapes are planted on limestone slopes and produce rich ripe wines with notes of tropical and stone fruits."
     },
     {
-        "question": "Where is the Roche de Solutré located",
+        "question": "Where is the Roche de Solutré located?",
         "answers": [
             "Côte Chalonnaise",
             "Côte d’Or",
@@ -282,7 +337,7 @@
             "Chablis"
         ],
         "correctAnswerIndex": 2,
-        "feedback": "The Roche de Solutré is a limestone escarpement in Mâconnais on which some of the richest and ripest Chardonnays in Burgundy are grown."
+        "feedback": "The Roche de Solutré is a limestone escarpment in Mâconnais on which some of the richest and ripest Chardonnays in Burgundy are grown."
     },
     {
         "question": "How many villages are Beaujolais villages?",
@@ -296,7 +351,7 @@
         "feedback": "There are 39 Beaujolais Villages. As the wines are usually blends from different villages, the specific village is rarely specified on the label."
     },
     {
-        "question": "The best vineyards in Alsace are located on which part of the slope",
+        "question": "The best vineyards in Alsace are located on which part of the slope?",
         "answers": [
             "Flat sites",
             "Steepest slopes",
@@ -304,7 +359,7 @@
             "Mid-slope"
         ],
         "correctAnswerIndex": 1,
-        "feedback": "The best vineyards in Alsace are found on the steepest slopes with east and south-east aspects."
+        "feedback": "The best vineyards in Alsace are found on the steepest slopes with east and southeast aspects."
     },
     {
         "question": "In which region is Chinon located?",
@@ -315,7 +370,7 @@
             "Central Vineyards"
         ],
         "correctAnswerIndex": 2,
-        "feedback": "Chinon is located in Touraine and has sandy soils that produce wine with Cabernet Franc that is light and fruity and good for early drinking."
+        "feedback": "Chinon is located in Touraine in the Loire Valley and has sandy soils that produce light and fruity wines from Cabernet Franc."
     },
     {
         "question": "Which is the only black grape permitted in the Northern Rhône?",
@@ -337,18 +392,7 @@
             "21"
         ],
         "correctAnswerIndex": 1,
-        "feedback": "Châteauneuf-du-Pape can be made from 13 different grape varieties, although Grenache dominates."
-    },
-    {
-        "question": "Which are the two most widely planted white grapes in the Southern Rhône?",
-        "answers": [
-            "Chardonnay and Grenache",
-            "Grenache and Sauvignon Blanc",
-            "Chardonnay and Sauvignon Blanc",
-            "Viognier and Saugivnon Blanc"
-        ],
-        "correctAnswerIndex": 2,
-        "feedback": "Chardonnay and Sauvignon Blanc are the most widely planted grapes in the Southern Rhône. There are smaller plantings of Viognier."
+        "feedback": "Châteauneuf-du-Pape from the Southern Rhône Valley in France can be made from 13 different grape varieties, although Grenache dominates."
     },
     {
         "question": "Which is the largest vine-growing region in Germany?",
@@ -359,7 +403,18 @@
             "Rheinhessen"
         ],
         "correctAnswerIndex": 3,
-        "feedback": "Rheinhessen is the largest vine-growing region in Germany. Müller-Thurgau and Riesling are the most planted varieties. Riesling and Spätburgunder can be used to produce GG wines."
+        "feedback": "Rheinhessen is the largest vine-growing region in Germany. Müller-Thurgau and Riesling are the most planted white varieties, and Dornfelder is the most planted red."
+    },
+    {
+        "question": "Spätburgunder is another name for which grape variety?",
+        "answers": [
+            "Syrah",
+            "Merlot",
+            "Dornfelder",
+            "Pinot Noir"
+        ],
+        "correctAnswerIndex": 3,
+        "feedback": "Spätburgunder is the German name for Pinot Noir. It translates as 'late burgundy' and refers to the variety's origin in Burgundy and 'late' for late ripening."
     },
     {
         "question": "Which is Austria’s largest vine-growing region?",
@@ -370,7 +425,7 @@
             "Neusiedlersee"
         ],
         "correctAnswerIndex": 0,
-        "feedback": "Weinviertel is the largest vine-growing area in Austria. Only Grüner Veltliner can be produced here."
+        "feedback": "Weinviertel, or 'Wine Quarter', is the largest vine-growing area in Austria. The Weinviertel DAC is made exclusively with Grüner Veltliner."
     },
     {
         "question": "Natural flor-like yeast contributes to the character of which style of Tokaji?",
@@ -381,7 +436,7 @@
             "Dry Tokaji without botrytis"
         ],
         "correctAnswerIndex": 0,
-        "feedback": "The natural flor-like yeasts give of Tokaji Szamorodni gives the wine a character similar to a Fino Sherry."
+        "feedback": "The natural flor-like yeasts of Tokaji Szamorodni gives the wine a character similar to a Fino Sherry."
     },
     {
         "question": "Which is the only variety of grape that Nemea PDO wines can be made from?",
@@ -392,7 +447,7 @@
             "Agiorgitiko"
         ],
         "correctAnswerIndex": 3,
-        "feedback": "Nemea PDO wines can only be made from Agiorgitiko, the best of which have a deep ruby color with high smooth tannins."
+        "feedback": "Nemea PDO wines can only be made from Agiorgitiko, the best of which often have a deep ruby color and high smooth tannins."
     },
     {
         "question": "Which is the main grape in Valpolicella?",
@@ -403,7 +458,7 @@
             "Garganega"
         ],
         "correctAnswerIndex": 0,
-        "feedback": "The thin-skinned and highly acidic Corvina is the primary grape in Valpolicella."
+        "feedback": "The thin-skinned and highly acidic Corvina is the primary grape used in Valpolicella in the northern Italian region of Veneto, along with Corvinone and other blending grapes."
     },
     {
         "question": "Frascati DOC is a blend of which grapes?",
@@ -425,7 +480,7 @@
             "Taurasi DOCG"
         ],
         "correctAnswerIndex": 2,
-        "feedback": "Aglianico del Vulture DOC, made with Aglianico on the high plains surrounding the extinct volcano of Monte Vulture is considered the best wine in Basilicata."
+        "feedback": "Aglianico del Vulture DOC, made with Aglianico grown on the high plains surrounding the extinct volcano of Monte Vulture, is considered the best wine in Basilicata."
     },
     {
         "question": "What is the traditional grape variety of Rueda?",
@@ -439,7 +494,7 @@
         "feedback": "The continental climate of Rueda with cool summer nights is ideal for Verdejo. Rueda blends must be 50% Verdejo."
     },
     {
-        "question": "What is the primary black variety in Bairrada?",
+        "question": "What is the primary black grape variety in Bairrada?",
         "answers": [
             "Baga",
             "Aragonês",
@@ -447,7 +502,7 @@
             "Alfrocheiro"
         ],
         "correctAnswerIndex": 0,
-        "feedback": "The late-ripening and small, thick-skinned Baga is dominant in Bairrada. Wines made with Baga are deeply colored with highly tannic."
+        "feedback": "The late-ripening and small, thick-skinned Baga is dominant in Bairrada, Portugal. Wines made with Baga are deeply colored and highly tannic."
     },
     {
         "question": "Which is the most widely planted grape variety in California?",
@@ -458,7 +513,7 @@
             "Zinfandel"
         ],
         "correctAnswerIndex": 2,
-        "feedback": "Chardonnay is the most widely planted grape variety in California, while Cabernet Sauvignon is the most widely planted black grape variety. "
+        "feedback": "Chardonnay is the most widely planted grape variety in California, while Cabernet Sauvignon is the most widely planted black grape variety."
     },
     {
         "question": "Which is the most widely planted grape variety in Oregon?",
@@ -469,12 +524,12 @@
             "Cabernet Sauvignon"
         ],
         "correctAnswerIndex": 1,
-        "feedback": "Pinot Noir is the most widely planted grape variety in Oregon and it produces highly acidic wines with red fruit and cinnamon flavors."
+        "feedback": "Pinot Noir is the most widely planted grape variety in Oregon. It produces highly acidic wines with red fruit and cinnamon flavors."
     },
     {
         "question": "What is one of the most widely planted grape varieties in the Okanagan Valley?",
         "answers": [
-            "Gewurtztraminer",
+            "Gewurztraminer",
             "Cabernet Sauvignon",
             "Pinot Noir",
             "Cabernet Franc"
@@ -486,19 +541,19 @@
         "question": "What is the most planted grape variety in Chile?",
         "answers": [
             "Cabernet Sauvignon",
-            "Carmenère",
+            "Carménère",
             "Malbec",
             "Syrah"
         ],
         "correctAnswerIndex": 0,
-        "feedback": "Frequently blended with Merlot, Carmenère, or Syrah, Cabernet Sauvignon is the most widely planted grape variety in Chile."
+        "feedback": "Frequently blended with Merlot, Carménère or Syrah, Cabernet Sauvignon is the most widely planted grape variety in Chile."
     },
     {
         "question": "Beside Cabernet, what are the other two primary black grape varieties in La Rioja Province in Argentina?",
         "answers": [
             "Syrah, Bonarda",
-            "Rioja, and Syrah",
-            "Malbec, Rioja",
+            "Tempranillo, Syrah",
+            "Malbec, Tannat",
             "Bonarda, Malbec"
         ],
         "correctAnswerIndex": 0,
@@ -509,11 +564,11 @@
         "answers": [
             "Chardonnay",
             "Semillon",
-            "Torrentés",
+            "Torrontés",
             "Viognier"
         ],
         "correctAnswerIndex": 2,
-        "feedback": "With flavors of melon and stone fruits, the medium bodied Torrontés is considered the specialty of Argentina."
+        "feedback": "With flavors of melon and stone fruits, the medium-bodied Torrontés is considered the specialty of Argentina."
     },
     {
         "question": "The producers in the Cape Peninsula district of the Constantia Ward have a reputation for wines produced from which variety?",
@@ -524,7 +579,7 @@
             "Syrah"
         ],
         "correctAnswerIndex": 2,
-        "feedback": "The producers in the Cape Peninsula district of the Constantia Ward have a reputation for Sauvignon Blanc. Some of the oldest vines in the cape are found here and they are constantly cooled by the Cape Doctor."
+        "feedback": "The producers in the Cape Peninsula district of South Africa have a reputation for Sauvignon Blanc. Some of the oldest vines in the cape are found here and they are constantly cooled by the Cape Doctor."
     },
     {
         "question": "Which variety dominates Coonawarra in Australia?",
@@ -557,7 +612,7 @@
             "Cabernet Sauvignon"
         ],
         "correctAnswerIndex": 0,
-        "feedback": "After Sauvignon Blanc, Pinot Noir is the second most planted grape variety in New Zealand. It is widely grown on the South Island and in a few sites in the North Island."
+        "feedback": "After Sauvignon Blanc, Pinot Noir is the second most planted grape variety in New Zealand. It is widely grown on the South Island and on a few sites on the North Island."
     },
     {
         "question": "Which wine region is the furthest north in Italy?",
@@ -601,7 +656,7 @@
             "Trebbiano, Sauvignon Blanc"
         ],
         "correctAnswerIndex": 0,
-        "feedback": "Chardonnay and Pinot Grigio are the primary grapes grown in Trentino which has a slightly warmer climate than Alto Adige."
+        "feedback": "Chardonnay and Pinot Grigio are the primary grapes grown in Trentino which has a slightly warmer climate than nearby Alto Adige."
     },
     {
         "question": "In which wine region is the town of Bolzano located?",
@@ -630,7 +685,7 @@
         "answers": [
             "Light-bodied, high acidity",
             "Full-bodied, low acidity",
-            "Light bodied, low acidity",
+            "Light-bodied, low acidity",
             "Full-bodied, high acidity"
         ],
         "correctAnswerIndex": 3,
@@ -645,7 +700,7 @@
             "Malvasia and Merlot"
         ],
         "correctAnswerIndex": 0,
-        "feedback": "Pinot Grigio and Merlot are the most planted varieties in Friuli-Venezia Giulia and are used to produce rich, ripe wines."
+        "feedback": "Pinot Grigio and Merlot are the most planted grape varieties in Friuli-Venezia Giulia and are used to produce rich, ripe wines."
     },
     {
         "question": "Which region produces some of the richest Pinot Grigio in Italy?",
@@ -678,7 +733,7 @@
             "Umbria"
         ],
         "correctAnswerIndex": 0,
-        "feedback": "In the hills of Friuli-Venezia Giulia, Collio and Colli Orientali DOC are noted for producing concentrated premium whites and Colli Orientali for reds."
+        "feedback": "In the hills of Friuli-Venezia Giulia, Collio and Colli Orientali DOC are noted for producing concentrated premium whites and Colli Orientali is also known for reds."
     },
     {
         "question": "What is the second most planted grape variety in Argentina?",
@@ -722,7 +777,7 @@
             "Mendoza"
         ],
         "correctAnswerIndex": 0,
-        "feedback": "To avoid confusion with Spain's Rioja region, wines here are often labeled Famatina after the main vineyard area, the Famatina Valley where large volumes of grapes are grown on irrigated valley floors."
+        "feedback": "To avoid confusion with Spain's Rioja region, wines from La Rioja in Argentina are often labeled Famatina after the main vineyard area where large volumes of grapes are grown on irrigated valley floors."
     },
     {
         "question": "What grape is the specialty of the Famatina Valley?",
@@ -733,7 +788,7 @@
             "Shiraz"
         ],
         "correctAnswerIndex": 0,
-        "feedback": "The highly aromatic Torrontés is the specialty. Cabernet Sauvignon, Syrah and Bonarda are also planted."
+        "feedback": "The highly aromatic Torrontés is the specialty of the Famatina Valley in Argentina. Cabernet Sauvignon, Syrah, and Bonarda are also planted."
     },
     {
         "question": "Which area has a reputation for producing some of the best examples of Torrontés?",
@@ -744,7 +799,7 @@
             "Maipú"
         ],
         "correctAnswerIndex": 1,
-        "feedback": "The high-altitude vineyards of Cafayate in the Salta region of Argentina are known for producing high quality Torrontés. Highly aromatic, Torrontés produces medium body wines with medium acidity, a fruity, floral perfume, and flavors of melon and stone fruits."
+        "feedback": "The high-altitude vineyards of Cafayate in the Salta region of Argentina are known for producing high quality Torrontés. Highly aromatic, Torrontés produces medium-bodied wines with medium acidity, a fruity, floral perfume, and flavors of melon and stone fruits."
     },
     {
         "question": "Which area in Australia is known as the benchmark for Sauvignon Blanc?",
@@ -755,7 +810,7 @@
             "Mornington Peninsula"
         ],
         "correctAnswerIndex": 2,
-        "feedback": "Adelaide Hills is known as the benchmark for Sauvignon Blanc, producing highly acidic wines with passion fruit flavors."
+        "feedback": "Adelaide Hills is known as the benchmark for Sauvignon Blanc in Australia, producing highly acidic wines with passion fruit flavors."
     },
     {
         "question": "Which wine could a Semillon from Western Australia be mistaken for?",
@@ -766,7 +821,7 @@
             "Chenin Blanc"
         ],
         "correctAnswerIndex": 0,
-        "feedback": "Often made with herbaceous flavors, wines made with Semillon from Western Australia could be mistaken for Sauvignon Blanc."
+        "feedback": "Wines made with Semillon from Western Australia, which often have herbaceous flavors, could be mistaken for Sauvignon Blanc."
     },
     {
         "question": "Which is a classic region for Riesling in Australia?",
@@ -777,7 +832,7 @@
             "Mornington Peninsula"
         ],
         "correctAnswerIndex": 0,
-        "feedback": "Both Eden and Clare Valley are well known for high-quality Rieslings with flavors of lime, lemon and grapefruit, and with age, they develop notes of toast, honey and petrol."
+        "feedback": "Both Eden and Clare Valley are well known for high-quality Rieslings with flavors of lime, lemon, and grapefruit, and with age, they develop notes of toast, honey, and petrol."
     },
     {
         "question": "Which region is known for producing botrytized wines from Semillon?",
@@ -788,7 +843,7 @@
             "Riverina"
         ],
         "correctAnswerIndex": 3,
-        "feedback": "Riverina in New South Wales is known for botrytized wines from Semillon. Morning mists and fogs in the Autumn contribute to noble rot."
+        "feedback": "Riverina in New South Wales on the southeastern coast of Australia, is known for botrytized wines made from Semillon. Morning mists and fogs in the autumn contribute to noble rot."
     },
     {
         "question": "Wines labeled Barossa can be made with grapes from which regions?",
@@ -799,7 +854,7 @@
             "Barossa Valley, Eden Valley"
         ],
         "correctAnswerIndex": 3,
-        "feedback": "Wines labeled Barossa can be made with grapes from Barossa Valley and Eden Valley, which is located in the hills east of Barossa."
+        "feedback": "Wines labeled Barossa can be made with grapes from the Barossa Valley and the Eden Valley, which is located in the hills east of Barossa."
     },
     {
         "question": "Which region is known as the heartland of fine wine production in Australia?",
@@ -810,7 +865,7 @@
             "Barossa Valley"
         ],
         "correctAnswerIndex": 3,
-        "feedback": "With a warm, dry climate, the Barossa Valley is known as the heartland of fine wine production in Australia. Made with old vine Shiraz, Cabernet Sauvignon and Grenache and produced with American oak, the full-bodied wines have soft tannins and ripe black fruit."
+        "feedback": "With a warm, dry climate, the Barossa Valley is known as the heartland of fine wine production in Australia. Made with old vine Shiraz, Cabernet Sauvignon, and Grenache, and produced with American oak, the full-bodied wines have soft tannins and ripe black fruit."
     },
     {
         "question": "Which white variety is most notable in the Barossa Valley?",
@@ -843,7 +898,7 @@
             "Goulburn Valley"
         ],
         "correctAnswerIndex": 2,
-        "feedback": "The Eden Valley is known for high-quality Rieslings with lime and grapefruit aromas that age well, developing flavors of marmalade and toast. "
+        "feedback": "The Eden Valley is known for high-quality Rieslings with lime and grapefruit aromas that age well, developing flavors of marmalade and toast."
     },
     {
         "question": "Which wine is the Clare Valley known for?",
@@ -857,17 +912,6 @@
         "feedback": "Like the Eden Valley, the Clare Valley of South Australia is also known for its Rieslings which are dry with high acidity and strong aromas of citrus and lime."
     },
     {
-        "question": "Which wine is the Clare Valley known for?",
-        "answers": [
-            "Semillon",
-            "Chardonnay",
-            "Riesling",
-            "Sauvignon Blanc"
-        ],
-        "correctAnswerIndex": 2,
-        "feedback": "Like the Eden Valley, the Clare Valley of South Australia is also known for its Rieslings which are dry with high acidity and strong aromas of citrus and lime, developing toast and honey notes with bottle aging."
-    },
-    {
         "question": "The Adelaide Hills are known for wines made from which grapes?",
         "answers": [
             "Semillon, Chardonnay",
@@ -876,7 +920,7 @@
             "Sauvignon Blanc, Chardonnay"
         ],
         "correctAnswerIndex": 3,
-        "feedback": "The Adeliade Hills are known for fresh Sauvignon Blancs and highly acidic Chardonnays with citrus and peach aromas. Pinot Noir is also produced."
+        "feedback": "The Adelaide Hills are known for fresh Sauvignon Blancs and highly acidic Chardonnays with citrus and peach aromas. Pinot Noir is also produced."
     },
     {
         "question": "What cooling influence has an effect on the McLaren Vale region in Australia?",
@@ -898,10 +942,10 @@
             "Granite content"
         ],
         "correctAnswerIndex": 0,
-        "feedback": "Coonawarra in South Australia is known for its distinct red terra rossa soil on top of limestone."
+        "feedback": "Coonawarra in South Australia is known for its Cabernet Sauvignon produced on its distinct red terra rossa soil on top of limestone."
     },
     {
-        "question": "Which region in Australia is known for age-worthy Cabernet Sauvignons with aromas of cassis, eucalyptus and menthol?",
+        "question": "Which region in Australia is known for age-worthy Cabernet Sauvignons with aromas of cassis, eucalyptus, and menthol?",
         "answers": [
             "Margaret River",
             "Hunter Valley",
@@ -920,29 +964,29 @@
             "Pinot Noir"
         ],
         "correctAnswerIndex": 3,
-        "feedback": "The Yarra Valley is known for age-worthy Pinot Noirs with soft tannins and strawberry, plum, and dark cherry flavors, and high-quality sparkling wines."
+        "feedback": "The Yarra Valley is known for age-worthy Pinot Noirs with soft tannins and strawberry, plum, and dark cherry flavors, and for high-quality sparkling wines."
     },
     {
-        "question": "The wine region of Victoria is notable for which of the following?",
+        "question": "The wine region of Victoria is notable for which of the following in Australia?",
         "answers": [
-            "Longest history of wine production in Australia",
-            "It's cool climate",
-            "Largest wine production by volume in Australia",
+            "Longest winemaking history",
+            "Its cool climate",
+            "Highest production volume",
             "Red terra rossa soil"
         ],
         "correctAnswerIndex": 1,
         "feedback": "Some of the coolest vineyards in mainland Australia are in Victoria and produce top quality sparkling wines from Pinot Noir and Chardonnay."
     },
     {
-        "question": "The Mornington Peninsula in Victoria Australia is known for producing notable wines from which grape varieties?",
+        "question": "The Mornington Peninsula in Victoria, Australia is known for producing notable wines from which grape varieties?",
         "answers": [
-            "Cabernet Sauvignon and Shiraz",
-            "Riesling and Chardonnay",
-            "Pinot Noir and Chardonnay",
-            "Cabernet Sauvignon and Grenache"
+            "Cabernet Sauvignon, Shiraz",
+            "Riesling, Chardonnay",
+            "Pinot Noir, Chardonnay",
+            "Cabernet Sauvignon, Grenache"
         ],
         "correctAnswerIndex": 2,
-        "feedback": "The cool climate of Mornington Peninsula is good for fruity Pinot Noirs and highly acidic Chardonnays with aromas of citrus, pear and apple."
+        "feedback": "The cool climate of Mornington Peninsula is good for fruity Pinot Noirs and highly acidic Chardonnays with aromas of citrus, pear, and apple."
     },
     {
         "question": "Geelong has a similar climate to which region?",
@@ -997,29 +1041,18 @@
             "Rainy harvests"
         ],
         "correctAnswerIndex": 3,
-        "feedback": "Rain at harvest can be a problem for hot and humid Hunter Valley in New South Wales, Australia and good canopy management to reduce rot is essential."
-    },
-    {
-        "question": "What is the most planted grape variety in Hunter Valley?",
-        "answers": [
-            "Chardonnay",
-            "Sauvignon Blanc",
-            "Semillon",
-            "Riesling"
-        ],
-        "correctAnswerIndex": 2,
-        "feedback": "Semillon is the most planted grape variety in Hunter Valley."
+        "feedback": "Rain at harvest can be a problem for hot and humid Hunter Valley in New South Wales, Australia. Good canopy management to reduce rot is essential."
     },
     {
         "question": "What best describes wines made from Shiraz in Hunter Valley?",
         "answers": [
             "Peppery, fresh",
-            "Soft tannins, medium bodied",
+            "Soft tannins, medium-bodied",
             "Fresher, lighter",
             "Peppery, structured"
         ],
         "correctAnswerIndex": 1,
-        "feedback": "The Shiraz from Hunter Valley in New South Wales Australia tends to be medium bodied and soft, with earthy notes and black fruit flavors of blackberry and cherry."
+        "feedback": "The Shiraz from Hunter Valley in New South Wales, Australia tends to be medium-bodied and soft, with earthy notes and black fruit flavors of blackberry and cherry."
     },
     {
         "question": "Wines from which region are not part of the South Eastern Australia super-zone?",
@@ -1044,17 +1077,6 @@
         "feedback": "Cabernet Sauvignon is widely planted in Margaret River in Western Australia and is often used to produce Bordeaux-style blends with Merlot."
     },
     {
-        "question": "Which Australian region is known for producing Bordeaux-style blends?",
-        "answers": [
-            "Barossa",
-            "Coonawarra",
-            "Margaret River",
-            "Hunter Valley"
-        ],
-        "correctAnswerIndex": 2,
-        "feedback": "Cabernet Sauvignon is widely planted in Margaret River in Western Australia and is often used to produce Bordeaux-style blends with Merlot."
-    },
-    {
         "question": "Which grape varieties are known for producing highly acidic wines with gooseberry and tropical fruit aromas in Margaret River?",
         "answers": [
             "Chardonnay, Sauvignon Blanc",
@@ -1066,18 +1088,18 @@
         "feedback": "Sauvignon Blanc is widely planted in Margaret River, Australia and blended with Semillon to produce highly acidic wines with gooseberry and tropical fruit aromas."
     },
     {
-        "question": "In which region are Mount Barker and Frankland River located in?",
+        "question": "In which region are Mount Barker and Frankland River located?",
         "answers": [
             "Great Southern",
             "South Australia",
             "New South Wales",
             "Western"
         ],
-        "correctAnswerIndex": 3,
+        "correctAnswerIndex": 0,
         "feedback": "Located in the Great Southern region of Australia, Mount Barker and Frankland are known for floral Rieslings, peppery Shiraz, and Cabernet Sauvignon."
     },
     {
-        "question": "What is a principle grape variety from Tasmania, Australia?",
+        "question": "What is a principal grape variety from Tasmania, Australia?",
         "answers": [
             "Riesling",
             "Pinot Gris",
@@ -1085,7 +1107,7 @@
             "Shiraz"
         ],
         "correctAnswerIndex": 1,
-        "feedback": "The main varieties of cool Maritime Tasmania are Pinot Gris, Sauvignon Blanc, Chardonnay and Pinot Noir. Cabernet Sauvignon does well in warm and dry areas."
+        "feedback": "The main varieties of cool Maritime Tasmania are Pinot Gris, Sauvignon Blanc, Chardonnay, and Pinot Noir. Cabernet Sauvignon does well in warm and dry areas."
     },
     {
         "question": "Which wine is most planted in Gisborne, New Zealand?",
@@ -1096,7 +1118,7 @@
             "Riesling"
         ],
         "correctAnswerIndex": 2,
-        "feedback": "With lots of rain, but also high temps and sun, the majority of the vineyards in New Zealand's Gisborne region are planted with Chardonnay with ripe tropical flavors. The region is also known for full-bodied Pinot Gris and premium Gewurtztraminer."
+        "feedback": "With lots of rain, but also high temps and sun, the majority of the vineyards in New Zealand's Gisborne region are planted with Chardonnay that produces wines with ripe tropical flavors. The region is also known for full-bodied Pinot Gris and premium Gewurztraminer."
     },
     {
         "question": "Where is Gimblett Gravels located?",
@@ -1107,7 +1129,7 @@
             "Hawke's Bay"
         ],
         "correctAnswerIndex": 3,
-        "feedback": "Gimblett Gravels in New Zealand's Hawke's Bay is known for high quality wines made from black grape varieties on the heat absorbing and well drained Valley floor. It's reputation is based on Bordeaux-style blends with Cabernet and Merlot, but it also produces high quality Syrah."
+        "feedback": "Gimblett Gravels in New Zealand's Hawke's Bay is known for high quality wines made from black grape varieties on the heat absorbing and well drained Valley floor. Its reputation is based on Bordeaux-style blends with Cabernet and Merlot, but it also produces high quality Syrah."
     },
     {
         "question": "What is the center for grape growing in New Zealand?",
@@ -1129,18 +1151,18 @@
             "Wairau"
         ],
         "correctAnswerIndex": 0,
-        "feedback": "Dry, windy and cool, Awatere Valley is in Marlborough and is known for herbaceous and highly acidic wines made from Sauvignon Blanc."
+        "feedback": "Dry, windy, and cool, Awatere Valley is in Marlborough and is known for herbaceous and highly acidic wines made from Sauvignon Blanc."
     },
     {
         "question": "Wines produced from which grapes dominate plantings in Nelson?",
         "answers": [
-            "Pinot Noir, Chardonnay, and Pinot Gris",
-            "Sauvignon Blanc, Riesling and Chardonnay",
-            "Sauvignon Blanc, Pinot Noir and Pinot Gris",
-            "Chardonnay, Riesling and Pinot Gris"
+            "Pinot Noir/Chardonnay/Pinot Gris",
+            "Sauv. Blanc/Riesling/Chardonnay",
+            "Sauv. Blanc/Pinot Noir/Pinot Gris",
+            "Chardonnay/Riesling/Pinot Gris"
         ],
         "correctAnswerIndex": 2,
-        "feedback": "The region of Nelson on the north coast of the South Island of New Zealand is planted primarily with Sauvignon Blanc, Pinot Noir and Pinot Gris."
+        "feedback": "The region of Nelson on the north coast of the South Island of New Zealand is planted primarily with Sauvignon Blanc, Pinot Noir, and Pinot Gris."
     },
     {
         "question": "The Waipara Valley is located in which region?",
@@ -1148,21 +1170,10 @@
             "Marlborough",
             "Canterbury",
             "Central Otago",
-            "Wairararpa"
+            "Wairarapa"
         ],
         "correctAnswerIndex": 1,
         "feedback": "The Waipara Valley is one of two viticulture centers in Canterbury, the other being a plain west of Christchurch."
-    },
-    {
-        "question": "Which variety accounts for the majority of plantings in Central Otago?",
-        "answers": [
-            "Sauvignon Blanc",
-            "Pinot Noir",
-            "Cabernet Sauvignon",
-            "Chardonnay"
-        ],
-        "correctAnswerIndex": 1,
-        "feedback": "Most plantings in Central Otago are Pinot Noir. The strong sunlight results in highly alcoholic and juicy, full-bodied Pinot Noirs with ripe red fruit flavors."
     },
     {
         "question": "Which variety accounts for the majority of plantings in Central Otago?",
@@ -1228,18 +1239,7 @@
             "Beaujolais"
         ],
         "correctAnswerIndex": 0,
-        "feedback": "Saint-Estèphe, Paulliac, Saint-Julien and Margaux are the four communes with the highest reputation in Haut-Médoc in Bordeaux."
-    },
-    {
-        "question": "In what region is Saint-Estèphe located?",
-        "answers": [
-            "Haut-Médoc",
-            "Pomerol",
-            "Côte d'Or",
-            "Beaujolais"
-        ],
-        "correctAnswerIndex": 0,
-        "feedback": "Saint-Estèphe, Paulliac, Saint-Julien and Margaux are the four communes with the highest reputation in Haut-Médoc in Bordeaux. The wines are mostly Cabernet Sauvignon, with grippy tannins and long aging potential."
+        "feedback": "Saint-Estèphe, Pauillac, Saint-Julien, and Margaux are the four communes with the highest reputation in Haut-Médoc in Bordeaux."
     },
     {
         "question": "What is the most highly rated wine area in Graves?",
@@ -1253,7 +1253,7 @@
         "feedback": "Pessac-Léognan has the highest reputation in Graves where the soil is gravelly and suited to Cabernet Sauvignon."
     },
     {
-        "question": "Which appellcation is not on the left bank of Bordeaux?",
+        "question": "Which appellation is not on the left bank of Bordeaux?",
         "answers": [
             "Médoc",
             "Sauternes",
@@ -1261,7 +1261,7 @@
             "Graves"
         ],
         "correctAnswerIndex": 2,
-        "feedback": "Médoc, Saturnes, and Graves are on the Left Bank, While Saint-Émilon and Pomerol are on the right bank. Most of the area in between is known as Entre-Deux Mers."
+        "feedback": "Médoc, Sauternes, and Graves are on the Left Bank, while Saint-Émilion and Pomerol are on the Right Bank. Most of the area in between is known as Entre-Deux Mers."
     },
     {
         "question": "Which is not a river in Bordeaux?",
@@ -1283,7 +1283,7 @@
             "Dordogne"
         ],
         "correctAnswerIndex": 1,
-        "feedback": "Cadillac, Blaye, Castillon and Francs in Bordeaux share the name of Côtes de Bordeaux and often produce good value Merlot for easy drinking."
+        "feedback": "Cadillac, Blaye, Castillon, and Francs in Bordeaux share the name of Côtes de Bordeaux and often produce good value Merlot for easy drinking."
     },
     {
         "question": "Which appellation is not included in the Côtes de Bordeaux?",
@@ -1319,7 +1319,7 @@
         "feedback": "The best sweet wine appellations in Bordeaux are on the Garonne River and its tributary, Ciron, where autumn mist is ideal for noble rot."
     },
     {
-        "question": "Which appellation cannot produce both red and white wines?",
+        "question": "Which appellation could only produce white wines until 2023?",
         "answers": [
             "Graves",
             "Entre-Deux Mers",
@@ -1327,7 +1327,7 @@
             "Saône"
         ],
         "correctAnswerIndex": 1,
-        "feedback": "Entre-Deux Mers can only produce dry white wines and red wines must be given a generic appellation. Graves and Pessac-Léognan can produce both."
+        "feedback": "Entre-Deux Mers could historically only produce dry white wines, while red wines had to be given a generic appellation."
     },
     {
         "question": "From which grapes are the wines of Pessac-Léognan typically made?",
@@ -1338,14 +1338,14 @@
             "Muscadelle"
         ],
         "correctAnswerIndex": 0,
-        "feedback": "The dry white wines of Pessc-Léognan which are some of the best and can qualify for a cru classé status are typically made from Sauvignon Blanc and Sémillon and are fermented and matured at least partly in oak. The wines have oak flavors and are medium to full bodied."
+        "feedback": "The dry white wines of Pessac-Léognan, which are some of the best and can qualify for cru classé status, are typically made from Sauvignon Blanc and Sémillon and are fermented and matured at least partly in oak. The wines have oak flavors and are medium to full-bodied."
     },
     {
         "question": "From which grape are the wines of Graves and Entre-Deux-Mers typically made?",
         "answers": [
             "Sémillon",
             "Sauvignon Blanc",
-            "Sémillon",
+            "Chardonnay",
             "Muscadelle"
         ],
         "correctAnswerIndex": 1,
@@ -1363,17 +1363,6 @@
         "feedback": "Dry white wines from Sauternes and also Médoc must be sold using a generic Bordeaux appellation."
     },
     {
-        "question": "Dry white wines from which appellation must be labeled using a generic Bordeaux appellation?",
-        "answers": [
-            "Sauternes",
-            "Graves",
-            "Pessac-Léognan",
-            "Entre-Deux-Mers"
-        ],
-        "correctAnswerIndex": 0,
-        "feedback": "Dry white wines from Médoc and Sauternes must be sold using a generic Bordeaux appellation."
-    },
-    {
         "question": "Where is the village of Barsac located?",
         "answers": [
             "Sauternes",
@@ -1387,13 +1376,13 @@
     {
         "question": "Which grape varieties are used with Sémillon to make sweet wine in Sauternes?",
         "answers": [
-            "Sauvignon Blanc and Muscadelle",
+            "Sauvignon Blanc, Muscadelle",
             "Sauvignon Blanc",
-            "Melon Blanc and Muscadelle",
+            "Melon Blanc, Muscadelle",
             "Muscadelle"
         ],
         "correctAnswerIndex": 0,
-        "feedback": "The sweet wines of Sauternes on the west bank of the Garonne river are made primarily with Sémillon, but Sauvignon Blanc adds acidity and fruit and Muscadelle, perfume."
+        "feedback": "The sweet wines of Sauternes on the west bank of the Garonne river are made primarily from Sémillon, but Sauvignon Blanc can add acidity and fruit, and Muscadelle can add perfume."
     },
     {
         "question": "Where is Bergerac located?",
@@ -1437,7 +1426,7 @@
             "Lot"
         ],
         "correctAnswerIndex": 3,
-        "feedback": "Cahors is located along the River Lot in south west France. The best wines here are highly tannic and oak aged with strong dark berry fruit flavors. "
+        "feedback": "Cahors is located along the River Lot in south west France. The best wines here are often highly tannic and oak aged with strong dark berry fruit flavors."
     },
     {
         "question": "In which region are the wines historically referred to as 'black' wines?",
@@ -1473,17 +1462,6 @@
         "feedback": "Tannat leads the blends in Madiran in South West France near the Pyrenees mountains. The red wines need long bottle aging and are highly tannic with deep color."
     },
     {
-        "question": "What is the most important grape variety in Jurançon in the foothills of the Pyrenees in South West France?",
-        "answers": [
-            "Petit Manseng",
-            "Ugni Blanc",
-            "Petit Verdot",
-            "Chardonnay"
-        ],
-        "correctAnswerIndex": 0,
-        "feedback": "Petit Manseng is the most important variety in Jurançon. The appellation is known for dry and sweet white wines."
-    },
-    {
         "question": "What is the most important grape variety in Jurançon?",
         "answers": [
             "Petit Manseng",
@@ -1503,18 +1481,7 @@
             "Barsac"
         ],
         "correctAnswerIndex": 1,
-        "feedback": "Sweet wines from Jurançon are made with passerillage, when sugar is concentrated by drying grapes on the vine."
-    },
-    {
-        "question": "The sweet wines from which appellation are not botrytized?",
-        "answers": [
-            "Sauternes",
-            "Jurançon",
-            "Monbazillac",
-            "Barsac"
-        ],
-        "correctAnswerIndex": 1,
-        "feedback": "The sweet wines from Jurançon in south west France are not botrytized, but made with passerillage by which the sugar concentration of the grapes is increased by drying them on the vine."
+        "feedback": "Sweet wines from Jurançon are not botrytized but are made with passerillage, which is the process by which sugar is concentrated by drying grapes on the vine."
     },
     {
         "question": "On which part of the slope are the premier cru or grand cru vineyards found in Burgundy?",
@@ -1536,10 +1503,10 @@
             "Chablis"
         ],
         "correctAnswerIndex": 1,
-        "feedback": "Côte d'Or has the most important plantings of Pinot Noir in Burgundy. The wines tend to have red fruit flavors in youth and develop earth, game and mushroom flavors with age."
+        "feedback": "Côte d'Or has the most important plantings of Pinot Noir in Burgundy. The wines tend to have red fruit flavors in youth and develop earth, game, and mushroom flavors with age."
     },
     {
-        "question": "In which region are spring frosts a notable problem?",
+        "question": "In which region in Burgundy are spring frosts a notable problem?",
         "answers": [
             "Côte Chalonnaise",
             "Côte d'Or",
@@ -1569,15 +1536,15 @@
             "Low acidity, high tannins"
         ],
         "correctAnswerIndex": 0,
-        "feedback": "While Pinot Noir from Burgundy can vary due to vintage, vineyard and producer, it is usually highly acidic with low to medium tannins."
+        "feedback": "While Pinot Noir from Burgundy can vary due to vintage, vineyard, and producer, it is usually highly acidic with low to medium tannins."
     },
     {
         "question": "Besides Pinot Noir and Chardonnay, what grape varieties is Burgundy known for?",
         "answers": [
-            "Sauvignon Blanc and Cabernet Franc",
-            "Aligoté and Gamay",
-            "Muscadelle and Merlot",
-            "Sémillon and Petit Verdot"
+            "Sauvignon Blanc, Cabernet Franc",
+            "Aligoté, Gamay",
+            "Muscadelle, Merlot",
+            "Sémillon, Petit Verdot"
         ],
         "correctAnswerIndex": 1,
         "feedback": "Aligoté and Gamay are grown in Burgundy, but are rare in the higher quality sites. Aligoté wines are highly acidic and neutral and Gamay wines are early drinking wines with low tannins and ripe berry fruit."
@@ -1586,7 +1553,7 @@
         "question": "Which appellation is furthest north in Burgundy?",
         "answers": [
             "Côte d'Or",
-            "Côte Chalonnais",
+            "Côte Chalonnaise",
             "Mâconnais",
             "Chablis"
         ],
@@ -1620,7 +1587,7 @@
         "answers": [
             "Chablis",
             "Sauternes",
-            "Maconnais",
+            "Mâconnais",
             "Côte Chalonnaise"
         ],
         "correctAnswerIndex": 0,
@@ -1635,7 +1602,7 @@
             "Côte Chalonnaise"
         ],
         "correctAnswerIndex": 1,
-        "feedback": "Côte d'Or is the heartland of Burgundy and is divided into the Côte de Nuits in the north known for full-bodied and long lived Pinot Noirs and Côte de Beaune in the south with its fruitier styled Pinot Noirs."
+        "feedback": "Côte d'Or ('Golden Slope') is the heartland of Burgundy and is divided into the Côte de Nuits in the north known for full-bodied and long lived Pinot Noirs and Côte de Beaune in the south with its fruitier styled Pinot Noirs."
     },
     {
         "question": "Which village is not in Côte de Beaune?",
@@ -1645,8 +1612,8 @@
             "Pommard",
             "Chassagne-Montrachet"
         ],
-        "correctAnswerIndex": 2,
-        "feedback": "Givry is the smallest of four village appellations in Côte Chalonnaise in Burgundy whereas the Côte de Beaune is in the Côte d'Or. Givry has a reputation for red wine."
+        "correctAnswerIndex": 0,
+        "feedback": "Givry is the smallest of four village appellations in Côte Chalonnaise in Burgundy, whereas the Côte de Beaune is in the Côte d'Or. Givry has a reputation for red wine."
     },
     {
         "question": "What is one of the three villages in Côte de Beaune with the highest reputation for white wines?",
@@ -1690,7 +1657,7 @@
             "Givry"
         ],
         "correctAnswerIndex": 2,
-        "feedback": "Meursault is in Côte d'Or. The four village appellations of Côte Chalonnaise are Rully, Montagny, Givry and Mercurey."
+        "feedback": "Meursault is in Côte d'Or. The four village appellations of Côte Chalonnaise are Rully, Montagny, Givry, and Mercurey."
     },
     {
         "question": "Which village produces only white wine?",
@@ -1701,7 +1668,7 @@
             "Givry"
         ],
         "correctAnswerIndex": 1,
-        "feedback": "Only white wines are produced in Montagny."
+        "feedback": "Only white wines are produced in Montagny in Burgundy. Chardonnay is the main grape variety."
     },
     {
         "question": "Which village is important for sparkling wine?",
@@ -1712,7 +1679,7 @@
             "Givry"
         ],
         "correctAnswerIndex": 0,
-        "feedback": "Rully is important for sparkling wine and in general, produces more white than red wines."
+        "feedback": "Rully in Burgundy is important for sparkling wine and generally produces more white wines than red."
     },
     {
         "question": "The reds of which village have the highest reputation?",
@@ -1723,7 +1690,7 @@
             "Givry"
         ],
         "correctAnswerIndex": 2,
-        "feedback": "The red wines of Mercurey have the highest reputation."
+        "feedback": "The red wines of Mercurey in Burgundy have the highest reputation."
     },
     {
         "question": "From which grape variety are most red wines in Mâconnais made?",
@@ -1745,7 +1712,7 @@
             "Aloxe-Corton"
         ],
         "correctAnswerIndex": 0,
-        "feedback": "The white wines from the Mâcon Villages are known for their value and some villages, such as Lugny, are famous. The wines can come from a number of villages."
+        "feedback": "The white wines from the Mâcon Villages are known for their value. The wines can come from a number of villages, including Lugny which is renowned for its Mâcon-Lugny Chardonnay."
     },
     {
         "question": "Which is not a village in Côte de Nuits?",
@@ -1756,29 +1723,18 @@
             "Volnay"
         ],
         "correctAnswerIndex": 3,
-        "feedback": "Gevrey-Chambertin, Vougeot, Vosne-Romanée and Nuits-Saints-Georges are in Côte de Nuits. Volnay is in the Côte de Beaune."
-    },
-    {
-        "question": "Which is not a village of Côte de Nuits?",
-        "answers": [
-            "Vougeot",
-            "Vosne-Romanée",
-            "Nuits-Saint-Georges",
-            "Volnay"
-        ],
-        "correctAnswerIndex": 3,
-        "feedback": "Côte de Nuits are Gevrey-Chambertin, Vougeot, Vosne-Romanée and Nuits-Saints-Georges are in Côte de Nuits. Volnay is in the Côte de Beaune."
+        "feedback": "Gevrey-Chambertin, Vougeot, Vosne-Romanée, and Nuits-Saints-Georges are in Côte de Nuits. Volnay is in the Côte de Beaune."
     },
     {
         "question": "The climate in Beaujolais is similar to the climate in which appellation?",
         "answers": [
             "Bordeaux",
-            "Côte Chalonnais",
+            "Côte Chalonnaise",
             "Mâconnais",
             "Chablis"
         ],
         "correctAnswerIndex": 2,
-        "feedback": "The climate in Beaujolais is similar to the climate of Mâconnais and is suitable for grape varieties that are early budding and early ripening."
+        "feedback": "The climate in Beaujolais is similar to the climate of Mâconnais in Burgundy and is suitable for grape varieties that are early budding and early ripening."
     },
     {
         "question": "What is the primary grape variety in Beaujolais?",
@@ -1789,7 +1745,7 @@
             "Cabernet Sauvignon"
         ],
         "correctAnswerIndex": 0,
-        "feedback": "Gamay which is early budding and early ripening is the primary grape variety in Beaujolais."
+        "feedback": "Gamay, which is early budding and early ripening, is the primary grape variety in Beaujolais."
     },
     {
         "question": "Beaujolais is produced in the alluvial plain of which river?",
@@ -1816,13 +1772,13 @@
     {
         "question": "Which village is not located in Beaujolais?",
         "answers": [
-            "Rouilly",
+            "Brouilly",
             "Morgon",
             "Moulin-à-Vent",
             "Montagny"
         ],
         "correctAnswerIndex": 3,
-        "feedback": "Montagny is a white wine appellation in the Côte Chalonnaise in Burgundy. Rouilly, Morgon, Fleurie and Moulin-à-Vent are the four of the 10 Beaujolais Crus with their own appellation that have the highest production."
+        "feedback": "Montagny is a white wine appellation in the Côte Chalonnaise in Burgundy. Brouilly, Morgon, Fleurie, and Moulin-à-Vent are 4 of the 10 Beaujolais Crus with their own appellation that have the highest production."
     },
     {
         "question": "What can be said of the wines produced in Moulin-à-Vent?",
@@ -1866,7 +1822,7 @@
             "Loire Valley"
         ],
         "correctAnswerIndex": 2,
-        "feedback": "The Vosges Mountains protect the vineyards of Alsace and reduce the risk of disease and improving conditions for organic and biodynamic wines."
+        "feedback": "The Vosges Mountains protect the vineyards of Alsace and reduce the risk of disease, improving conditions for organic and biodynamic wines."
     },
     {
         "question": "Which is not one of the four noble varieties of Alsace?",
@@ -1877,7 +1833,7 @@
             "Pinot Gris"
         ],
         "correctAnswerIndex": 1,
-        "feedback": "The four noble varieties of Alsace are Riesling, Gewurztraminer, Pinot Gris and Muscat. Most wines are made from a single variety and are varietally labeled."
+        "feedback": "The four noble varieties of Alsace are Riesling, Gewurztraminer, Pinot Gris, and Muscat. Most wines are made from a single variety and are varietally labeled."
     },
     {
         "question": "What does Edelzwicker indicate on a wine label in Alsace?",
@@ -1888,7 +1844,7 @@
             "Produced with a noble variety"
         ],
         "correctAnswerIndex": 2,
-        "feedback": "Edelzwicker or Gentil indicates that the wine is a blend. These are rare as most wines from Alsace are made with a single grape variety."
+        "feedback": "Edelzwicker or Gentil indicates that the wine is a blend. These are rare as most wines from Alsace are made from a single grape variety."
     },
     {
         "question": "What is the most widely planted of the noble varieties in Alsace?",
@@ -1899,18 +1855,18 @@
             "Riesling"
         ],
         "correctAnswerIndex": 3,
-        "feedback": "Riesling is the most planted noble variety in Alsace and makes medium to full-bodied dry, steely wines with medium acidity and citrus and stone fruit aromas."
+        "feedback": "Riesling is the most planted noble variety in Alsace. It is used to make medium to full-bodied dry, steely wines with medium acidity and citrus and stone fruit aromas."
     },
     {
         "question": "Which Alsatian white variety produces wines notable for their rose aromas?",
         "answers": [
-            "Muscat",
+            "Sauvignon Blanc",
             "Gewurztraminer",
             "Pinot Gris",
             "Riesling"
         ],
         "correctAnswerIndex": 1,
-        "feedback": "Alsatian Gewurztraminer has aromas of roses, lychees and sweet baking spices and is often used to produce full-bodied wines that are high in alcohol and low to medium in acidity."
+        "feedback": "Alsatian Gewurztraminer has aromas of roses, lychees, and sweet baking spices and is often used to produce full-bodied wines that are high in alcohol and low to medium in acidity."
     },
     {
         "question": "Which Alsatian white grape variety is lightly pink?",
@@ -1932,7 +1888,7 @@
             "Riesling"
         ],
         "correctAnswerIndex": 1,
-        "feedback": "Wines made with Gewurztraminer in Alsace are typically full-bodied with a rich, oily texture, low to medium acidity and high alcohol."
+        "feedback": "Wines made with Gewurztraminer in Alsace are typically full-bodied with a rich, oily texture, low to medium acidity, and high alcohol."
     },
     {
         "question": "How would you describe a typical Pinot Gris from Alsace?",
@@ -1951,10 +1907,10 @@
             "Muscat",
             "Gewurztraminer",
             "Pinot Gris",
-            "Sauvginon Blanc"
+            "Sauvignon Blanc"
         ],
         "correctAnswerIndex": 0,
-        "feedback": "Muscat Blanc a Petit Grains is grown in Alsace and is noted for flavors of orange blossom, rose and grape. The wines are usually light to medium in body and low to medium in acidity."
+        "feedback": "Muscat Blanc à Petit Grains is grown in Alsace and is noted for flavors of orange blossom, rose, and grape. The wines are usually light to medium in body and low to medium in acidity."
     },
     {
         "question": "What is the only black grape variety permitted in Alsace?",
@@ -1965,7 +1921,7 @@
             "Grenache"
         ],
         "correctAnswerIndex": 0,
-        "feedback": "The only black grape variety permitted in Alsace is Pinot Noir which is usually used to produce light and fruity wines."
+        "feedback": "The only black grape variety permitted in Alsace is Pinot Noir, which is usually used to produce light and fruity wines."
     },
     {
         "question": "What grape variety is still widely planted in Alsace but which is not one of the four noble varieties?",
@@ -1976,8 +1932,7 @@
             "Sauvignon Blanc"
         ],
         "correctAnswerIndex": 2,
-        "feedback": "Often used for sparkling wines, Pinot Blanc is widely planted in Alsace, as is the spicier Auxerrois. Sylvaner is also planted, but less widely than before."
-
+        "feedback": "Often used for sparkling wines, Pinot Blanc is widely planted in Alsace, as is the spicier Auxerrois Blanc. Sylvaner is also planted, but less widely than before."
     },
     {
         "question": "Which Loire Valley region has a maritime climate?",
@@ -1999,9 +1954,7 @@
             "Anjou"
         ],
         "correctAnswerIndex": 3,
-        "feedback": "While near the ocean, Anjou in the Loire Valley is warmer and drier because it is protected by the Mauge hills."
-
-
+        "feedback": "While near the ocean, Anjou in the Loire Valley in France is warmer and drier because it is protected by the Mauges hills."
     },
     {
         "question": "What is a major problem in the Loire Valley?",
@@ -2034,7 +1987,7 @@
             "Chardonnay"
         ],
         "correctAnswerIndex": 1,
-        "feedback": "Sancerre in the Central Vineyards is one of the two most prestigious appellations for Sauvignon Blanc. The other is Pouilly-Fumé. The soil here is chalky with well-drained stony soil. Sauvignon Blanc is also grown in Touraine."
+        "feedback": "Sancerre in the Central Vineyards is one of the two most prestigious appellations for Sauvignon Blanc. The other is Pouilly-Fumé. The stony soil is chalky and well-drained. Sauvignon Blanc is also grown in Touraine."
     },
     {
         "question": "What is distinct about the Sauvignon Blanc from Pouilly-Fumé?",
@@ -2042,7 +1995,7 @@
             "Smoky notes",
             "Low acidity",
             "Highly aromatic",
-            "Full bodied"
+            "Full-bodied"
         ],
         "correctAnswerIndex": 0,
         "feedback": "Sauvignon Blanc from Pouilly-Fumé is known for its smoky notes. The wines are highly acidic with aromas of green apples and wet stone."
@@ -2056,13 +2009,13 @@
             "Vouvray"
         ],
         "correctAnswerIndex": 2,
-        "feedback": "Menetou-Salon is known for producing more moderately priced Sauvignon Blanc made in the same style as Sancerre and Pouilly-Fumé."
+        "feedback": "Menetou-Salon in the Central Loire Valley is known for producing more moderately priced Sauvignon Blanc wines made in the same style as Sancerre and Pouilly-Fumé."
     },
     {
         "question": "Which region is east of the city of Tours?",
         "answers": [
             "Chinon",
-            "Sancere",
+            "Sancerre",
             "Menetou-Salon",
             "Vouvray"
         ],
@@ -2096,7 +2049,7 @@
         "answers": [
             "Grapes are lightly pink",
             "Grapes ripen at different speeds",
-            "Aromatic",
+            "Late-budding",
             "Frost resistant"
         ],
         "correctAnswerIndex": 1,
@@ -2111,37 +2064,37 @@
             "Saumur"
         ],
         "correctAnswerIndex": 0,
-        "feedback": " Located in the valley of the River Layon, Coteaux du Layon has a high reputation for sweet wines."
+        "feedback": "Located in the valley of the River Layon, Coteaux du Layon has a high reputation for sweet wines."
     },
     {
         "question": "Which site is located in the Coteaux du Layon?",
         "answers": [
             "Quarts de Chaume",
-            "Vouray",
+            "Vouvray",
             "Savennières",
             "Bergerac"
         ],
         "correctAnswerIndex": 0,
-        "feedback": "Quarts de Chaume is located in the Coteaux du Layon and along with Bonnezeaux is known for producing some of the greatest sweet wines in the world."
+        "feedback": "Quarts de Chaume is located in the Coteaux du Layon in the Loire Valley, and along with Bonnezeaux, is known for producing some of the greatest sweet wines in the world."
     },
     {
-        "question": "Which region is known for producing light to medium bodied wines from Chenin Blanc with pronounced floral notes?",
+        "question": "Which region is known for producing light to medium-bodied wines from Chenin Blanc with pronounced floral notes?",
         "answers": [
             "Coteaux du Layon",
             "Savennières",
-            "Asumur",
+            "Saumur",
             "Vouvray"
         ],
         "correctAnswerIndex": 3,
-        "feedback": "With a cool climate and clay soils, Vouvray is known for producing light to medium bodied wines with Chenin Blanc. Both dry and sparkling wines are produced with a full range of sweetness. Oak is rare."
+        "feedback": "With a cool climate and clay soils, Vouvray in the Loire Valley is known for producing light to medium-bodied wines with Chenin Blanc. Both dry and sparkling wines are produced with a full range of sweetness. Oak is rare."
     },
     {
-        "question": "Which region in the Loire Valley is known for its dry full bodied wines made with Chenin Blanc?",
+        "question": "Which region in the Loire Valley is known for its dry full-bodied wines made with Chenin Blanc?",
         "answers": [
             "Vouvray",
             "Coteaux du Layon",
             "Savennières",
-            "Asumur"
+            "Saumur"
         ],
         "correctAnswerIndex": 2,
         "feedback": "Savennières is known for its dry full-bodied wines made with Chenin Blanc. As noble rot is rare here, Chenin Blanc can be late harvested for complex dry wines."
@@ -2151,11 +2104,11 @@
         "answers": [
             "It is frost resistant",
             "It ripens late",
-            "Grapes on one bunch ripen at different speeds",
+            "Grapes ripen at different speeds",
             "The grapes are lightly pink"
         ],
         "correctAnswerIndex": 0,
-        "feedback": "Muscadet which is also known as Melon Blanc or Melon de Bourgogne is frost resistant and early ripening and is suited to cool climates, including Nantais in the Loire Valley."
+        "feedback": "Muscadet which is also known as Melon Blanc or Melon de Bourgogne is frost resistant and early ripening and suited to cool climates, including Nantais in the Loire Valley."
     },
     {
         "question": "What is true of the wines from the Muscadet Appellations in the Loire Valley?",
@@ -2166,7 +2119,7 @@
             "Low acidity"
         ],
         "correctAnswerIndex": 0,
-        "feedback": "By law, the wines of the Muscadet Appellations in the Loire Valley cannot be over 12% abv. The wines are usually light bodied and high in acidity."
+        "feedback": "By law, the wines of the Muscadet Appellations in the Loire Valley cannot be over 12% abv. The wines are usually light-bodied and high in acidity."
     },
     {
         "question": "What is the most planted black grape variety in the Loire Valley?",
@@ -2184,7 +2137,7 @@
         "answers": [
             "Chinon",
             "Vouvray",
-            "Mentou-Salon",
+            "Menetou-Salon",
             "Sancerre"
         ],
         "correctAnswerIndex": 0,
@@ -2198,7 +2151,7 @@
             "Loire Valley",
             "Burgundy"
         ],
-        "correctAnswerIndex": 0,
+        "correctAnswerIndex": 2,
         "feedback": "Bourgueil and Saint-Nicolas-de-Bourgueil are located in Touraine in the Loire Valley where early ripening Cabernet Franc is grown."
     },
     {
@@ -2210,7 +2163,7 @@
             "More tannic"
         ],
         "correctAnswerIndex": 1,
-        "feedback": "Wines made from Cabernet Franc in Saumur and Saumur-Champigny are often lighter in body and tannins. The wines which can be served chilled have juicy fruit flavors and floral aromas and while mostly drunk young, some can benefit from age."
+        "feedback": "Wines made from Cabernet Franc in Saumur and Saumur-Champigny are often lighter in body and tannins. The wines which can be served chilled have juicy fruit flavors and floral aromas. While mostly drunk young, some can benefit from age."
     },
     {
         "question": "Where can Rosé de Loire be produced?",
@@ -2221,7 +2174,7 @@
             "Savennières"
         ],
         "correctAnswerIndex": 0,
-        "feedback": "While usually from Anjou-Saumur, Rosé de Loire can also be grown in Touraine. 30% Cabernet Franc and/or Cabernet Sauvignon is required."
+        "feedback": "While usually from Anjou-Saumur in the Loire Valley, Rosé de Loire can also be grown in Touraine. 30% Cabernet Franc and/or Cabernet Sauvignon is required."
     },
     {
         "question": "What is the highest quality Rosé in Anjou-Saumur?",
@@ -2243,10 +2196,10 @@
             "Grolleau"
         ],
         "correctAnswerIndex": 3,
-        "feedback": "Rosé d’Anjou is less sweet and is usually made from high yielding Grolleau and blended with Cabernet Franc and other local varieties."
+        "feedback": "Rosé d’Anjou is less sweet and is usually made from high-yielding Grolleau and blended with Cabernet Franc and other local varieties."
     },
     {
-        "question": "From which grape must rosé from Sancerre be made?",
+        "question": "From which grape must Sancerre rosé be made?",
         "answers": [
             "Cabernet Franc",
             "Grolleau",
@@ -2254,18 +2207,18 @@
             "Gamay"
         ],
         "correctAnswerIndex": 2,
-        "feedback": "Delicate, pale and light, rosé from Sancerre must be made from Pinot Noir."
+        "feedback": "Delicate, pale, and light, rosé from Sancerre must be made from Pinot Noir."
     },
     {
         "question": "From which grape must the rosé wines of Touraine be made?",
         "answers": [
             "Grolleau",
-            "Cabernet Franc and/or Cabernet Sauvignon",
+            "Cab. Franc/Cab. Sauvignon",
             "Pinot Noir",
-            "A variety of grapes are permitted"
+            "Variety of grapes permitted"
         ],
         "correctAnswerIndex": 3,
-        "feedback": "Dry and fruity, the rosé wines of Touraine can be made from a variety of grapes."
+        "feedback": "Dry and fruity, the rosé wines of Touraine in the Loire Valley can be made from a variety of grapes."
     },
     {
         "question": "Which grape variety has the greatest reputation in the Northern Rhône?",
@@ -2279,7 +2232,7 @@
         "feedback": "The Northern Rhône is noted for powerful wines with floral and black pepper aromas made from Syrah, the only permitted black grape."
     },
     {
-        "question": "What has a noted cooling effect on the Northern Rhône",
+        "question": "What has a noted cooling effect on the Northern Rhône?",
         "answers": [
             "Wind",
             "Hail",
@@ -2287,7 +2240,7 @@
             "Rain"
         ],
         "correctAnswerIndex": 0,
-        "feedback": "The mistral, a cold northern wind cools the Northern Rhône valley and the best  vineyards are planted on steep south facing slopes."
+        "feedback": "The mistral, a cold northern wind cools the Northern Rhône valley and the best vineyards are planted on steep south facing slopes."
     },
     {
         "question": "Which wine is noted for developing hazelnut aromas with age in the Northern Rhône?",
@@ -2320,7 +2273,7 @@
             "Hermitage"
         ],
         "correctAnswerIndex": 2,
-        "feedback": "Côte Rotie (roasted slopes) is furthest north in the Rhône Valley. Only red wines are permitted, but can be up to 20% Viognier."
+        "feedback": "Côte Rotie ('Roasted Slopes') is furthest north in the Rhône Valley. Only red wines are permitted, but can be up to 20% Viognier."
     },
     {
         "question": "Which region in the Northern Rhône produces full-bodied red wines that are deeply colored, fresh, floral, and spicy?",
@@ -2331,7 +2284,7 @@
             "Hermitage"
         ],
         "correctAnswerIndex": 2,
-        "feedback": "Côte Rotie produces in the Northern Rhône produces full-bodied red wines that are deeply colored, fresh, floral, and spicy."
+        "feedback": "Côte Rotie in the Northern Rhône produces full-bodied red wines that are deeply colored, fresh, floral, and spicy."
     },
     {
         "question": "From which grapes can wines in the appellation Condrieu be made?",
@@ -2353,7 +2306,7 @@
             "Hermitage"
         ],
         "correctAnswerIndex": 2,
-        "feedback": "Château-Grillet is located in the appellation of Condrieu where wines may only be made from Viognier."
+        "feedback": "Château-Grillet is located in the appellation of Condrieu in the Northern Rhône where wines may only be made from Viognier."
     },
     {
         "question": "Which area makes some of the lightest red wines in the Northern Rhône?",
@@ -2371,11 +2324,11 @@
         "answers": [
             "Syrah only",
             "Viognier",
-            "Viognier, Roussanne, and Marsanne",
-            "Syrah, Roussanne, and Marsanne"
+            "Viognier, Roussanne, Marsanne",
+            "Syrah, Roussanne, Marsanne"
         ],
         "correctAnswerIndex": 3,
-        "feedback": "Full-bodied Red Hermitage can be made from Syrah and although rare, can be made with up to 15% Roussanne and Marsanne."
+        "feedback": "Full-bodied Red Hermitage can be made from Syrah, and although rare, can be made with up to 15% Roussanne and Marsanne."
     },
     {
         "question": "Which appellation is furthest south in the Northern Rhône?",
@@ -2386,18 +2339,18 @@
             "Saint-Joseph"
         ],
         "correctAnswerIndex": 0,
-        "feedback": "Cornas is the appellation furthest south in the Northern Rhône. Wines can only be made with Syrah here."
+        "feedback": "Cornas is the appellation furthest south in the Northern Rhône. Wines can only be made with Syrah."
     },
     {
         "question": "Beside Syrah, from which other grape varieties can wines in Cornas in the Northern Rhône be made?",
         "answers": [
             "Syrah only",
             "Viognier",
-            "Viognier, Roussanne and Marsanne",
-            "Roussanne and Marsanne"
+            "Viognier, Roussanne, Marsanne",
+            "Roussanne, Marsanne"
         ],
         "correctAnswerIndex": 0,
-        "feedback": "The wines in Cornas must be 100% Syrah and are made in a similar style to those from Hermitage, deep in color and full-bodied."
+        "feedback": "The wines in Cornas must be 100% Syrah and are made in a similar style to those from Hermitage which are deep in color and full-bodied."
     },
     {
         "question": "Which appellation in the Northern Rhône is most important for the volume of wine it produces?",
@@ -2419,7 +2372,7 @@
             "Gobelet"
         ],
         "correctAnswerIndex": 0,
-        "feedback": "Grenache is bush trained and low to the ground in the Southern Rhône for heat from the soil and protection from the cold northerly mistral wind."
+        "feedback": "Grenache is usually bush trained and low to the ground in the Southern Rhône to obtain heat from the soil and protection from the cold northerly mistral wind."
     },
     {
         "question": "How is Syrah usually planted in the Southern Rhône?",
@@ -2452,10 +2405,10 @@
             "Carignan"
         ],
         "correctAnswerIndex": 1,
-        "feedback": "With deep color, high tannins and rich black fruit flavors, Mourvèdre can add gamey and meaty flavors to Grenache blends. The Southern Rhône is the furthest north that this variety can fully ripen."
+        "feedback": "With deep color, high tannins, and rich black fruit flavors, Mourvèdre can add gamey and meaty flavors to Grenache blends. The Southern Rhône is the furthest north this variety can fully ripen."
     },
     {
-        "question": "Besides Grenache, what other grape variety are most rosés in Tavel and Lirac made from?",
+        "question": "Besides Grenache, what other grape varieties are most rosés in Tavel and Lirac made from?",
         "answers": [
             "Cinsault",
             "Syrah",
@@ -2463,10 +2416,10 @@
             "Pinot Noir"
         ],
         "correctAnswerIndex": 0,
-        "feedback": "Most rosés in Tavel and Lirac are made from Grenache and Cinsault. Lirac also produces high quality wines similar to Châteauneuf-du-Pape."
+        "feedback": "Most rosés in Tavel and Lirac in the Southern Rhône in France are made from Grenache and Cinsault. Lirac also produces high quality wines similar to Châteauneuf-du-Pape."
     },
     {
-        "question": "Which region can only produce rosé",
+        "question": "Which region can only produce rosé?",
         "answers": [
             "Lirac",
             "Anjou",
@@ -2496,10 +2449,10 @@
             "Tavel"
         ],
         "correctAnswerIndex": 2,
-        "feedback": "Beaumes de Venise in the Southern Rhône is well known for its fortified Muscat, Muscat de Beaumes-de-Venise."
+        "feedback": "Beaumes de Venise in the Southern Rhône is well known for its fortified Muscat, Muscat de Beaumes-de-Venise, which is made exclusively from Muscat à Petits Grains."
     },
     {
-        "question": "In which region is the fortified Muscat, Muscat de Beaumes-de-Venise produced?",
+        "question": "In which region is Muscat de Beaumes-de-Venise produced?",
         "answers": [
             "Southern Rhône",
             "Jurançon",
@@ -2507,7 +2460,7 @@
             "Loire Valley"
         ],
         "correctAnswerIndex": 0,
-        "feedback": "Muscat de Beaumes-de-Venise is produced in Beaumes de Venise in the Southern Rhône."
+        "feedback": "The sweet fortified Muscat de Beaumes-de-Venise is produced in Beaumes de Venise in the Southern Rhône."
     },
     {
         "question": "What is less of a problem in vineyards in Southern France than in any other region in France?",
@@ -2518,7 +2471,7 @@
             "Summer hail"
         ],
         "correctAnswerIndex": 0,
-        "feedback": "Fungal disease is less of a problem in Southern France. Although drought and summer floods can both be a challenge."
+        "feedback": "The warm, dry Mediterranean climate and strong Mistral wind in Southern France make fungal disease less of a problem. Although drought and summer floods can both be a challenge."
     },
     {
         "question": "What grape variety is one of the two most important local varieties in Southern France?",
@@ -2545,16 +2498,16 @@
     {
         "question": "What is true of Carignan in Southern France?",
         "answers": [
-            "Ripens only in warmest sites",
-            "Lacks fruit or finesse",
-            "Primarily for Rose",
+            "Early ripening",
+            "Lacks finesse",
+            "Primarily for rosé",
             "Better in cooler site"
         ],
         "correctAnswerIndex": 1,
-        "feedback": "Still widely grown, but now in lesser quantities, Carignan lacks fruit or finesse. Older vines in poor soil fare better. The wines are high in acid, tannin and deep in color."
+        "feedback": "The late ripening Carignan is known to lack finesse. Older vines in poor soil fare better. The wines are high in acid, tannin, and deep in color."
     },
     {
-        "question": "Which grape variety can only ripen in the warmest sites in Southern France",
+        "question": "Which grape variety can only ripen in the warmest sites in Southern France?",
         "answers": [
             "Mourvèdre",
             "Syrah",
@@ -2562,7 +2515,7 @@
             "Grenache"
         ],
         "correctAnswerIndex": 0,
-        "feedback": "Mourvèdre, useful in blends adding color and complexity, can only ripen in the warmest sites in Southern France."
+        "feedback": "Mourvèdre, useful in blends by adding color and complexity, can only ripen in the warmest sites in Southern France."
     },
     {
         "question": "Which is one of the two most widely planted white grape varieties in Southern France?",
@@ -2576,15 +2529,15 @@
         "feedback": "Sauvignon Blanc and Chardonnay are the most planted white varieties in Southern France. Viognier is also planted."
     },
     {
-        "question": "Which departement is not part of Languedoc?",
+        "question": "Which department is not part of Languedoc?",
         "answers": [
             "Pyrénées-Orientales",
             "Aude",
-            "Herault",
+            "Hérault",
             "Gard"
         ],
         "correctAnswerIndex": 0,
-        "feedback": "Aude, Herault, and Gard are located in Languedoc where the majority of the wines in Southern France come from, whereas Pyrénées-Orientales is known as Roussillon."
+        "feedback": "Aude, Hérault, and Gard are located in Languedoc where the majority of the wines in Southern France are made. Pyrénées-Orientales is in Roussillon."
     },
     {
         "question": "What is located between Beziers and Montpellier?",
@@ -2595,7 +2548,7 @@
             "Coastal plain"
         ],
         "correctAnswerIndex": 3,
-        "feedback": "A large coastal plain lies between Beziers and Montpellier in Languedoc."
+        "feedback": "A large coastal plain lies between Beziers and Montpellier in Languedoc in Southern France."
     },
     {
         "question": "Which is not one of the four grape varieties that most of the wines are made from in Languedoc?",
@@ -2606,7 +2559,7 @@
             "Mourvèdre"
         ],
         "correctAnswerIndex": 0,
-        "feedback": "Most wines in Languedoc are made from Carignan, Grenache and Syrah and some Mourvèdre, but not Cinsault."
+        "feedback": "Most wines in Languedoc in Southern France are made from Carignan, Grenache, and Syrah, and some Mourvèdre, but not Cinsault."
     },
     {
         "question": "In which region is Fitou?",
@@ -2617,7 +2570,7 @@
             "Southern Rhône"
         ],
         "correctAnswerIndex": 1,
-        "feedback": "Fitou is located in Languedoc in Southern France where it has two areas, a warm coastal area that produces full bodied wines and a cooler area more inland with altitude that produces lighter wines."
+        "feedback": "Fitou is located in Languedoc in Southern France where it has two areas, a warm coastal area that produces full-bodied wines and a cooler area more inland with altitude that produces lighter wines."
     },
     {
         "question": "What is the region of Corbières cooled by?",
@@ -2628,7 +2581,7 @@
             "River"
         ],
         "correctAnswerIndex": 0,
-        "feedback": "A warm, coastal site, Corbières in Southern France is cooled by the tramontone, a wind that blows between the Massif Central and the Pyrenees."
+        "feedback": "A warm, coastal site, Corbières in Southern France is cooled by the tramontane, a wind that blows between the highland region of Massif Central and the Pyrenees mountain range."
     },
     {
         "question": "Where is Boutenac located?",
@@ -2639,7 +2592,7 @@
             "Southern France"
         ],
         "correctAnswerIndex": 3,
-        "feedback": "Boutenac is the best of 11 sub-regions in the warm coastal region of Corbières in Languedoc in Southern France."
+        "feedback": "Boutenac is the best of 11 sub-regions in the warm coastal region of Corbières in Languedoc in Southern France. It is known for high-quality, full-bodied reds dominated by old-vine Carignan."
     },
     {
         "question": "Where is La Livinière located?",
@@ -2650,7 +2603,7 @@
             "Burgundy"
         ],
         "correctAnswerIndex": 1,
-        "feedback": "La Livinière is the best sub-region of Minervois in Languedoc in Southern France which lies on the slopes of the Massif Central."
+        "feedback": "Minervois La Livinière in Languedoc in Southern France has a reputation for producing some of the finest red wines in the region. It lies on the slopes of the Massif Central highland region."
     },
     {
         "question": "What is true of the Côtes du Roussillon in comparison to other areas in Languedoc?",
@@ -2668,7 +2621,7 @@
         "answers": [
             "Sauvignon Blanc",
             "Chardonnay",
-            "Vigonier",
+            "Viognier",
             "Pinot Gris"
         ],
         "correctAnswerIndex": 1,
@@ -2683,7 +2636,7 @@
             "Northern Rhône"
         ],
         "correctAnswerIndex": 2,
-        "feedback": "Picpoul is primarily grown in Southern France in Picpoul de Pinet where cooling sea breezes retain the grapes naturally high acidity."
+        "feedback": "The white Picpoul grape variety is primarily grown in Southern France in Picpoul de Pinet where cooling sea breezes retain the grapes' naturally high acidity."
     },
     {
         "question": "Which region produces the most IGP wines in France?",
@@ -2705,7 +2658,7 @@
             "Very pale"
         ],
         "correctAnswerIndex": 3,
-        "feedback": "Most rosés in Provence are pale, light and dry with flavors of grapefruit and red fruit."
+        "feedback": "Most rosés in Provence are pale, light, and dry with flavors of grapefruit and red fruit."
     },
     {
         "question": "In which region is Bandol located?",
@@ -2713,7 +2666,7 @@
             "Southern Rhône",
             "Southwest France",
             "Southern France",
-            "Nothern Rhône"
+            "Northern Rhône"
         ],
         "correctAnswerIndex": 2,
         "feedback": "Bandol is a group of vineyards on the coast in Southern France. The full-bodied wines are usually made with Mourvèdre and have powerful tannins."
@@ -2749,7 +2702,7 @@
             "Franken, Rheingau"
         ],
         "correctAnswerIndex": 0,
-        "feedback": "Silvaner is mostly found in Rheinhessen and Franken and makes earthy wines with less fruit and lower acidity than Riesling."
+        "feedback": "Silvaner is mostly found in Rheinhessen and Franken and is used to make earthy wines with less fruit and lower acidity than Riesling."
     },
     {
         "question": "Which is the third most planted grape variety in Germany?",
@@ -2760,7 +2713,7 @@
             "Dornfelder"
         ],
         "correctAnswerIndex": 1,
-        "feedback": "Spätburgunder (aka Pinot Noir) is the third most planted grape variety in Germany. It is important in the regions of Pfalz and Baden."
+        "feedback": "Spätburgunder (aka Pinot Noir) is the third most planted grape variety in Germany, after Riesling and Müller-Thurgau. It is important in the regions of Pfalz and Baden."
     },
     {
         "question": "Which is a black grape variety planted widely in Germany?",
@@ -2771,10 +2724,10 @@
             "St. Laurent"
         ],
         "correctAnswerIndex": 2,
-        "feedback": "Dornfelder is planted widely in Germany and is used to make deeply colored wines."
+        "feedback": "Dornfelder is planted widely in Germany and is used to make deeply colored red wines."
     },
     {
-        "question": "Which is the name for Meunier in Germany?",
+        "question": "What is the name for Meunier in Germany?",
         "answers": [
             "Portugieser",
             "Trollinger",
@@ -2782,10 +2735,10 @@
             "Schwarzriesling"
         ],
         "correctAnswerIndex": 3,
-        "feedback": "Schwarzriesling is the German name for Meunier. Portugieser, Trollinger and Spätburgunder (aka Pinot Noir) are all black varieties grown in Germany."
+        "feedback": "Schwarzriesling is the German name for Meunier. Portugieser, Trollinger, and Spätburgunder (aka Pinot Noir) are all black varieties grown in Germany."
     },
     {
-        "question": "In which region is Piersport located?",
+        "question": "In which region is Piesport located?",
         "answers": [
             "Rheinhessen",
             "Rheingau",
@@ -2793,15 +2746,15 @@
             "Mosel"
         ],
         "correctAnswerIndex": 3,
-        "feedback": "Piersport, Bernkastel and Wehlen are the most well known villages in Middle Mosel which is located in the center of Mosel. Riesling dominates."
+        "feedback": "Piesport, Bernkastel, and Wehlen are the most well-known villages in Middle Mosel in Germany. Riesling dominates."
     },
     {
         "question": "Compared to Rieslings produced in Rheingau, Rheinhessen, and Pfalz, what can be said of Rieslings from Mosel?",
         "answers": [
-            "Lower in alcohol and higher in acidity",
-            "Higher in alcohol and lower in acidity",
-            "Lower in alcohol and lower in acidity",
-            "Higher in alcohol and higher in acidity"
+            "Lower alcohol, Higher acidity",
+            "Higher alcohol, lower acidity",
+            "Lower alcohol, lower acidity",
+            "Higher alcohol, higher acidity"
         ],
         "correctAnswerIndex": 0,
         "feedback": "With floral and green fruit flavors, the Rieslings in Mosel are lighter with lower alcohol and higher acidity than Rieslings from Rheingau, Rheinhessen, and Pfalz."
@@ -2815,7 +2768,7 @@
             "Main"
         ],
         "correctAnswerIndex": 3,
-        "feedback": "The Main river is in Rheingau whlie Saar and Ruwer are tributaries of the Rhine river in Mosel."
+        "feedback": "The Main river is in Rheingau while Saar and Ruwer are tributaries of the Rhine river in Mosel."
     },
     {
         "question": "In which region are the villages of Schloßböckelheim and Bad Kreuznach located?",
@@ -2826,7 +2779,7 @@
             "Pfalz"
         ],
         "correctAnswerIndex": 2,
-        "feedback": "Schloßböckelheim and Bad Kreuznach are in Nahe. The best vineyards are located between them and the best wines are made with Riesling."
+        "feedback": "Schloßböckelheim and Bad Kreuznach are in Nahe in Germany. The best vineyards are located between them, and the best wines are made with Riesling."
     },
     {
         "question": "The Taunus hills are found in which wine region in Germany?",
@@ -2840,7 +2793,7 @@
         "feedback": "The Taunus hills protect the vineyards in Rheingau. The vineyards are primarily located on the slopes of the north side of the Rhine and Main rivers and face south."
     },
     {
-        "question": "In which region is the village of Rudesheim located?",
+        "question": "In which region is the village of Rüdesheim located?",
         "answers": [
             "Rheingau",
             "Nahe",
@@ -2848,10 +2801,10 @@
             "Mosel"
         ],
         "correctAnswerIndex": 0,
-        "feedback": "Rudesheim and Johannisberg are villages in the Rheingau region of Germany around which most of the vineyards are located. Riesling dominates and is usually riper and fuller than Rieslings from Mosel."
+        "feedback": "Rüdesheim and Johannisberg are villages in the Rheingau region of Germany around which most of the vineyards are located. Riesling dominates and is usually riper and fuller than Rieslings from Mosel."
     },
     {
-        "question": "From which region do some of Germany’s best Beerenauslese and Tockenbeerenauslese wines come from?",
+        "question": "From which region do some of Germany’s best Beerenauslese and Trockenbeerenauslese wines come from?",
         "answers": [
             "Rheinhessen",
             "Rheingau",
@@ -2859,18 +2812,18 @@
             "Pfalz"
         ],
         "correctAnswerIndex": 1,
-        "feedback": "Some of the best German Beerenauslese and Tockenbeerenauslese sweet wines come from Rheingau as the Rhine River produces humidity and encourages noble rot."
+        "feedback": "Some of the best German Beerenauslese and Trockenbeerenauslese sweet wines come from Rheingau as the Rhine River produces humidity and encourages noble rot."
     },
     {
         "question": "From which grape varieties can GG wines be made from in Rheingau?",
         "answers": [
             "Riesling only",
-            "Riesling or Spätburgunder",
-            "Riesling, Weißburgunder or Spätburgunder",
-            "Riesling or Weißburgunder"
+            "Riesling/Spätburgunder",
+            "Riesling/Weiß-/Spätburgunder",
+            "Riesling/Weißburgunder"
         ],
         "correctAnswerIndex": 1,
-        "feedback": "GG wines in Rheingau can be made from Riesling or Spätburgunder. The warmer climate results in Rieslings that are fuller in body with a ripe peach flavor."
+        "feedback": "GG wines (a term of distinction for leading vineyards in Germany) in Rheingau can be made from Riesling or Spätburgunder. The warmer climate results in Rieslings that are fuller in body with a ripe peach flavor."
     },
     {
         "question": "Which is the largest wine-growing region in Germany?",
@@ -2888,14 +2841,14 @@
         "answers": [
             "Nierstein",
             "Deidesheim",
-            "Rudesheim",
+            "Rüdesheim",
             "Schloßböckelheim"
         ],
         "correctAnswerIndex": 0,
-        "feedback": "The Rheinterrasse located around the village of Nierstein in Rheinhessen is known for producing some of the fullest bodied Rieslings in Germany."
+        "feedback": "The Rheinterrasse, located around the village of Nierstein in Rheinhessen, is known for producing some of the fullest bodied Rieslings in Germany."
     },
     {
-        "question": "Which region in Germany is developing a reputation for innovation and excellence in wine making?",
+        "question": "Which region in Germany is developing a reputation for innovation and excellence in winemaking?",
         "answers": [
             "Mosel",
             "Nahe",
@@ -2903,7 +2856,7 @@
             "Baden"
         ],
         "correctAnswerIndex": 2,
-        "feedback": "Rheinhessen is developing a reputation for innovation and excellence in wine making. The region of Pfalz is as well."
+        "feedback": "Rheinhessen, Germany's largest wine region, is developing a reputation for innovation and excellence in winemaking. The region of Pfalz is as well."
     },
     {
         "question": "What is the second largest wine growing region in Germany?",
@@ -2914,7 +2867,7 @@
             "Mosel"
         ],
         "correctAnswerIndex": 1,
-        "feedback": "While Rheinhessen is the largest wine growing region in Germany, Pfalz is the second. Riesling is the most planted variet in Pfalz."
+        "feedback": "Pfalz is the second largest wine growing region in Germany after Rheinhessen. Riesling is the most planted variety in Pfalz."
     },
     {
         "question": "Which is the driest wine region in Germany?",
@@ -2958,7 +2911,7 @@
             "Kaiserstuhl"
         ],
         "correctAnswerIndex": 3,
-        "feedback": "Kaiserstuhl is an extinct volcano in Baden, Germany on which many high quality vineyards are located. It is known for Spätburgunder (pinot noir)."
+        "feedback": "Kaiserstuhl is an extinct volcano in Baden, Germany on which many high quality vineyards are located. It is known for Spätburgunder (aka Pinot Noir)."
     },
     {
         "question": "What is the most planted grape variety in Franken?",
@@ -2969,7 +2922,7 @@
             "Silvaner"
         ],
         "correctAnswerIndex": 3,
-        "feedback": "Unusually, Riesling is not the most planted or highest quality grape variety in Franken, rather it's the early flowering and ripening Silvaner."
+        "feedback": "Unusually, Riesling is not the most planted or highest quality grape variety in Franken. It's the early flowering and ripening Silvaner."
     },
     {
         "question": "Which village is in Franken?",
@@ -2991,10 +2944,10 @@
             "Silvaner"
         ],
         "correctAnswerIndex": 0,
-        "feedback": "Grüner Veltliner is the most planted grape variety in Austria and makes highly acidic wines with white pepper flavors that develop honey and toast with age."
+        "feedback": "Grüner Veltliner is the most widely planted grape variety in Austria and is used to make highly acidic wines with white pepper flavors that develop honey and toast with age."
     },
     {
-        "question": "Which grape variety is used to produce high quality dessert wines in Austria?",
+        "question": "Which grape variety is used to produce high-quality dessert wines in Austria?",
         "answers": [
             "Grüner Veltliner",
             "Riesling",
@@ -3002,7 +2955,7 @@
             "Silvaner"
         ],
         "correctAnswerIndex": 2,
-        "feedback": "Welschriesling is used to produce high quality dessert wines in Austria because it is very susceptible to botrytis."
+        "feedback": "Welschriesling is used to produce high-quality dessert wines in Austria's Burgenland region near Lake Neusiedl. The variety is very susceptible to noble rot."
     },
     {
         "question": "What is the most widely planted black grape variety in Austria?",
@@ -3013,7 +2966,7 @@
             "Spätburgunder"
         ],
         "correctAnswerIndex": 0,
-        "feedback": "A cross between Blaufränkisch and St. Laurent, Zweigelt is the most widely planted black grape variety in Austria."
+        "feedback": "A cross between Blaufränkisch and St. Laurent, Zweigelt is the most widely planted black grape variety in Austria. It is used to make wines reminiscent of Pinot Noir."
     },
     {
         "question": "What Austrian black grape variety has the highest reputation?",
@@ -3035,7 +2988,7 @@
             "Niederösterreich"
         ],
         "correctAnswerIndex": 3,
-        "feedback": "Wachau is in Niederösterreich in lower Austria and has the highest reputation for Riesling and Grüner Veltliner,and has its own classification system."
+        "feedback": "Wachau is in Niederösterreich in lower Austria and has the highest reputation for Riesling and Grüner Veltliner. It also has its own classification system."
     },
     {
         "question": "In which region in Austria is Kremstal located?",
@@ -3046,7 +2999,7 @@
             "Niederösterreich"
         ],
         "correctAnswerIndex": 3,
-        "feedback": "Kremstal is in the Niederösterreich region with vineyards along the Danube river and produces wines with Riesling and Grüner Veltliner."
+        "feedback": "Kremstal is in the Niederösterreich region with vineyards along the Danube river. It produces wines with Riesling and Grüner Veltliner."
     },
     {
         "question": "In which region in Austria is Kamptal located?",
@@ -3063,12 +3016,12 @@
         "question": "What is true of wines labeled as Klassik in Weinviertel in Austria?",
         "answers": [
             "High alcohol",
-            "Full bodied",
+            "Full-bodied",
             "Oaked",
             "Light, fresh"
         ],
         "correctAnswerIndex": 3,
-        "feedback": "Wines labeled as Klassic in Weinviertel in Austria are not oaked and are made in a light, fresh and fruity style."
+        "feedback": "Wines labeled as Klassik in Weinviertel in Austria are not oaked and are made in a light, fresh, and fruity style."
     },
     {
         "question": "What is true of wines labeled as Reserve in Weinviertel in Austria?",
@@ -3101,10 +3054,10 @@
             "Silvaner"
         ],
         "correctAnswerIndex": 0,
-        "feedback": "Welschriesling is widely used to produce sweet wine in Austria as it is highy prone to the development of botrytis."
+        "feedback": "Welschriesling is widely used to produce sweet wine in Austria as it is highly prone to the development of botrytis."
     },
     {
-        "question": "Neusidelersee is a DAC for wines made from which grape variety in Austria?",
+        "question": "Neusiedlersee is a DAC for wines made from which grape variety in Austria?",
         "answers": [
             "Zweigelt",
             "Blaufränkisch",
@@ -3112,10 +3065,10 @@
             "Spätburgunder"
         ],
         "correctAnswerIndex": 0,
-        "feedback": "Neusdielersee is a DAC in Burgenland for wines made with Zweigelt. It is also the name of a low, shallow lake."
+        "feedback": "Neusiedlersee is a DAC in Burgenland for wines made with Zweigelt, Austria's most planted red grape. It is also the name of a low, shallow lake."
     },
     {
-        "question": "Mittelburgenland is a DAC for wines made from which grape variety in Austria?",
+        "question": "Mittelburgenland, often called Blaufränkischland, is a DAC for wines made from which grape variety in Austria?",
         "answers": [
             "Zweigelt",
             "Blaufränkisch",
@@ -3123,13 +3076,13 @@
             "Spätburgunder"
         ],
         "correctAnswerIndex": 1,
-        "feedback": "Mittelburgenland is 1 of 3 DACs for Blaufränkisch which makes medium bodied and highly acidic wines with pepper and sour cherry flavors."
+        "feedback": "Mittelburgenland is 1 of 3 DACs for Blaufränkisch which makes medium-bodied and highly acidic wines with pepper and sour cherry flavors."
     },
     {
         "question": "Which grape variety is most widely planted in Tokaj?",
         "answers": [
             "Furmint",
-            "Harslevelu",
+            "Hárslevelű",
             "Sarga Muskotaly",
             "Welschriesling"
         ],
@@ -3156,10 +3109,10 @@
             "Limnio"
         ],
         "correctAnswerIndex": 0,
-        "feedback": "The only black grape permitted for red wines in Naoussa PDO in Macedonia is highly tannic and acidic Xinomavro."
+        "feedback": "The only black grape permitted for red wines in Naoussa PDO in Macedonia is Xinomavro. The wines are highly tannic and acidic."
     },
     {
-        "question": "From which section of the slope do the best grapes come from in Nemea in Greece?",
+        "question": "From which section of the slope do the best Agiorgitiko grapes come from in Nemea in Greece?",
         "answers": [
             "Mid-slope",
             "Steepest slopes",
@@ -3167,7 +3120,7 @@
             "Lower slopes"
         ],
         "correctAnswerIndex": 0,
-        "feedback": "The best Agiorgitiko grapes come from the middle of the slopes in Nemea. It tends to be jammy in lower sites and has less fine tannins in higher."
+        "feedback": "The best Agiorgitiko grapes come from the middle of the slopes in Nemea. It tends to be jammy in lower sites and has less fine tannins in higher sites."
     },
     {
         "question": "Which grape variety has the highest reputation in Santorini PDO?",
@@ -3181,7 +3134,7 @@
         "feedback": "Wines made from the white grape Assyrtiko have the highest reputation on the island of Santorini."
     },
     {
-        "question": "What is the climate of the Mesata Central in Spain?",
+        "question": "What is the climate of the Meseta Central in Spain?",
         "answers": [
             "Moderate maritime",
             "Warm mediterranean",
@@ -3189,7 +3142,7 @@
             "Cool continental"
         ],
         "correctAnswerIndex": 2,
-        "feedback": "Cut off rom the sea the climate of the Mesata Central is hot continental. Winters are below freezing and summers are hot with little rain."
+        "feedback": "Cut off from the sea, the climate of the Meseta Central is hot continental. Winters are below freezing and summers are hot with little rain."
     },
     {
         "question": "What is the premier grape variety of Spain?",
@@ -3211,7 +3164,7 @@
             "Toro"
         ],
         "correctAnswerIndex": 0,
-        "feedback": "Old vine Garnacha Tinta (aka Grenache) is important in the production of full-bodied reds in Priorat. It is also often used in rosados."
+        "feedback": "Old vine Garnacha Tinta (aka Grenache) is important in the production of full-bodied reds in Priorat in northeastern Spain. It is also often used in rosados."
     },
     {
         "question": "Where in Spain is Monastrell important?",
@@ -3222,17 +3175,17 @@
             "Rueda"
         ],
         "correctAnswerIndex": 1,
-        "feedback": "Monastrell (aka Mourvedre) is important in south eastern Spain in Yecla and Jumilla. The thick skinned grape is drought tolerant."
+        "feedback": "Monastrell (aka Mourvèdre) is important in southeastern Spain in Yecla and Jumilla. The thick skinned grape is drought tolerant."
     },
     {
-        "question": "What is typical of wines made from Monastrell in south east Spain?",
+        "question": "What is typical of wines made from Monastrell in southeast Spain?",
         "answers": [
             "high alcohol, high tannins",
             "low alcohol, high tannins",
             "high alcohol, low tannins",
-            "low alchol, low tannins"
+            "low alcohol, low tannins"
         ],
-        "correctAnswerIndex": 1,
+        "correctAnswerIndex": 0,
         "feedback": "Wines made from Monastrell (aka Mourvèdre) tend to be highly tannic and alcoholic with low to medium acidity and ripe blackberry fruit flavors."
     },
     {
@@ -3244,7 +3197,7 @@
             "Rioja"
         ],
         "correctAnswerIndex": 3,
-        "feedback": "Graciano is primarily grown in Rioja for use in blends to add acidity, tannins and black fruit aromas which aid in aging."
+        "feedback": "Graciano is primarily grown in Rioja for use in blends to add acidity, tannins, and black fruit aromas which aid in aging."
     },
     {
         "question": "Mazuelo is the Spanish name for which grape in Rioja?",
@@ -3255,7 +3208,7 @@
             "Jaen"
         ],
         "correctAnswerIndex": 2,
-        "feedback": "Carignan is known as Mazuelo in Rioja and as Cariñena in Spain and is blended with Tempranillo to add acidity, tannins and color."
+        "feedback": "Carignan is known as Mazuelo in Rioja and as Cariñena in Spain, and is blended with Tempranillo to add acidity, tannins, and color."
     },
     {
         "question": "In which region is Cariñena often blended with Garnacha?",
@@ -3271,13 +3224,24 @@
     {
         "question": "Which Spanish grape variety sometimes produces wines known for their herbaceousness?",
         "answers": [
-            "Monatrell",
+            "Monastrell",
             "Garnacha Tinta",
             "Mencía",
             "Mazuelo"
         ],
         "correctAnswerIndex": 2,
-        "feedback": "Mencía (aka Jaen in Portugal) is often used to produce fresh wines that have medium to high acidicty and a herbaceousness."
+        "feedback": "Mencía (aka Jaen in Portugal) is often used to produce fresh, herbaceous wines with medium to high acidity."
+    },
+    {
+        "question": "What is another name for Mencía?",
+        "answers": [
+            "Rioja",
+            "Garnache",
+            "Jaen",
+            "Mazuelo"
+        ],
+        "correctAnswerIndex": 2,
+        "feedback": "Jaen is the Portuguese name for Mencía. It is often used to produce fresh, herbaceous wines with medium to high acidity."
     },
     {
         "question": "Which Spanish grape variety is highly prone to oxidation?",
@@ -3288,7 +3252,7 @@
             "Viura"
         ],
         "correctAnswerIndex": 1,
-        "feedback": "Often use to make wines similar to Sherry, Verdejo is highly prone to oxidation."
+        "feedback": "Often used to make wines similar to Sherry, Verdejo is highly prone to oxidation."
     },
     {
         "question": "Which Spanish grape variety can be used to make wines similar to Sauvignon Blanc?",
@@ -3299,7 +3263,7 @@
             "Verdejo"
         ],
         "correctAnswerIndex": 3,
-        "feedback": "Verdejo can make highly acidic and light bodied wines similar to Sauvignon Blanc with flavors of melon and peach and often blended with Sauvignon Blanc."
+        "feedback": "Verdejo can make highly acidic and light-bodied wines similar to Sauvignon Blanc with flavors of melon and peach, and is often blended with Sauvignon Blanc."
     },
     {
         "question": "What technique is often used to make a fuller bodied Verdejo?",
@@ -3310,7 +3274,7 @@
             "Fermentation in steel"
         ],
         "correctAnswerIndex": 0,
-        "feedback": "Skin contact and barrel femerntation are used to produce a fuller bodied style of Verdejo in Spain."
+        "feedback": "Skin contact and barrel fermentation are used to produce a fuller bodied style of Verdejo in Spain."
     },
     {
         "question": "In which region of Spain is Albariño grown?",
@@ -3321,7 +3285,7 @@
             "Castilla-La Mancha"
         ],
         "correctAnswerIndex": 1,
-        "feedback": "Grown in North West Spain, thick skinned Albariño. Resistant to fungus disease, the grape does well in damp areas."
+        "feedback": "Grown in northwest Spain, the thick skinned Albariño is resistant to fungal disease and does well in damp areas."
     },
     {
         "question": "What is true of wines made from Albariño?",
@@ -3329,10 +3293,10 @@
             "Low in acidity",
             "High in acidity",
             "Tropical fruit flavors",
-            "Highly susceptible to oxidation"
+            "Prone to oxidation"
         ],
         "correctAnswerIndex": 1,
-        "feedback": "Albariño is naturally high in acidty and is used to produce fresh wines with citrus and stone fruit flavors, but can also be made in a fuller body style."
+        "feedback": "Albariño is naturally high in acidity and is used to produce fresh wines with citrus and stone fruit flavors, but can also be made in a fuller body style."
     },
     {
         "question": "What is the most widely planted grape variety in Spain?",
@@ -3354,7 +3318,7 @@
             "La Mancha"
         ],
         "correctAnswerIndex": 3,
-        "feedback": "Airén is mostly planted in La Mancha as it can handle the high temperatures and drought conditions of the Mesata Central."
+        "feedback": "Airén is mostly planted in La Mancha as it can handle the high temperatures and drought conditions of the Meseta Central, a vast, high-altitude plateau."
     },
     {
         "question": "Which grape variety is often used to make Brandy de Jerez in Spain?",
@@ -3376,7 +3340,7 @@
             "Parellada"
         ],
         "correctAnswerIndex": 2,
-        "feedback": "While Airén is often used to make Brandy de Jerez, Cava is often made from Parellada, Xarel-lo and Macabeo planted in Catalunya."
+        "feedback": "While Airén is often used to make Brandy de Jerez, Cava is often made from Parellada, Xarel-lo, and Macabeo planted in Catalunya."
     },
     {
         "question": "What is Macabeo called in Rioja?",
@@ -3398,21 +3362,21 @@
             "5"
         ],
         "correctAnswerIndex": 1,
-        "feedback": "Rioja surrounds the city of Logroño and is divided into three sub-regions: Rioja Alavesa, Rioja Alta and Rioja Baja."
+        "feedback": "Rioja surrounds the city of Logroño and is divided into 3 sub-regions: Rioja Alavesa, Rioja Alta and Rioja Baja. Tempranillo is the primary grape. Garnacha, Graciano, and Mazuelo are also key."
     },
     {
         "question": "What is the most widely planted grape variety in Rioja, Spain?",
         "answers": [
             "Tempranillo",
             "Garnacha",
-            "Monsatrell",
+            "Monastrell",
             "Mazuelo"
         ],
         "correctAnswerIndex": 0,
         "feedback": "Tempranillo is the most widely planted grape variety in Rioja and is the primary grape in most blends. It has medium tannins and red fruit flavors."
     },
     {
-        "question": "How many grape white varieties are permitted in white Rioja?",
+        "question": "How many white grape varieties are permitted in white Rioja?",
         "answers": [
             "3",
             "13",
@@ -3420,7 +3384,7 @@
             "5"
         ],
         "correctAnswerIndex": 2,
-        "feedback": "Eight white grape varieties are permitted in white Rioja. Viura is the most planted."
+        "feedback": "8 white grape varieties are permitted in white Rioja. Viura is the most planted."
     },
     {
         "question": "What is the primary grape variety grown in Cariñena?",
@@ -3431,7 +3395,7 @@
             "Garnacha"
         ],
         "correctAnswerIndex": 3,
-        "feedback": "Garnacha is the primary grape variety in both Cariñena and Calatayud which have warm continental climates and little rain."
+        "feedback": "Garnacha is the primary grape variety in both Cariñena and Calatayud, which have warm continental climates and little rain."
     },
     {
         "question": "What is the most widely planted grape variety in Navarra?",
@@ -3453,7 +3417,7 @@
             "Castilla"
         ],
         "correctAnswerIndex": 1,
-        "feedback": "Most of the world's Cava is made in Catalunya in the north east corner of Spain. Significant volumes of branded wines are also produed here."
+        "feedback": "Most of the world's Cava is made in Catalunya in the northeast corner of Spain. Significant volumes of branded wines are also produced here."
     },
     {
         "question": "Penedès is located in which region in Spain?",
@@ -3464,7 +3428,7 @@
             "Ribera del Duero"
         ],
         "correctAnswerIndex": 1,
-        "feedback": "Penedès is located in Catalunya. White grape varieties used for Cava are grown here, as well as siginificant quantities of international grapes."
+        "feedback": "Penedès is located in Catalunya. White grape varieties used for Cava are grown here, as well as significant quantities of international grapes."
     },
     {
         "question": "Ull de Llebre is another name for which grape variety in Catalunya, Spain?",
@@ -3475,7 +3439,7 @@
             "Garnacha"
         ],
         "correctAnswerIndex": 2,
-        "feedback": "Ulle de Llebre is another name for Tempranillos in Catalunya, Spain."
+        "feedback": "Ull de Llebre is another name for Tempranillo in Catalunya, Spain."
     },
     {
         "question": "What are the primary grape varieties of Priorat?",
@@ -3508,7 +3472,7 @@
             "Low tannins, low alcohol"
         ],
         "correctAnswerIndex": 0,
-        "feedback": "Red Priorat wines are usually high in tannins and alcohol and are deeply colored with black fruit flavors."
+        "feedback": "Red Priorat wines are usually high in tannins and alcohol and deeply colored with black fruit flavors."
     },
     {
         "question": "What primarily cools the region of Ribera del Duero in Spain?",
@@ -3519,7 +3483,7 @@
             "River"
         ],
         "correctAnswerIndex": 1,
-        "feedback": "Ribera del Duero is located on the highest part of the Meseta Central where altitude cools and helps to retain the grapes acidity and freshness."
+        "feedback": "Ribera del Duero is located on the highest part of the Meseta Central where altitude cools and helps to retain the grapes' acidity and freshness."
     },
     {
         "question": "Which Spanish wine area focuses primarily on white wines?",
@@ -3530,7 +3494,7 @@
             "Bierzo"
         ],
         "correctAnswerIndex": 2,
-        "feedback": "White wine is the primary focus in Rueda where the continental climate and cool summer nights is well-suited to Verdejo."
+        "feedback": "White wine is the primary focus in Rueda where the continental climate and cool summer nights are well-suited for producing crisp and aromatic wines from Verdejo."
     },
     {
         "question": "Beside Verdejo, what is the other primary grape variety in Rueda?",
@@ -3541,7 +3505,7 @@
             "Sauvignon Blanc"
         ],
         "correctAnswerIndex": 3,
-        "feedback": "Sauvignon Blanc and Verdejo are the primary grape varieties in Rueda where they can be produced varietally and in blends which are at least 50% Verdejo."
+        "feedback": "Sauvignon Blanc and Verdejo are the primary grape varieties in Rueda where they can be used varietally and in blends which are at least 50% Verdejo."
     },
     {
         "question": "What is the primary grape variety in Bierzo?",
@@ -3552,7 +3516,7 @@
             "Verdejo"
         ],
         "correctAnswerIndex": 1,
-        "feedback": "The primary grape variety of Bierzo in north west Spain is Mencía which makes highly acidic wines with red fruit aromas."
+        "feedback": "The primary grape variety in Bierzo in northwest Spain is Mencía which is used to make highly acidic wines with red fruit aromas."
     },
     {
         "question": "What is a common problem in the vineyards of Rías Baixas?",
@@ -3563,10 +3527,10 @@
             "Mildew"
         ],
         "correctAnswerIndex": 3,
-        "feedback": "Mildew and rot are a common problem in damp and humid Rías Baixas and air circulation is often encouraged by training the vines on pergolas."
+        "feedback": "Mildew and rot are a common problem in the damp and humid region of Rías Baixas in Spain. Air circulation is often encouraged by training the vines on pergolas."
     },
     {
-        "question": "What is the primary grape vareity in Rías Baixas?",
+        "question": "What is the primary grape variety in Rías Baixas?",
         "answers": [
             "Verdejo",
             "Mencía",
@@ -3574,7 +3538,7 @@
             "Tempranillo"
         ],
         "correctAnswerIndex": 2,
-        "feedback": "The highly acidic Albariño is the primary grape variety in Rías Baixas on the Atlantic cost in north west Spain. It has ripe stone fruit flavors."
+        "feedback": "The highly acidic Albariño is the primary grape variety in Rías Baixas on the Atlantic coast in northwest Spain. It has ripe stone fruit flavors."
     },
     {
         "question": "Which region is a source of value wines in Spain?",
@@ -3585,7 +3549,7 @@
             "Rioja"
         ],
         "correctAnswerIndex": 0,
-        "feedback": "Valencia is a source of value wines in Spain, Monastrell (aka Mourvèdre) is the most planted black variety and the local Merseguera the most planted white."
+        "feedback": "Valencia is a source of value wines in Spain. Monastrell (aka Mourvèdre) is the most planted black variety and the local Merseguera is the most planted white."
     },
     {
         "question": "In which region of Spain is there significant plantings of Muscat of Alexandria?",
@@ -3596,7 +3560,7 @@
             "Rioja"
         ],
         "correctAnswerIndex": 0,
-        "feedback": "There are significant plantings of Muscat of Alexandria in Valencia that is used to produce a sweet fortified wine known as Moscatel de Valencia."
+        "feedback": "There are significant plantings of Muscat of Alexandria in Valencia that is used to produce a sweet, fortified wine known as Moscatel de Valencia."
     },
     {
         "question": "What is the largest DO in Spain?",
@@ -3607,18 +3571,18 @@
             "Rioja"
         ],
         "correctAnswerIndex": 1,
-        "feedback": "La Mancha is the largest DO in Spain and Airén is the most planted grape variety."
+        "feedback": "La Mancha is the largest DO in Spain, and Airén is the most planted grape variety."
     },
     {
         "question": "What is the most planted grape variety in La Mancha?",
         "answers": [
             "Airén",
             "Tempranillo",
-            "Veredejo",
+            "Verdejo",
             "Albariño"
         ],
         "correctAnswerIndex": 0,
-        "feedback": "Able to withstand extreme heat and drought, Airén is the most planted grape variety in La Mancha which is also the largest wine region in Spain."
+        "feedback": "Able to withstand extreme heat and drought, Airén is the most planted grape variety in La Mancha, which is also the largest wine region in Spain."
     },
     {
         "question": "Cencibel is another name for which grape variety?",
@@ -3629,7 +3593,7 @@
             "Tempranillo"
         ],
         "correctAnswerIndex": 3,
-        "feedback": "Cencibel is the local name for Tempranillo in La Mancha, the largest wine region in Spain located south of Madrid in the Meseta Central."
+        "feedback": "Cencibel is the local name for Tempranillo in La Mancha, the largest wine region in Spain, which is located south of Madrid in the Meseta Central."
     },
     {
         "question": "What region in Spain is a good source for well-made and affordable wines?",
@@ -3643,7 +3607,7 @@
         "feedback": "La Mancha is a good source for well-made and affordable wines in Spain."
     },
     {
-        "question": "What is the oldest marked wine region in the world?",
+        "question": "What is the oldest demarcated wine region in the world?",
         "answers": [
             "Bairrada",
             "Douro",
@@ -3651,7 +3615,7 @@
             "Toro"
         ],
         "correctAnswerIndex": 1,
-        "feedback": "Douro, Portugal is the oldest marked wine region in the world."
+        "feedback": "Douro, Portugal is the oldest demarcated wine region in the world. Located along the Douro River near Porto, the region is famous for its steep-terraced vineyards and Port wine."
     },
     {
         "question": "What grape variety is a typical red blend from Alentejo made from?",
@@ -3668,9 +3632,9 @@
         "question": "What is another name for Tempranillo?",
         "answers": [
             "Alicante Bouschet",
-            "Trincadeira",
+            "Mencía",
             "Aragonês",
-            "Tinta Roriz"
+            "Touriga Nacional"
         ],
         "correctAnswerIndex": 2,
         "feedback": "Aragonês is another name for Tempranillo in Portugal. It is often used in red blends from Alentejo."
@@ -3695,7 +3659,7 @@
             "Roupeiro"
         ],
         "correctAnswerIndex": 0,
-        "feedback": "White wines from Bairrada in Portugal are usually made from the local grape varieties, Bical and Maria Gomez."
+        "feedback": "White wines from Bairrada in Portugal are usually made from the local grape varieties Bical and Maria Gomez."
     },
     {
         "question": "What is not one of the 5 grape varieties from which Port and unfortified wines are made from in Douro, Portugal?",
@@ -3706,7 +3670,7 @@
             "Tinta Cão"
         ],
         "correctAnswerIndex": 2,
-        "feedback": "Both Port and unforitifed wines are made from Touriga Nacional, Touriga Franca, Tinta Roriz, Tinta Barroca, and Tinta Câo."
+        "feedback": "Both Port and unfortified wines are made from Touriga Nacional, Touriga Franca, Tinta Roriz, Tinta Barroca, and Tinta Cão."
     },
     {
         "question": "What is not another name for Tempranillo?",
@@ -3717,10 +3681,10 @@
             "Trincadeira"
         ],
         "correctAnswerIndex": 3,
-        "feedback": "Cencibel in Spain and Aragonês and Tinta Roriz in Portugal are all names for Tempranillo, Trincadeira is not."
+        "feedback": "Cencibel in Spain, and Aragonês and Tinta Roriz in Portugal, are all names for Tempranillo. Trincadeira is not."
     },
     {
-        "question": "What is the largest wine making region in Portugal?",
+        "question": "What is the largest winemaking region in Portugal?",
         "answers": [
             "Alentejo",
             "Alentejano",
@@ -3742,7 +3706,7 @@
         "feedback": "The deep colored red wines from Douro are usually full-bodied and high in tannins, with flavors of black fruit and hints of toast."
     },
     {
-        "question": "In which region in Portugual are the sub-regions of Monçao and Melgaço?",
+        "question": "In which region in Portugal are the sub-regions of Monçâo and Melgaço?",
         "answers": [
             "Douro",
             "Alentejo",
@@ -3750,24 +3714,13 @@
             "Dão"
         ],
         "correctAnswerIndex": 2,
-        "feedback": "Monçao and Melgaço in which Alvarinho (aka Albariño) is grown, are both sub-regions of Vinho Verde. Alvarinho must be made from 100% Alvarinho."
+        "feedback": "Monçâo and Melgaço in which Alvarinho (aka Albariño) is grown, are both sub-regions of Vinho Verde. Alvarinho must be made from 100% Alvarinho."
     },
     {
         "question": "Which grape is grown in Vinho Verde in Portugal and traditionally used to produce slightly sparkling wines?",
         "answers": [
             "Roupeiro",
-            "Encruzao",
-            "Arinto",
-            "Antão Vaz"
-        ],
-        "correctAnswerIndex": 2,
-        "feedback": "Arinto and Loureiro are grown in Vinho Verde and traditionally used to produce slightly sparkling wines."
-    },
-    {
-        "question": "Which grape is grown in Vinho Verde and traditionally used to produce slightly sparkling wines?",
-        "answers": [
-            "Roupeiro",
-            "Encruzao",
+            "Encruzado",
             "Arinto",
             "Antão Vaz"
         ],
@@ -3783,29 +3736,29 @@
             "Aragonês"
         ],
         "correctAnswerIndex": 1,
-        "feedback": "Mencía is called Jaen in Portugual and is grown in Dão."
+        "feedback": "Mencía is called Jaen in Portugal and is grown in Dão."
     },
     {
         "question": "In what region in the United States is the Umpqua Valley located?",
         "answers": [
-            "Williamette valley",
+            "Willamette Valley",
             "Columbia Valley",
             "Southern Oregon",
             "Yakima Valley"
         ],
         "correctAnswerIndex": 2,
-        "feedback": "The Umpqua Valley is in Southern Oregon which is the warmest growing region in Oregon. But hills also allow cool climate varieties to be grown."
+        "feedback": "The Umpqua Valley is in Southern Oregon. It is the warmest growing region in Oregon but hills also allow cool climate varieties to be grown."
     },
     {
         "question": "In what region in the United States is the Rogue Valley located?",
         "answers": [
-            "Williamette valley",
+            "Willamette valley",
             "Columbia Valley",
             "Southern Oregon",
             "Yakima Valley"
         ],
         "correctAnswerIndex": 2,
-        "feedback": "The Rogue Valley is in Southern Oregon which is the warmest growing region in Oregon. But hills also allow cool climate varieties to be grown."
+        "feedback": "The Rogue Valley is in Southern Oregon which is the warmest growing region in Oregon but hills also allow cool climate varieties to be grown."
     },
     {
         "question": "What is the most widely planted black grape variety in California?",
@@ -3827,7 +3780,7 @@
             "Merlot"
         ],
         "correctAnswerIndex": 1,
-        "feedback": "Zinfandel is considered California's own grape variety. It can ripen unevenly with underripe and herbaceous grapes and concentrated raisins."
+        "feedback": "Zinfandel is considered California's own grape variety. It can ripen unevenly and a single bunch can have underripe berries, ripe grapes and concentrated raisins all at the same time, resulting in complex and highly alcoholic wines."
     },
     {
         "question": "Which grape variety is often used to make large volume rosé in California?",
@@ -3838,7 +3791,7 @@
             "Syrah"
         ],
         "correctAnswerIndex": 1,
-        "feedback": "Early picked Zinfandel is used to make large volume rosés called White Zinfandel which are fruity and pale, medium sweet, and low in alcohol."
+        "feedback": "Early picked Zinfandel is used to make large volume rosés called White Zinfandel. The wines are fruity, pale, medium-sweet, and low in alcohol."
     },
     {
         "question": "Which region in California has the largest planting of Merlot?",
@@ -3852,18 +3805,7 @@
         "feedback": "San Joaquin has the largest planting of Merlot in California and produces simple and inexpensive wines."
     },
     {
-        "question": "Which region produces premium Pinot Noir in California?",
-        "answers": [
-            "Monterey",
-            "Anderson Valley",
-            "Lodi",
-            "Santa Maria Valley"
-        ],
-        "correctAnswerIndex": 0,
-        "feedback": "Top quality Pinot Noir is produced in a range of styles in moderate regions, including Santa Maria Valley, the Russian River Valley, and Los Carneros."
-    },
-    {
-        "question": "What can Fumé blanc indicate on a label of Californian Sauvignon Blanc?",
+        "question": "What can Fumé Blanc indicate on a label of Californian Sauvignon Blanc?",
         "answers": [
             "Oaked-style",
             "Smokey notes",
@@ -3871,7 +3813,7 @@
             "Dry"
         ],
         "correctAnswerIndex": 0,
-        "feedback": "Fumé blanc can indicate that the Sauvignon Blanc was made in an oaked-style, although it is sometimes used on un-oaked wines as well."
+        "feedback": "Fumé Blanc can indicate that the Sauvignon Blanc was made in an oaked-style, although it is sometimes used on unoaked wines as well."
     },
     {
         "question": "What strongly influences the climate on the North Coast in California?",
@@ -3904,7 +3846,7 @@
             "Cascade"
         ],
         "correctAnswerIndex": 2,
-        "feedback": "The Mayacamas mountains on the western side of Napa divide the region from Sonoma. Vineyards are located on the mountains and on the valley floor."
+        "feedback": "The Mayacamas Mountains on the western side of Napa divide the region from Sonoma. Vineyards are located on the mountains and on the valley floor."
     },
     {
         "question": "Which mountain range divides Napa from the Central Valley in California?",
@@ -3915,10 +3857,10 @@
             "Cascade"
         ],
         "correctAnswerIndex": 1,
-        "feedback": "The Vaca mountains on the eastern side of Napa divide the region from the Central Valley. Vineyards are located on the mountains and on the valley floor."
+        "feedback": "The Vaca Mountains on the eastern side of Napa divide the region from the Central Valley. Vineyards are located on the mountains and on the valley floor."
     },
     {
-        "question": "What most siginficantly cools the Napa Valley?",
+        "question": "What most significantly cools the Napa Valley?",
         "answers": [
             "San Pablo Bay",
             "Lake Berryessa",
@@ -3942,13 +3884,13 @@
     {
         "question": "Wines made with Cabernet Sauvignon from which area in the fertile valley in Napa, California are said to have the most power?",
         "answers": [
-            "Stags Leap Disrict",
+            "Stags Leap District",
             "Rutherford",
             "Oakville",
             "Yountville"
         ],
         "correctAnswerIndex": 1,
-        "feedback": "Rutherford has the highest daytime temperatures and the least influence from San Pablo Bay resulting in powerful wines."
+        "feedback": "Rutherford has the highest daytime temperatures and the least influence from San Pablo Bay, resulting in a reputation for the most powerful wines."
     },
     {
         "question": "The Chalk Hill gap in the Mayacamas Mountains allows cool air to cool which area in Napa Valley?",
@@ -3962,7 +3904,7 @@
         "feedback": "Cool air passes through the Chalk Hill gap and lowers the daytime temperatures retaining acidity in grapes."
     },
     {
-        "question": "Which is above the fog level in the Napa Valley?",
+        "question": "What is above the fog level in the Napa Valley?",
         "answers": [
             "Howell Mountain",
             "Calistoga",
@@ -3970,7 +3912,7 @@
             "Oakville"
         ],
         "correctAnswerIndex": 0,
-        "feedback": "Howell Mountain is above the fog level in the Napa Valley and is cooled more by altitude than fog."
+        "feedback": "Howell Mountain is above the fog level in the Napa Valley and is cooled more by altitude than by fog."
     },
     {
         "question": "Which area faces west in the Napa Valley?",
@@ -3981,7 +3923,7 @@
             "Spring Mountain District"
         ],
         "correctAnswerIndex": 2,
-        "feedback": "Atlas Peak and Howell Mountain face west and are warmer as they receive the full afternoon sun making fuller wines that are more alcoholic."
+        "feedback": "Atlas Peak and Howell Mountain in the Napa Valley face west and are warmer as they receive the full afternoon sun making fuller and more alcoholic wines."
     },
     {
         "question": "What is the main white grape variety grown on the sides of the Napa Valley?",
@@ -4003,7 +3945,7 @@
             "Los Carneros"
         ],
         "correctAnswerIndex": 1,
-        "feedback": "The Petaluma Gap cools the foggy Russian River Valley which is good for premium Pinot Noirs and Chardonnays, and sparkling wines."
+        "feedback": "The Petaluma Gap cools the foggy Russian River Valley which is good for premium Pinot Noirs and Chardonnays, and for sparkling wines."
     },
     {
         "question": "Which area is known for premium old vine Zinfandel?",
@@ -4025,7 +3967,7 @@
             "Los Carneros"
         ],
         "correctAnswerIndex": 2,
-        "feedback": "With a reputation for old vine Zinfandel and Sauvignon Blanc, Rhône varieties are also popular in the Dry Creek Valley as is Cabernet Sauvignon."
+        "feedback": "With a reputation for old vine Zinfandel and Sauvignon Blanc, Rhône varieties are also popular in the Dry Creek Valley, as is Cabernet Sauvignon."
     },
     {
         "question": "Which Sonoma area is known for fuller bodied and more fleshy wines?",
@@ -4039,15 +3981,15 @@
         "feedback": "The Alexander Valley is very warm and known for producing fuller bodied and fleshier wines from Cabernet Sauvignon and international varieties."
     },
     {
-        "question": "Which Californian region is known for old vine Zinfandels?",
+        "question": "Which Californian region is known for old vine Zinfandel?",
         "answers": [
-            "Sonoma Valley AVA",
+            "Sonoma Valley",
             "Russian River Valley",
             "Mount Veeder",
             "Alexander Valley"
         ],
         "correctAnswerIndex": 0,
-        "feedback": "Parallel to Napa Valley and cooled by fog and breezes from San Pablo Bay, the Sonoma Valley is knwon for old vine Zinfandels and premium Chardonnay."
+        "feedback": "Parallel to Napa Valley and cooled by fog and breezes from San Pablo Bay, the Sonoma Valley is known for old vine Zinfandel and premium Chardonnay."
     },
     {
         "question": "Which Californian AVA is known as a source for aromatic whites, including Riesling and Gewurztraminer?",
@@ -4058,7 +4000,7 @@
             "Anderson Valley"
         ],
         "correctAnswerIndex": 3,
-        "feedback": "The Anderson Valley in Mendocino County is known for aromatic whites, including Riesling and Gewurztraminer, and sparkling wines."
+        "feedback": "The Anderson Valley in Mendocino County is known for aromatic whites, including Riesling and Gewurztraminer, and for sparkling wines."
     },
     {
         "question": "In which region in California are new varieties such as Rubired and Ruby Cabernet grown?",
@@ -4080,7 +4022,7 @@
             "Central Coast"
         ],
         "correctAnswerIndex": 0,
-        "feedback": "Barbera is widely planted in the Central Valley, as are Cabernet Sauvignon, Merlot, Chardonnay, Colombard and Chenin Blanc."
+        "feedback": "Barbera is widely planted in the Central Valley, as are Cabernet Sauvignon, Merlot, Chardonnay, Colombard, and Chenin Blanc."
     },
     {
         "question": "The Santa Lucia Highlands have a reputation for wines made from which grape?",
@@ -4091,7 +4033,7 @@
             "Syrah"
         ],
         "correctAnswerIndex": 2,
-        "feedback": "The Santa Lucia Highlands on the slopes of the Salinas Valley in Monterey County, California are known for premium Chardonnays with citrus and tropical fruit flavors. "
+        "feedback": "The Santa Lucia Highlands on the slopes of the Salinas Valley in Monterey County, California are known for premium Chardonnays with citrus and tropical fruit flavors."
     },
     {
         "question": "Which region is home to some of the oldest and best quality Zinfandels in California?",
@@ -4102,7 +4044,7 @@
             "Lodi"
         ],
         "correctAnswerIndex": 3,
-        "feedback": "Lodi in the Scaramento and San Joaquin Valleys is home to some of the oldest and best quality Zinfandels in California."
+        "feedback": "Lodi in the Sacramento and San Joaquin Valleys is home to some of the oldest and best quality Zinfandels in California."
     },
     {
         "question": "What are the most important black grape varieties in Washington State?",
@@ -4113,10 +4055,10 @@
             "Pinot Noir, Cabernet Franc"
         ],
         "correctAnswerIndex": 0,
-        "feedback": "Cabernet and Merlot are the most important black grape varieties in Washington where they make plummy wines that can age."
+        "feedback": "Cabernet and Merlot are the most important black grape varieties in Washington, where they are used to make plummy wines that can age."
     },
     {
-        "question": "What is the most planted white grape variety in Washington?",
+        "question": "What is the most planted white grape variety in Washington state?",
         "answers": [
             "Pinot Gris",
             "Sauvignon Blanc",
@@ -4134,11 +4076,11 @@
             "Walla Walla",
             "Okanagan Valley"
         ],
-        "correctAnswerIndex": 2,
-        "feedback": "The Okanagan Valley is a DVA in Canada."
+        "correctAnswerIndex": 3,
+        "feedback": "The Okanagan Valley is a DVA in British Columbia in Canada. While both red and white wines are produced from a variety of grapes, Pinot Gris is often considered the region's signature and Merlot is the most common."
     },
     {
-        "question": "What is a major problem in Columbia Valley?",
+        "question": "What is a major problem in the Columbia Valley?",
         "answers": [
             "Summer hail",
             "Heavy rains",
@@ -4157,7 +4099,7 @@
             "Mayacamas"
         ],
         "correctAnswerIndex": 1,
-        "feedback": "The Columbia Valley lies in the rain shadow of the Cascade mountains and river irrigation is necessary."
+        "feedback": "The Columbia Valley lies in the rain shadow of the Cascade Mountains, and river irrigation is necessary."
     },
     {
         "question": "What grape variety is the Finger Lakes region in New York state best known for?",
@@ -4179,7 +4121,7 @@
             "Black grape variety"
         ],
         "correctAnswerIndex": 1,
-        "feedback": "Vidal is a hybrid that is used to produce premium ice wine in Canada, although it has less acid struture and perfume than those made with Riesling."
+        "feedback": "Vidal is a hybrid that is used to produce premium ice wine in Canada, although it has less acid structure and perfume than those made with Riesling."
     },
     {
         "question": "What type of climate is found in most of Chile?",
@@ -4200,8 +4142,8 @@
             "Australia",
             "Argentina"
         ],
-        "correctAnswerIndex": 1,
-        "feedback": "The cold Humboldt Current cmes from Antartica and blows up the coast of Chile blowing cold air into the river valleys."
+        "correctAnswerIndex": 0,
+        "feedback": "The cold Humboldt Current comes from Antarctica and blows up the coast of Chile, blowing cold air into the river valleys."
     },
     {
         "question": "El Niño often causes what in Chile?",
@@ -4212,29 +4154,18 @@
             "Cold winds"
         ],
         "correctAnswerIndex": 2,
-        "feedback": "El Niño is a weather pattern that causes heavy rains in Chile and throughout the Pacific. El Niña causes drought."
-    },
-    {
-        "question": "What is the most planted grape variety in Chile?",
-        "answers": [
-            "Chardonnay",
-            "Merlot",
-            "Cabernet Sauvignon",
-            "Syrah"
-        ],
-        "correctAnswerIndex": 2,
-        "feedback": "Cabernet Sauvignon is the most planted grape variety in Chile. Ripe black fruit aromas and herbaceousness are common in premium wines."
+        "feedback": "El Niño is a weather pattern that causes heavy rains in Chile and throughout the Pacific. La Niña causes drought."
     },
     {
         "question": "Which grape variety is Cabernet Sauvignon frequently blended with in Chile?",
         "answers": [
-            "Carmenère",
+            "Carménère",
             "Carignan",
             "Cabernet Franc",
             "Cinsault"
         ],
         "correctAnswerIndex": 0,
-        "feedback": "Cabernet Sauvignon is frequently blended with Carmenère, Syrah and Merlot in Chile."
+        "feedback": "Cabernet Sauvignon is frequently blended with Carménère, Syrah and Merlot in Chile."
     },
     {
         "question": "What is considered Chile's signature grape?",
@@ -4242,10 +4173,10 @@
             "Merlot",
             "Cabernet Sauvignon",
             "Syrah",
-            "Carmenère"
+            "Carménère"
         ],
         "correctAnswerIndex": 3,
-        "feedback": "Late ripening Carmenère with black fruit flavors and herbal aromas is the signature grape of Chile."
+        "feedback": "Late ripening Carménère with black fruit flavors and herbal aromas is the signature grape of Chile."
     },
     {
         "question": "Which region in Chile is known to produce lighter bodied wines from Syrah with hints of pepper?",
@@ -4256,21 +4187,10 @@
             "Maipo Valley"
         ],
         "correctAnswerIndex": 1,
-        "feedback": "Syrahs from northern regions including Elqui Valley are known for lighter Syrahs with hints of pepper and also Sauvignon Blanc."
+        "feedback": "Syrah from the northern regions in Chile, including the Elqui Valley, are lighter with hints of pepper."
     },
     {
-        "question": "Which region in Chile is known to produce lighter bodied wines from Syrah with hints of pepper?",
-        "answers": [
-            "Colchagua Valley",
-            "Elqui Valley",
-            "Cachapoal Valley",
-            "Maipo Valley"
-        ],
-        "correctAnswerIndex": 1,
-        "feedback": "Syrahs from northern regions including the Elqui Valley are known to produce lighter Syrahs with hints of pepper."
-    },
-    {
-        "question": "Which region in Chile is known for fuller bodied Syrahs with intense black fruit flavors?",
+        "question": "Which region in Chile is known for fuller bodied Syrah with intense black fruit flavors?",
         "answers": [
             "Colchagua Valley",
             "Elqui Valley",
@@ -4278,7 +4198,7 @@
             "Leyda Valley"
         ],
         "correctAnswerIndex": 0,
-        "feedback": "Hotter climates such as those found in Colchagua Valley are known for fuller bodied Syrahs with intense black fruit flavors."
+        "feedback": "Hotter climates such as those found in the Colchagua Valley are known for producing fuller bodied Syrah with intense black fruit flavors."
     },
     {
         "question": "What is the third most planted white grape variety in Chile?",
@@ -4289,7 +4209,7 @@
             "Semillon"
         ],
         "correctAnswerIndex": 2,
-        "feedback": "Mostly used in the brandy Pisco, Muscat of Alexandria is the third most planted white grape variety in Chile after Sauvingon Blanc and Chardonnay."
+        "feedback": "Mostly used to produce Pisco, a South American grape brandy, Muscat of Alexandria is the 3rd most planted white grape variety in Chile, after Sauvignon Blanc and Chardonnay."
     },
     {
         "question": "Which region in Chile is known for producing highly acidic fruity wines with Sauvignon Blanc?",
@@ -4300,7 +4220,7 @@
             "Maule Valley"
         ],
         "correctAnswerIndex": 0,
-        "feedback": "The San Antonio Valley and Casablanca Valley in the Aconcagua region are known for producing highly acidic fruity wines with Sauvignon Blanc."
+        "feedback": "The San Antonio Valley and the Casablanca Valley, both in the Aconcagua region, are known for producing highly acidic, fruity wines with Sauvignon Blanc."
     },
     {
         "question": "Which region in Chile is known for producing particularly elegant Chardonnays?",
@@ -4314,7 +4234,7 @@
         "feedback": "The Limarí Valley in Chile is known for producing elegant Chardonnays, as are the Aconcagua Valley and the Casablanca Valley."
     },
     {
-        "question": "In which region are aromatic grape varieties such as Viognier, Riesling and Gewurtztraminer grown?",
+        "question": "In which region are aromatic grape varieties such as Viognier, Riesling, and Gewurztraminer grown in Chile?",
         "answers": [
             "San Antonio Valley",
             "Colchagua Valley",
@@ -4322,18 +4242,18 @@
             "Itata Valley"
         ],
         "correctAnswerIndex": 3,
-        "feedback": "Aromatic grape varieites such as Viognier, Riesling and Gewurztraminer are grown in cool location such as the Itata Valley and the Bío Bío Valley."
+        "feedback": "Aromatic grape varieties such as Viognier, Riesling, and Gewurztraminer are grown in cool locations, such as the Itata Valley and the Bío Bío Valley."
     },
     {
-        "question": "Which sub-region is in the principle wine region that is furthest north in Chile?",
+        "question": "Which sub-region is in the principal wine region that is furthest north in Chile?",
         "answers": [
-            "Chopa Valley",
+            "Choapa Valley",
             "Colchagua Valley",
             "Curico Valley",
             "Casablanca Valley"
         ],
         "correctAnswerIndex": 0,
-        "feedback": "Choapa Valley, Elqui Valley and Limari Vally are in the Coquimbo region which is the principle region that is furthest north in Chile."
+        "feedback": "Choapa Valley, Elqui Valley, and Limarí Valley are in the Coquimbo region which is the principal region that is furthest north in Chile."
     },
     {
         "question": "What is the biggest challenge for vineyards in the Coquimbo Region of Chile?",
@@ -4363,7 +4283,7 @@
             "Syrah",
             "Sauvignon Blanc",
             "Cabernet Sauvignon",
-            "Carmenère"
+            "Carménère"
         ],
         "correctAnswerIndex": 2,
         "feedback": "Cabernet Sauvignon is the dominant grape variety in the Aconcagua Valley, although Syrah is growing in importance."
@@ -4385,15 +4305,15 @@
             "Cabernet Sauvignon",
             "Merlot",
             "Syrah",
-            "Carmenère"
+            "Carménère"
         ],
         "correctAnswerIndex": 1,
-        "feedback": "Merlot is not one of the classic grapes for premium wines in Aconcagua. Cabernet Sauvignon dominates while Syrah and Carmenère are increasing."
+        "feedback": "Merlot is not one of the classic grapes for premium wines in Aconcagua. Cabernet Sauvignon dominates, while Syrah and Carménère are increasing."
     },
     {
         "question": "Which Chilean sub-region is notably cooler?",
         "answers": [
-            "Aconcaqua Valley",
+            "Aconcagua Valley",
             "Maule Valley",
             "Casablanca Valley",
             "Maipo Valley"
@@ -4410,7 +4330,7 @@
             "Sauvignon Blanc"
         ],
         "correctAnswerIndex": 3,
-        "feedback": "White varieites are primarily grown in the San Antonio Valley in Chile as it is notably cooler and Sauvignon Blanc has the greatest reputation."
+        "feedback": "White varieties are primarily grown in the San Antonio Valley in Chile as it is notably cooler. Sauvignon Blanc has the highest reputation."
     },
     {
         "question": "In which sub-region in Chile is the Leyda Valley located?",
@@ -4418,7 +4338,7 @@
             "San Antonio Valley",
             "Casablanca Valley",
             "Maipo Valley",
-            "Elqui "
+            "Elqui"
         ],
         "correctAnswerIndex": 0,
         "feedback": "The Leyda Valley is a cool zone in the San Antonio Valley in the Aconcagua region that has a high reputation for Sauvignon Blanc and Chardonnay."
@@ -4428,7 +4348,7 @@
         "answers": [
             "Merlot",
             "Pinot Noir",
-            "Carmenère",
+            "Carménère",
             "Cabernet Sauvignon"
         ],
         "correctAnswerIndex": 1,
@@ -4482,12 +4402,12 @@
         "question": "What is the most notable grape variety in the western hills of the Maule Valley in Chile?",
         "answers": [
             "Carignan",
-            "Carmenère",
+            "Carménère",
             "Cabernet Sauvignon",
             "Syrah"
         ],
         "correctAnswerIndex": 0,
-        "feedback": "Carignan is the most notable wine in the Maule Valley in the Central Valley region where many vines are dry-farmed and bush trained."
+        "feedback": "Carignan is the most notable grape in the Maule Valley in the Central Valley region where many vines are dry-farmed and bush trained."
     },
     {
         "question": "Which sub-region for wine production is furthest south in Chile?",
@@ -4505,11 +4425,11 @@
         "answers": [
             "Merlot",
             "Syrah",
-            "Carmenère",
+            "Carménère",
             "Cabernet Sauvignon"
         ],
         "correctAnswerIndex": 2,
-        "feedback": "Carmenère does well on the valley floor of the Cachapoal Valley zone, while Cabernet Sauvignon and Syrah do well on the cool eastern end."
+        "feedback": "Carménère does well on the valley floor of the Cachapoal Valley zone, while Cabernet Sauvignon and Syrah do well on the cool eastern end."
     },
     {
         "question": "Which area in Chile is cut off from ocean influence?",
@@ -4520,18 +4440,7 @@
             "San Antonio Valley"
         ],
         "correctAnswerIndex": 2,
-        "feedback": "The Cachapoal Valley in the Rapel sub-region is cut off from ocean influence. Carmenère, Cabernet Sauvignon and Syrah do well here."
-    },
-    {
-        "question": "Which sub-region in Chile is entirely cut off from ocean breezes?",
-        "answers": [
-            "Casablanca Valley",
-            "San Antonio Valley",
-            "Colchagua Valley",
-            "Cachapoal Valley"
-        ],
-        "correctAnswerIndex": 3,
-        "feedback": "The Cachapoal Valley sub-region is cut off from ocean breezes whereas Colchagua receives some ocean influence."
+        "feedback": "The Cachapoal Valley in the Rapel sub-region is cut off from ocean influence. Carménère, Cabernet Sauvignon, and Syrah do well here."
     },
     {
         "question": "In which wine sub-region in Chile is Apalta located?",
@@ -4542,7 +4451,7 @@
             "Cachapoal Valley"
         ],
         "correctAnswerIndex": 2,
-        "feedback": "Apalta is located in the Colchagua Valley has a repuation for premium wines."
+        "feedback": "A renowned horseshoe shaped valley, Apalta is located in the Colchagua Valley in Chile and has a reputation for Carménère-dominant blends, Cabernet Sauvignon, and Syrah."
     },
     {
         "question": "Which region in Chile is showing great promise for aromatic grape varieties?",
@@ -4553,10 +4462,10 @@
             "Casablanca Valley"
         ],
         "correctAnswerIndex": 0,
-        "feedback": "The Bío Bío Valley is showing great promise for aromatic varieties, as well as Pinot Noir and Chardonnay."
+        "feedback": "The Bío Bío Valley is showing great promise for aromatic grape varieties, as well as Pinot Noir and Chardonnay."
     },
     {
-        "question": "In which Chilean regions are plantings dominated by País and Muscat of Alexandra?",
+        "question": "In which Chilean regions are plantings dominated by País and Muscat of Alexandria?",
         "answers": [
             "Limarí Valley",
             "San Antonio Valley",
@@ -4586,7 +4495,7 @@
             "Spring frosts"
         ],
         "correctAnswerIndex": 2,
-        "feedback": "In the rain shadow of the Andes mountains, the wine regions of Argentina are very dry with low fungal disease, rot and mildew make Argentina."
+        "feedback": "In the rain shadow of the Andes mountains, the wine regions of Argentina are very dry with low levels of fungal disease, rot, and mildew."
     },
     {
         "question": "What is the flagship grape variety of Argentina?",
@@ -4597,7 +4506,7 @@
             "Cabernet Sauvignon"
         ],
         "correctAnswerIndex": 0,
-        "feedback": "Malbec is the flagship grape of Argentina where it produces deeply colored, full-bodied wines with black fruit flavors and high tannins."
+        "feedback": "Malbec is the flagship grape variety of Argentina where it produces deeply colored, full-bodied wines with black fruit flavors and high tannins."
     },
     {
         "question": "What is generally true of the wines produced with the Bonarda grape variety in Argentina?",
@@ -4641,7 +4550,7 @@
             "Pedro Gimenez"
         ],
         "correctAnswerIndex": 0,
-        "feedback": "Torrentés is the specialty of La Rioja Province in Argentina, while the most planted black vareities are Cabernet Sauvignon, Syrah and Bonarda."
+        "feedback": "Torrontés is the specialty of La Rioja Province in Argentina, while the most planted black varieties are Cabernet Sauvignon, Syrah, and Bonarda."
     },
     {
         "question": "Wines from which grape variety is San Juan Province in Argentina noted for?",
@@ -4655,7 +4564,7 @@
         "feedback": "San Juan Province is noted for its Syrah, while it is also noted for Malbec, Cabernet Sauvignon, and Bonarda."
     },
     {
-        "question": "Which division in the Mendoza Province focus primarily on inexpensive high-volume wine?",
+        "question": "Which division in the Mendoza Province focuses primarily on inexpensive high-volume wine?",
         "answers": [
             "Northern",
             "Central",
@@ -4663,7 +4572,7 @@
             "Southern"
         ],
         "correctAnswerIndex": 0,
-        "feedback": "The Northern and Eastern divisions focus primarily on inexpensive high-volume wine where the Mendoza river provides irrigation."
+        "feedback": "The Northern and Eastern divisions in Argentina focus primarily on inexpensive high-volume wine, where the Mendoza river provides irrigation."
     },
     {
         "question": "Which division in the Mendoza Province has the longest reputation for premium wines?",
@@ -4674,10 +4583,10 @@
             "Southern"
         ],
         "correctAnswerIndex": 1,
-        "feedback": "The Central division of Mendoza has the longest reputation for premium wines and many famous producers are located here."
+        "feedback": "The Central division of Mendoza has the longest reputation for premium wines, and many famous producers are located here."
     },
     {
-        "question": "Which department has a reputation for hiqh-quality old vine Malbec in Argentina?",
+        "question": "Which department has a reputation for high-quality old vine Malbec in Argentina?",
         "answers": [
             "Cafayate",
             "La Rioja",
@@ -4685,7 +4594,7 @@
             "Maipú"
         ],
         "correctAnswerIndex": 2,
-        "feedback": "The Luján de Cuyo department in Central Mendoza has a repuation for high quality old vine Malbec."
+        "feedback": "The Luján de Cuyo department in Central Mendoza has a reputation for high quality old vine Malbec."
     },
     {
         "question": "In which province of Argentina is the Luján de Cuyo department located?",
@@ -4696,18 +4605,7 @@
             "La Rioja"
         ],
         "correctAnswerIndex": 1,
-        "feedback": "Luján de Cuyo is located in the Central division of Mendoza and produces high quality Malbec, old vines add softeness and sweet spice."
-    },
-    {
-        "question": "Which division in Mendoza, Argentina has the highest vineyards in the province?",
-        "answers": [
-            "Northern",
-            "Central",
-            "Uco Valley",
-            "Eastern"
-        ],
-        "correctAnswerIndex": 2,
-        "feedback": "The Uco Valley has the highest vineyards in the Mendoza province at 900 to 1500 meters where cool nights can retain acidity and add floral notes."
+        "feedback": "Luján de Cuyo is located in the Central division of Mendoza in Argentina and produces high quality Malbec. Old vines add softness and sweet spice."
     },
     {
         "question": "In which province is Tupungato located in Argentina?",
@@ -4721,7 +4619,7 @@
         "feedback": "Tupungato in the Uco Valley of Mendoza is increasingly recognized for its premium wines."
     },
     {
-        "question": "In which Argentinan province is the Maipú department located?",
+        "question": "In which Argentinian province is the Maipú department located?",
         "answers": [
             "San Juan",
             "La Rioja",
@@ -4729,29 +4627,18 @@
             "Mendoza"
         ],
         "correctAnswerIndex": 3,
-        "feedback": "Maipú is located in Central Mendoza. Syrah and Cabernet Sauvignon do well here at the lower altitude as do old vine Bonarda and Tempranillo."
+        "feedback": "Maipú is located in Central Mendoza. Syrah and Cabernet Sauvignon do well here at the lower altitude, as do old vine Bonarda and Tempranillo."
     },
     {
         "question": "Which province is located in the Patagonia region of Argentina?",
         "answers": [
-            "Rió Negro",
+            "Río Negro",
             "La Rioja",
             "Salta",
             "Mendoza"
         ],
         "correctAnswerIndex": 0,
-        "feedback": "The low altitude Rió Negro province is in Patagonia. Strong desert winds can be a challenge, but low rainfall also means low disease."
-    },
-    {
-        "question": "Which province is located in the Patagonia region of Argentina?",
-        "answers": [
-            "La Rioja",
-            "Neuquén",
-            "Salta",
-            "Mendoza"
-        ],
-        "correctAnswerIndex": 1,
-        "feedback": "The low altitude Neuquén province is in Patagonia and it's potential is still being explored."
+        "feedback": "The low altitude Río Negro province is in Patagonia. Strong desert winds can be a challenge, but low rainfall also means low disease."
     },
     {
         "question": "The cold Benguela Current has an impact on vineyards in which country?",
@@ -4762,7 +4649,7 @@
             "New Zealand"
         ],
         "correctAnswerIndex": 1,
-        "feedback": "The cold Benguela Current from Antartica cools vineyards on the coast of South Africa, as does the Cape Doctor, a strong south-easterly summer wind."
+        "feedback": "The cold Benguela Current from Antarctica cools vineyards on the coast of South Africa, as does the Cape Doctor, a strong southeasterly summer wind."
     },
     {
         "question": "What is the most planted black grape variety in South Africa?",
@@ -4773,10 +4660,10 @@
             "Pinotage"
         ],
         "correctAnswerIndex": 0,
-        "feedback": "Cabernet Sauvignon is the most planted black grape variety in South Africa and is used to produce varietal wines and Bordeaux-style blends."
+        "feedback": "Cabernet Sauvignon is the most planted black grape variety in South Africa. It is used to produce varietal wines and Bordeaux-style blends."
     },
     {
-        "question": "Which of the following black grape varietes is least planted in South Africa?",
+        "question": "Which of the following black grape varieties is least planted in South Africa?",
         "answers": [
             "Cabernet Sauvignon",
             "Merlot",
@@ -4784,7 +4671,7 @@
             "Pinotage"
         ],
         "correctAnswerIndex": 2,
-        "feedback": "Pinot Noir is planted but it is less tolerant of the hot climate in Souh Africa and is only planted in small amounts along the coast."
+        "feedback": "Pinot Noir is planted but it is less tolerant of the hot climate in South Africa and is only planted in small amounts along the coast."
     },
     {
         "question": "What is the most planted grape variety in South Africa?",
@@ -4795,7 +4682,7 @@
             "Merlot"
         ],
         "correctAnswerIndex": 2,
-        "feedback": "Chenin Blanc is the most planted grape variety in South Africa and produces simple wines with stone fruit flavors or complex wines from old bush vines."
+        "feedback": "Chenin Blanc is the most planted grape variety in South Africa. It is used to produce simple wines with stone fruit flavors, and complex wines from old bush vines."
     },
     {
         "question": "What is the second most planted white grape variety in South Africa?",
@@ -4817,7 +4704,7 @@
             "Muscat of Alexandria"
         ],
         "correctAnswerIndex": 3,
-        "feedback": "Hanepoot refers to Muscat of Alexandria in South Africa which is used to produce late harvest dessert wines here which can be influenced by noble rot."
+        "feedback": "Hanepoot refers to Muscat of Alexandria in South Africa. It is used to produce late harvest dessert wines which can be influenced by noble rot."
     },
     {
         "question": "Which South African wines are noted for having a herbaceous character?",
@@ -4831,7 +4718,7 @@
         "feedback": "The highly acidic Sauvignon Blanc with flavors of citrus and green fruit can display a herbaceous character in South Africa."
     },
     {
-        "question": "Which district is in the Coastal region of South Africa?",
+        "question": "Which district is in the coastal region of South Africa?",
         "answers": [
             "Robertson",
             "Walker Bay",
@@ -4839,7 +4726,7 @@
             "Swartland"
         ],
         "correctAnswerIndex": 2,
-        "feedback": "Stellenbosch is in the Coastal region of South Africa and has a reputation for red wines, typically Cabernet Sauvignon and Merlot, often in Bordeaux-style blends."
+        "feedback": "Stellenbosch is in the coastal region of South Africa and has a reputation for red wines, typically Cabernet Sauvignon and Merlot, often in Bordeaux-style blends."
     },
     {
         "question": "What are the most planted white grape varieties in the Paarl district?",
@@ -4850,7 +4737,7 @@
             "Chardonnay, Viognier"
         ],
         "correctAnswerIndex": 0,
-        "feedback": "Chenin Blanc and Chardonnay are the most planted white varieties in the Paarl district in the Coastal region of South Africa."
+        "feedback": "Chenin Blanc and Chardonnay are the most planted white varieties in the Paarl district in the coastal region of South Africa."
     },
     {
         "question": "The Cape Doctor cools vineyards in which country?",
@@ -4861,7 +4748,7 @@
             "South Africa"
         ],
         "correctAnswerIndex": 3,
-        "feedback": "The Cape Doctor cools vineyards in South Africa which is a strong south-easterly wind that blows in the summer."
+        "feedback": "The Cape Doctor, a strong southeasterly wind that blows in the summer, cools vineyards in South Africa. It's called the Cape Doctor because it's believed to purify the air."
     },
     {
         "question": "In which district in South Africa is irrigation essential?",
@@ -4875,14 +4762,14 @@
         "feedback": "Worcester in the Breede River Valley is hot and dry and irrigation is essential. Chenin Blanc and Colombard are the most planted varieties."
     },
     {
-        "question": "Which district in South Africa is a reliable source of well made wines for high volume brands?",
+        "question": "Which district in South Africa is a reliable source of well-made wines for high volume brands?",
         "answers": [
             "Paarl",
             "Constantia",
             "Robertson",
             "Walker Bay"
         ],
-        "correctAnswerIndex": 3,
+        "correctAnswerIndex": 2,
         "feedback": "Robertson and Worcester in the Breede River Valley are a reliable source for well-made high volume brands."
     },
     {
@@ -4891,13 +4778,13 @@
             "Paarl",
             "Swartland",
             "Robertson",
-            "Heeml-en-Aarde"
+            "Hemel-en-Aarde"
         ],
         "correctAnswerIndex": 1,
         "feedback": "Swartland has a growing reputation for innovation and premium wines, particularly for dry farmed Syrah and old vine Chenin Blanc."
     },
     {
-        "question": "Which grape vareity does the Durbanville Ward in South Africa have a reputation for?",
+        "question": "Which grape variety does the Durbanville Ward in South Africa have a reputation for?",
         "answers": [
             "Muscat",
             "Chardonnay",
@@ -4916,7 +4803,7 @@
             "Sauvignon Blanc"
         ],
         "correctAnswerIndex": 0,
-        "feedback": "Vin de Constance is a sweet wine made from late-harvested Muscat in the Constantia ward in the Coastal region of South Africa."
+        "feedback": "Vin de Constance is a sweet wine made from late-harvested Muscat in the Constantia ward in the coastal region of South Africa."
     },
     {
         "question": "Which location has a reputation for wines made with Semillon in South Africa?",
@@ -4927,7 +4814,7 @@
             "Paarl"
         ],
         "correctAnswerIndex": 2,
-        "feedback": "The Constantia ward in South Africa has a reputation for Semillon and Sauvignon Blanc in an area south of Table Mountain and closer to Cape Point."
+        "feedback": "The Constantia ward in South Africa has a reputation for Semillon and Sauvignon Blanc. It is located south of Table Mountain and close to Cape Point."
     },
     {
         "question": "What area has long been home to some of South Africa's best Chardonnays and Pinot Noirs?",
@@ -4938,7 +4825,237 @@
             "Elim"
         ],
         "correctAnswerIndex": 1,
-        "feedback": "Hemel-en-Aarde in the Walker Bay district is the most well-established vineyard area on the Cape South Coast noted for Chardonnay and Pinot Noir."
+        "feedback": "Hemel-en-Aarde ('Heaven and Earth') in the Walker Bay district is the most well-established vineyard area on the coast of South Africa. It is noted for Chardonnay and Pinot Noir."
+    },
+    {
+        "question": "What is the minimum aging requirement for a Barolo DOCG before release?",
+        "answers": [
+            "2 years with 18 months in oak",
+            "3 years with 18 months in oak",
+            "5 years with 18 months in oak",
+            "4 years with 24 months in oak"
+        ],
+        "correctAnswerIndex": 1,
+        "feedback": "Made exclusively from Nebbiolo in Piedmont, Barolo DOCG must be aged for a minimum of 3 years (38 months) before release, of which 18 months must be in oak. Riserva requires 5 years total."
+    },
+    {
+        "question": "Which grape variety is used to produce Amarone della Valpolicella?",
+        "answers": [
+            "Garganega",
+            "Corvina",
+            "Sangiovese",
+            "Nebbiolo"
+        ],
+        "correctAnswerIndex": 1,
+        "feedback": "Amarone della Valpolicella is made primarily from Corvina, along with Corvinone and Rondinella. The grapes are dried for several months before fermentation in a process called appassimento, which concentrates sugars and flavors, resulting in a rich, full-bodied, and highly alcoholic dry wine."
+    },
+    {
+        "question": "What is the primary grape variety in Vino Nobile di Montepulciano DOCG?",
+        "answers": [
+            "Montepulciano",
+            "Sangiovese",
+            "Sagrantino",
+            "Aglianico"
+        ],
+        "correctAnswerIndex": 1,
+        "feedback": "Vino Nobile di Montepulciano is made primarily from Sangiovese, known locally as Prugnolo Gentile. Montepulciano is a town in Tuscany, not a grape variety — a common source of confusion with the Montepulciano d'Abruzzo DOC, which is made from the Montepulciano grape."
+    },
+    {
+        "question": "Which Tuscan DOCG is known for producing Sangiovese-dominant wines that must be aged for at least 2 years?",
+        "answers": [
+            "Morellino di Scansano",
+            "Vernaccia di San Gimignano",
+            "Bolgheri",
+            "Pomino"
+        ],
+        "correctAnswerIndex": 0,
+        "feedback": "Morellino di Scansano DOCG is located in the Maremma coastal area of Tuscany. It is made from at least 85% Sangiovese, known locally as Morellino. The Riserva must be aged for at least 2 years before release."
+    },
+    {
+        "question": "What grape variety is Sagrantino di Montefalco DOCG made from?",
+        "answers": [
+            "Sangiovese",
+            "Montepulciano",
+            "Sagrantino",
+            "Aglianico"
+        ],
+        "correctAnswerIndex": 2,
+        "feedback": "Sagrantino di Montefalco DOCG is made exclusively from Sagrantino, a grape variety native to Umbria in central Italy. The wines are deeply colored and have some of the highest tannin levels of any Italian wine. Minimum aging is 37 months including 12 in oak."
+    },
+    {
+        "question": "Fino and Manzanilla Sherries are best described as which style?",
+        "answers": [
+            "Oxidatively aged, medium-sweet",
+            "Aged under flor, bone dry",
+            "Solera-blended, off-dry",
+            "Fortified, sweet"
+        ],
+        "correctAnswerIndex": 1,
+        "feedback": "Fino and Manzanilla are biologically aged under a layer of flor yeast which protects them from oxidation, resulting in pale, bone dry, and delicate wines. Manzanilla is produced in Sanlúcar de Barrameda where the coastal humidity encourages a thicker flor, giving it a slightly saline character."
+    },
+    {
+        "question": "Which Sherry style is produced by intentionally oxidative aging without flor?",
+        "answers": [
+            "Fino",
+            "Manzanilla",
+            "Oloroso",
+            "Amontillado"
+        ],
+        "correctAnswerIndex": 2,
+        "feedback": "Oloroso is aged oxidatively without the protection of flor yeast, resulting in a dark, nutty, and full-bodied Sherry. It is fortified to a higher level than Fino (around 17-18% abv) which prevents flor from developing. Oloroso can be dry or sweetened."
+    },
+    {
+        "question": "What is the purpose of the solera system in Sherry production?",
+        "answers": [
+            "Dry grapes before fermentation",
+            "Induce flor yeast growth",
+            "Blend wine across vintages",
+            "Freeze to concentrate sugars"
+        ],
+        "correctAnswerIndex": 2,
+        "feedback": "The solera is a fractional blending system in which wine is drawn from the oldest barrels for bottling and replenished with younger wine from the next oldest row, known as criaderas. This ensures consistency of style across vintages. No more than one-third of each barrel is drawn off at any one time."
+    },
+    {
+        "question": "Which grape variety is primarily used to make Chablis Grand Cru?",
+        "answers": [
+            "Aligoté",
+            "Pinot Blanc",
+            "Chardonnay",
+            "Pinot Gris"
+        ],
+        "correctAnswerIndex": 2,
+        "feedback": "Like all Chablis appellations, Grand Cru must be made exclusively from Chardonnay. There are 7 Grand Cru vineyards in Chablis, all located on a single slope on the right bank of the Serein river facing southwest. The wines are known for their intense minerality, high acidity, and steely character."
+    },
+    {
+        "question": "What is the name of the soil type unique to Chablis that contributes to its mineral character?",
+        "answers": [
+            "Terra rossa",
+            "Kimmeridgian limestone",
+            "Llicorella",
+            "Tuff"
+        ],
+        "correctAnswerIndex": 1,
+        "feedback": "The best vineyards in Chablis are planted on Kimmeridgian limestone, a soil rich in marine fossils that is believed to contribute to the wines' distinctive flinty, mineral character. Portlandian limestone is found in the lesser Petit Chablis vineyards."
+    },
+    {
+        "question": "What is the minimum Prädikat level in Germany at which grapes must be affected by botrytis?",
+        "answers": [
+            "Auslese",
+            "Beerenauslese",
+            "Spätlese",
+            "Eiswein"
+        ],
+        "correctAnswerIndex": 1,
+        "feedback": "Beerenauslese (BA) requires individually selected botrytis-affected berries. Auslese wines may show some botrytis character but it is not a requirement. Trockenbeerenauslese (TBA) requires shrivelled, botrytis-affected berries. Eiswein grapes must be frozen but are not botrytis-affected."
+    },
+    {
+        "question": "What does 'trocken' indicate on a German wine label?",
+        "answers": [
+            "Late harvested",
+            "Dry",
+            "Sweet",
+            "Botrytis-affected grapes"
+        ],
+        "correctAnswerIndex": 1,
+        "feedback": "Trocken means 'dry' in German and indicates a wine with a maximum of 9g/L residual sugar (or up to 18g/L if the acidity is within 2g/L of the residual sugar). Halbtrocken means 'half-dry' or off-dry."
+    },
+    {
+        "question": "Which method is used to produce Champagne's bubbles?",
+        "answers": [
+            "Carbon dioxide injection",
+            "Traditional method",
+            "Charmat method",
+            "Carbonation in 1° fermentation"
+        ],
+        "correctAnswerIndex": 1,
+        "feedback": "Champagne is produced using the Traditional Method (Méthode Traditionnelle), in which a second fermentation is induced in the bottle by adding a liqueur de tirage (wine, sugar, and yeast). After aging on the lees, the sediment is removed by riddling and disgorgement. The dosage is then added before final corking."
+    },
+    {
+        "question": "Which of the following is the primary grape variety used in Blanc de Blancs Champagne?",
+        "answers": [
+            "Pinot Noir",
+            "Pinot Meunier",
+            "Chardonnay",
+            "Pinot Gris"
+        ],
+        "correctAnswerIndex": 2,
+        "feedback": "Blanc de Blancs Champagne is made exclusively from white grapes, which in practice means Chardonnay. It is typically lighter, more delicate, and has higher acidity than blended Champagnes. Blanc de Noirs is made from black-skinned grapes only, principally Pinot Noir and/or Pinot Meunier."
+    },
+    {
+        "question": "What is the minimum lees aging requirement for non-vintage Champagne?",
+        "answers": [
+            "6 months",
+            "12 months",
+            "15 months",
+            "36 months"
+        ],
+        "correctAnswerIndex": 2,
+        "feedback": "Non-vintage Champagne must be aged for a minimum of 15 months on the lees, of which at least 12 months must be in bottle after tirage."
+    },
+    {
+        "question": "What is the minimum lees aging requirement for Vintage Champagne?",
+        "answers": [
+            "6 months",
+            "24 months",
+            "15 months",
+            "36 months"
+        ],
+        "correctAnswerIndex": 3,
+        "feedback": "Vintage Champagne requires a minimum of 36 months on the lees. Extended lees contact adds complexity and autolytic flavors of brioche, toast, and biscuit."
+    },
+    {
+        "question": "Port wine is produced in which Portuguese wine region?",
+        "answers": [
+            "Alentejo",
+            "Dão",
+            "Douro",
+            "Vinho Verde"
+        ],
+        "correctAnswerIndex": 2,
+        "feedback": "Port is produced in the Douro Valley in northern Portugal, the world's oldest demarcated wine region. The wine is fortified with grape spirit during fermentation to retain natural sweetness."
+    },
+    {
+        "question": "How long must a Late Bottled Vintage (LBV) Port be aged in barrel before bottling?",
+        "answers": [
+            "1–2 years",
+            "2–3 years",
+            "4–6 years",
+            "8–10 years"
+        ],
+        "correctAnswerIndex": 2,
+        "feedback": "LBV Port must be aged in barrel for 4–6 years before bottling, after which it is generally ready to drink on release. This contrasts with Vintage Port, which is bottled after just 2 years in barrel but then requires many years of bottle aging to develop, often 20 years or more."
+    },
+    {
+        "question": "What style of Madeira is made primarily from the Sercial grape variety?",
+        "answers": [
+            "Richest and sweetest style",
+            "Palest and driest style",
+            "Medium-sweet style",
+            "Most full-bodied style"
+        ],
+        "correctAnswerIndex": 1,
+        "feedback": "Sercial produces the palest and driest style of Madeira with high acidity and almond notes. All 4 styles of Madeira are fortified and heated in the estufagem or canteiro process, giving the wines their distinctive caramelized, rancio character."
+    },
+    {
+        "question": "What grape variety are both Condrieu and Château-Grillet in the Northern Rhône made from?",
+        "answers": [
+            "Chardonnay",
+            "Viognier",
+            "Sauvignon Blanc",
+            "Sauvignon Gris"
+        ],
+        "correctAnswerIndex": 1,
+        "feedback": "Both Condrieu and Château-Grillet are made exclusively from the intensely aromatic Viognier. Château-Grillet is a rare single-estate appellation entirely enclosed within the broader Condrieu appellation, making it one of the smallest appellations in France."
+    },
+    {
+        "question": "Which of the following best describes the climate of Mendoza, Argentina?",
+        "answers": [
+            "Moderate maritime, high humidity",
+            "Cool continental, spring frosts",
+            "Hot, dry desert, high altitude",
+            "Warm Mediterranean, mild winters"
+        ],
+        "correctAnswerIndex": 2,
+        "feedback": "Mendoza lies in the eastern foothills of the Andes in a desert climate where rainfall is very low and irrigation from Andean snowmelt is essential. Altitude plays a critical role in moderating temperatures, creating large diurnal temperature ranges that preserve acidity and produce wines with both ripeness and freshness."
     }
 ]
-
