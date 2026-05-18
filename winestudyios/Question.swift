@@ -10,6 +10,7 @@ struct Question: Codable {
     let answers: [String]
     let correctAnswerIndex: Int
     let feedback: String
+    let category: String?
 }
 
 struct QuestionLoader {

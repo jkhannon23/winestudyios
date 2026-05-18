@@ -160,15 +160,6 @@ class ViewController: UIViewController {
         return label
     }()
 
-    private let welcomeStreakLabel: UILabel = {
-        let label = UILabel()
-        label.font = nunito(16)
-        label.textColor = .white
-        label.textAlignment = .center
-        label.adjustsFontForContentSizeCategory = true
-        label.translatesAutoresizingMaskIntoConstraints = false
-        return label
-    }()
 
     private let playButton: UIButton = {
         let button = UIButton(type: .system)
@@ -205,15 +196,6 @@ class ViewController: UIViewController {
         return button
     }()
 
-    private let dailyStatusLabel: UILabel = {
-        let label = UILabel()
-        label.font = nunito(14, weight: "Medium")
-        label.textColor = .white
-        label.textAlignment = .center
-        label.adjustsFontForContentSizeCategory = true
-        label.translatesAutoresizingMaskIntoConstraints = false
-        return label
-    }()
 
     // --- Quiz screen ---
     private let quizContainerView: UIView = {
@@ -454,6 +436,7 @@ class ViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         startBirdBounce()
+        updateDailyChallengeStatus()
     }
 
     private func startBirdBounce() {
@@ -489,34 +472,65 @@ class ViewController: UIViewController {
         }
     }
 
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        updateWelcomeStreak()
-        updateDailyChallengeStatus()
-
-        // shadowPath must be set after layout so bounds are resolved.
-        // An explicit oval path is required — UIImageView sets its image via
-        // layer.contents, which CoreAnimation cannot alpha-trace for shadows.
-    }
-
-    private func updateWelcomeStreak() {
-        let streak = StreakManager.currentStreak
-        if streak > 0 {
-            welcomeStreakLabel.text = "Streak: \(streak) day\(streak == 1 ? "" : "s")"
-        } else {
-            welcomeStreakLabel.text = ""
-        }
-    }
-
     private func updateDailyChallengeStatus() {
-        if DailyChallengeManager.hasCompletedToday {
-            dailyStatusLabel.text = "\u{2713} Daily challenge completed"
+        let completed   = DailyChallengeManager.hasCompletedToday
+        let streak      = StreakManager.currentStreak
+        let flameOrange = UIColor(red: 1.0, green: 0.59, blue: 0.0, alpha: 1)
+        let flameCfg    = UIImage.SymbolConfiguration(pointSize: 18, weight: .semibold)
+
+        func flameRun() -> NSAttributedString {
+            let flame = UIImage(systemName: "flame.fill", withConfiguration: flameCfg)?
+                .withTintColor(flameOrange, renderingMode: .alwaysOriginal)
+            let att = NSTextAttachment(); att.image = flame
+            return NSAttributedString(attachment: att)
+        }
+
+        if completed {
+            // ── Done state: frosted card, "Done for the day  🔥 3" ──
             dailyChallengeButton.isEnabled = false
-            dailyChallengeButton.alpha = 0.5
-        } else {
-            dailyStatusLabel.text = ""
+            dailyChallengeButton.backgroundColor = UIColor.white.withAlphaComponent(0.15)
+            dailyChallengeButton.layer.borderColor = UIColor.white.withAlphaComponent(0.35).cgColor
+
+            let attrs: [NSAttributedString.Key: Any] = [
+                .font: ViewController.nunito(20, weight: "Bold"),
+                .foregroundColor: UIColor.white
+            ]
+            let title = NSMutableAttributedString(string: "Done for the day", attributes: attrs)
+            if streak > 0 {
+                title.append(NSAttributedString(string: "   ", attributes: attrs))
+                title.append(flameRun())
+                title.append(NSAttributedString(string: "\(streak)", attributes: attrs))
+            }
+            dailyChallengeButton.setAttributedTitle(title, for: .normal)
+            dailyChallengeButton.setAttributedTitle(title, for: .disabled)
+
+        } else if streak > 0 {
+            // ── Streak active: "Daily challenge  🔥 3" ──
             dailyChallengeButton.isEnabled = true
-            dailyChallengeButton.alpha = 1.0
+            dailyChallengeButton.backgroundColor = .clear
+            dailyChallengeButton.layer.borderColor = UIColor.white.cgColor
+
+            let attrs: [NSAttributedString.Key: Any] = [
+                .font: ViewController.nunito(20, weight: "Bold"),
+                .foregroundColor: UIColor.white
+            ]
+            let title = NSMutableAttributedString(string: "Daily challenge   ", attributes: attrs)
+            title.append(flameRun())
+            title.append(NSAttributedString(string: "  \(streak)", attributes: attrs))
+            dailyChallengeButton.setAttributedTitle(title, for: .normal)
+
+        } else {
+            // ── No streak, not played: plain button ──
+            dailyChallengeButton.isEnabled = true
+            dailyChallengeButton.backgroundColor = .clear
+            dailyChallengeButton.layer.borderColor = UIColor.white.cgColor
+
+            let attrs: [NSAttributedString.Key: Any] = [
+                .font: ViewController.nunito(20, weight: "Bold"),
+                .foregroundColor: UIColor.white
+            ]
+            dailyChallengeButton.setAttributedTitle(
+                NSAttributedString(string: "Daily challenge", attributes: attrs), for: .normal)
         }
     }
 
@@ -620,10 +634,8 @@ class ViewController: UIViewController {
         welcomeContainerView.addSubview(titleImageView)
         welcomeContainerView.addSubview(birdImageView)
         welcomeContainerView.addSubview(subtitleLabel)
-        welcomeContainerView.addSubview(welcomeStreakLabel)
         welcomeContainerView.addSubview(playButton)
         welcomeContainerView.addSubview(dailyChallengeButton)
-        welcomeContainerView.addSubview(dailyStatusLabel)
         // --- Quiz container ---
         quizContainerView.isHidden = true
         view.addSubview(quizContainerView)
@@ -697,13 +709,6 @@ class ViewController: UIViewController {
             dailyChallengeButton.widthAnchor.constraint(equalToConstant: 280),
             dailyChallengeButton.heightAnchor.constraint(equalToConstant: 55),
 
-            // Daily status label below daily challenge button
-            dailyStatusLabel.topAnchor.constraint(equalTo: dailyChallengeButton.bottomAnchor, constant: 12),
-            dailyStatusLabel.centerXAnchor.constraint(equalTo: welcomeContainerView.centerXAnchor),
-
-            // Streak label below daily status
-            welcomeStreakLabel.topAnchor.constraint(equalTo: dailyStatusLabel.bottomAnchor, constant: 8),
-            welcomeStreakLabel.centerXAnchor.constraint(equalTo: welcomeContainerView.centerXAnchor),
 
             // Quiz container fills entire view
             quizContainerView.topAnchor.constraint(equalTo: view.topAnchor),
@@ -924,6 +929,7 @@ class ViewController: UIViewController {
     }
 
     @objc private func dailyChallengeTapped() {
+        guard !DailyChallengeManager.hasCompletedToday else { return }
         playAgainSound()
         isDailyChallenge = true
         startQuiz()
@@ -936,6 +942,7 @@ class ViewController: UIViewController {
             // Spaced-repetition: mix due-for-review weak items with new questions.
             quizQuestions = QuestionStatsManager.selectQuiz(from: allQuestions, count: totalQuestions)
         }
+        guard !quizQuestions.isEmpty else { return } // JSON failed to load
         currentIndex = 0
         score = 0
 
@@ -1072,7 +1079,7 @@ class ViewController: UIViewController {
         let selectedButton = sender.tag
         let selectedOriginalIndex = shuffledAnswerIndices[selectedButton]
         let correctOriginalIndex = question.correctAnswerIndex
-        let correctButton = shuffledAnswerIndices.firstIndex(of: correctOriginalIndex)!
+        guard let correctButton = shuffledAnswerIndices.firstIndex(of: correctOriginalIndex) else { return }
 
         let isCorrect = selectedOriginalIndex == correctOriginalIndex
         if isCorrect {
@@ -1276,7 +1283,6 @@ class ViewController: UIViewController {
     }
 
     @objc private func restartTapped() {
-        updateWelcomeStreak()
         updateDailyChallengeStatus()
         transition(from: scoreContainerView, to: welcomeContainerView)
         startBirdBounce()

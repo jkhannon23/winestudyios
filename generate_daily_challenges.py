@@ -83,13 +83,13 @@ def seeded_shuffle(items: list, seed: int) -> list:
     for i in range(n - 1, 0, -1):
         bound = i + 1  # want j in [0, i] → bound = i+1 values
 
-        # Swift's unbiased bounded generation:
-        # threshold = (2^64 % bound), i.e. values below threshold are biased.
-        # Reject those and redraw.
-        threshold = (-bound) % (2**64) % bound  # equivalent to (2^64 % bound)
+        # Unbiased bounded generation:
+        # threshold = 2^64 % bound — the number of "biased" values at the low end.
+        # Reject r if r < threshold; almost all draws are accepted (prob ≈ bound/2^64).
+        threshold = (2**64) % bound
         while True:
             r = next_state()
-            if r % bound >= threshold:
+            if r >= threshold:
                 break
         j = r % bound
 

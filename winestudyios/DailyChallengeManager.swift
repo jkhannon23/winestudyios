@@ -17,7 +17,7 @@ struct DailyChallengeManager {
     ///   "https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main/daily-challenges"
     ///
     /// Leave empty to always use the local deterministic fallback.
-    static let serverBaseURL = ""
+    static let serverBaseURL = "https://raw.githubusercontent.com/jkhannon23/winestudyios/main/daily-challenges"
 
     // MARK: - UserDefaults Keys
 
@@ -31,6 +31,7 @@ struct DailyChallengeManager {
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy-MM-dd"
         formatter.calendar = Calendar.current
+        formatter.timeZone = TimeZone.current
         return formatter
     }()
 
@@ -58,13 +59,13 @@ struct DailyChallengeManager {
             guard
                 let data,
                 (response as? HTTPURLResponse)?.statusCode == 200,
-                let payload = try? JSONDecoder().decode(DailyPayload.self, from: data),
-                payload.date == dateStr,
-                !payload.questionIds.isEmpty
+                let json = try? JSONSerialization.jsonObject(with: data) as? [String: Any],
+                let date = json["date"] as? String, date == dateStr,
+                let ids = json["questionIds"] as? [String], !ids.isEmpty
             else { return }
 
             // Cache the IDs — questionsForToday() will pick them up synchronously.
-            UserDefaults.standard.set(payload.questionIds, forKey: serverCachePrefix + dateStr)
+            UserDefaults.standard.set(ids, forKey: serverCachePrefix + dateStr)
         }.resume()
     }
 
@@ -145,13 +146,6 @@ extension Question {
     var stableId: String {
         String(format: "%016x", DailyChallengeManager.stableSeed(for: question))
     }
-}
-
-// MARK: - Server Payload
-
-private struct DailyPayload: Decodable {
-    let date: String
-    let questionIds: [String]
 }
 
 // MARK: - Seeded RNG (local deterministic fallback)

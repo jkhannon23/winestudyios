@@ -16,6 +16,7 @@ struct StreakManager {
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy-MM-dd"
         formatter.calendar = Calendar.current
+        formatter.timeZone = TimeZone.current
         return formatter
     }()
 
