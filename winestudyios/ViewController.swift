@@ -445,6 +445,9 @@ class ViewController: UIViewController {
         view.backgroundColor = hotPink
         preloadSounds()
         allQuestions = QuestionLoader.load()
+        // Kick off the server fetch immediately so today's question IDs are
+        // cached before the user taps Daily Challenge.
+        DailyChallengeManager.prefetchTodaysChallenge()
         setupUI()
     }
 
@@ -490,6 +493,10 @@ class ViewController: UIViewController {
         super.viewDidLayoutSubviews()
         updateWelcomeStreak()
         updateDailyChallengeStatus()
+
+        // shadowPath must be set after layout so bounds are resolved.
+        // An explicit oval path is required — UIImageView sets its image via
+        // layer.contents, which CoreAnimation cannot alpha-trace for shadows.
     }
 
     private func updateWelcomeStreak() {
@@ -586,7 +593,7 @@ class ViewController: UIViewController {
             NSLayoutConstraint.activate([
                 button.leadingAnchor.constraint(equalTo: answersContainerView.leadingAnchor),
                 button.trailingAnchor.constraint(equalTo: answersContainerView.trailingAnchor),
-                button.heightAnchor.constraint(equalToConstant: 56),
+                button.heightAnchor.constraint(equalToConstant: 64),
             ])
 
             if i == 0 {
@@ -678,12 +685,8 @@ class ViewController: UIViewController {
             subtitleLabel.topAnchor.constraint(equalTo: birdImageView.bottomAnchor, constant: 8),
             subtitleLabel.centerXAnchor.constraint(equalTo: welcomeContainerView.centerXAnchor),
 
-            // Streak label below subtitle
-            welcomeStreakLabel.topAnchor.constraint(equalTo: subtitleLabel.bottomAnchor, constant: 8),
-            welcomeStreakLabel.centerXAnchor.constraint(equalTo: welcomeContainerView.centerXAnchor),
-
-            // Play button below streak
-            playButton.topAnchor.constraint(equalTo: welcomeStreakLabel.bottomAnchor, constant: 28),
+            // Play button below subtitle
+            playButton.topAnchor.constraint(equalTo: subtitleLabel.bottomAnchor, constant: 28),
             playButton.centerXAnchor.constraint(equalTo: welcomeContainerView.centerXAnchor),
             playButton.widthAnchor.constraint(equalToConstant: 280),
             playButton.heightAnchor.constraint(equalToConstant: 55),
@@ -697,6 +700,10 @@ class ViewController: UIViewController {
             // Daily status label below daily challenge button
             dailyStatusLabel.topAnchor.constraint(equalTo: dailyChallengeButton.bottomAnchor, constant: 12),
             dailyStatusLabel.centerXAnchor.constraint(equalTo: welcomeContainerView.centerXAnchor),
+
+            // Streak label below daily status
+            welcomeStreakLabel.topAnchor.constraint(equalTo: dailyStatusLabel.bottomAnchor, constant: 8),
+            welcomeStreakLabel.centerXAnchor.constraint(equalTo: welcomeContainerView.centerXAnchor),
 
             // Quiz container fills entire view
             quizContainerView.topAnchor.constraint(equalTo: view.topAnchor),
@@ -1230,6 +1237,7 @@ class ViewController: UIViewController {
     private func showScore() {
         if isDailyChallenge {
             DailyChallengeManager.recordScore(score)
+            StreakManager.recordCompletion()
             scoreSubtitleLabel.text = scoreMessage()
             let restartAttrs: [NSAttributedString.Key: Any] = [
                 .font: ViewController.nunito(18, weight: "Bold"),
@@ -1254,7 +1262,6 @@ class ViewController: UIViewController {
             playSound(named: "fail")
         }
 
-        StreakManager.recordCompletion()
         transition(from: quizContainerView, to: scoreContainerView)
         animateScoreRing()
     }
