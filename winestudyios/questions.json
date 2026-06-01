@@ -2204,7 +2204,7 @@
             "Vouvray"
         ],
         "correctAnswerIndex": 3,
-        "feedback": "Vouvray is east of the city of Tours in the Loire Valley where both still and sparkling wine is produced with Chenin Blanc.",
+        "feedback": "Vouvray is east of the city of Tours in the Loire Valley. Both still and sparkling wines are produced here with Chenin Blanc.",
         "category": "Loire Valley"
     },
     {
@@ -4112,7 +4112,7 @@
             "Yakima Valley"
         ],
         "correctAnswerIndex": 2,
-        "feedback": "The Rogue Valley is in Southern Oregon which is the warmest growing region in Oregon but hills also allow cool climate varieties to be grown.",
+        "feedback": "The Rogue Valley is in Southern Oregon. While it is the warmest growing region in Oregon, hills also allow cool climate varieties to be grown.",
         "category": "USA"
     },
     {
@@ -5160,15 +5160,15 @@
         "category": "South Africa"
     },
     {
-        "question": "Which district is in the coastal region of South Africa?",
+        "question": "Which South African wine district has the highest reputation for premium red wine production?",
         "answers": [
             "Robertson",
-            "Walker Bay",
+            "Worcester",
             "Stellenbosch",
-            "Swartland"
+            "Paarl"
         ],
         "correctAnswerIndex": 2,
-        "feedback": "Stellenbosch is in the coastal region of South Africa and has a reputation for red wines, typically Cabernet Sauvignon and Merlot, often in Bordeaux-style blends.",
+        "feedback": "Stellenbosch is South Africa's most prestigious wine district, with a reputation for premium reds — particularly Cabernet Sauvignon, Merlot, and Bordeaux-style blends. It lies inland from Cape Town within the Coastal Region.",
         "category": "South Africa"
     },
     {
