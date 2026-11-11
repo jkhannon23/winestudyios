@@ -10,7 +10,7 @@ import AVFoundation
 
 // Button that always fills its container width (ignores intrinsic width)
 class FullWidthButton: UIButton {
-    var padding = UIEdgeInsets(top: 14, left: 20, bottom: 14, right: 20)
+    var padding = UIEdgeInsets(top: 10, left: 20, bottom: 10, right: 20)
 
     override var intrinsicContentSize: CGSize {
         let size = super.intrinsicContentSize
@@ -64,6 +64,37 @@ class ViewController: UIViewController {
             return UIFontMetrics.default.scaledFont(for: .systemFont(ofSize: size, weight: uiWeight))
         }
         return UIFontMetrics.default.scaledFont(for: base)
+    }
+
+    /// Builds an attributed string combining text and an SF Symbol icon, with the icon
+    /// vertically centred on the font's cap-height band so it doesn't sit low or high.
+    /// - Parameters:
+    ///   - text:      Button label text
+    ///   - fontSize:  Point size used for both text and icon sizing
+    ///   - color:     Tint/foreground colour for both text and icon
+    ///   - symbol:    SF Symbol name (default "arrow.right")
+    ///   - iconFirst: Pass true to put the icon before the text (e.g. ↻ Play again)
+    private static func buttonTitle(_ text: String, fontSize: CGFloat, color: UIColor,
+                                    symbol: String = "arrow.right", iconFirst: Bool = false,
+                                    weight: String = "Black", iconY: CGFloat = -3) -> NSAttributedString {
+        let attrs: [NSAttributedString.Key: Any] = [.font: nunito(fontSize, weight: weight), .foregroundColor: color]
+        let iconSize = fontSize - 2
+        let cfg      = UIImage.SymbolConfiguration(pointSize: iconSize, weight: .black)
+        let img      = UIImage(systemName: symbol, withConfiguration: cfg)?
+                           .withTintColor(color, renderingMode: .alwaysOriginal)
+        let att      = NSTextAttachment()
+        att.image    = img
+        // Use the image's natural aspect ratio so symbols like arrow.counterclockwise aren't squashed
+        let imgSize  = img?.size ?? CGSize(width: iconSize, height: iconSize)
+        let attWidth = imgSize.height > 0 ? iconSize * (imgSize.width / imgSize.height) : iconSize
+        att.bounds   = CGRect(x: 0, y: iconY, width: attWidth, height: iconSize)
+        let iconStr  = NSAttributedString(attachment: att)
+        let gap      = NSAttributedString(string: " ", attributes: attrs)
+        let textStr  = NSAttributedString(string: text, attributes: attrs)
+        let out      = NSMutableAttributedString()
+        if iconFirst { out.append(iconStr); out.append(gap); out.append(textStr) }
+        else         { out.append(textStr); out.append(gap); out.append(iconStr) }
+        return out
     }
 
     private static func applyButtonShadow(_ button: UIButton) {
@@ -196,6 +227,36 @@ class ViewController: UIViewController {
         return button
     }()
 
+    // Completion state — flame + number on left, two lines of text on right
+    private let dailyChallengeCompletedView: UIView = {
+        let view = UIView()
+        view.isHidden = true
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }()
+
+    private let completedFlameImageView: UIImageView = {
+        let iv = UIImageView()
+        iv.contentMode = .scaleAspectFit
+        iv.translatesAutoresizingMaskIntoConstraints = false
+        return iv
+    }()
+
+    private let completedStreakLabel: UILabel = {
+        let label = UILabel()
+        label.textAlignment = .center
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
+
+    private let completedTextLabel: UILabel = {
+        let label = UILabel()
+        label.numberOfLines = 0
+        label.textAlignment = .left
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
+
 
     // --- Quiz screen ---
     private let quizContainerView: UIView = {
@@ -217,11 +278,20 @@ class ViewController: UIViewController {
         return view
     }()
 
+    private let quizQuitButton: UIButton = {
+        let button = UIButton(type: .system)
+        let cfg = UIImage.SymbolConfiguration(pointSize: 16, weight: .semibold)
+        button.setImage(UIImage(systemName: "xmark", withConfiguration: cfg), for: .normal)
+        button.tintColor = .white
+        button.translatesAutoresizingMaskIntoConstraints = false
+        return button
+    }()
+
     private let progressLabel: UILabel = {
         let label = UILabel()
         label.font = nunito(16, weight: "Bold")
         label.textColor = .white
-        label.textAlignment = .left
+        label.textAlignment = .center
         label.adjustsFontForContentSizeCategory = true
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
@@ -391,7 +461,7 @@ class ViewController: UIViewController {
     private let scoreOutOfLabel: UILabel = {
         let label = UILabel()
         label.font = nunito(14)
-        label.textColor = UIColor(red: 140/255, green: 140/255, blue: 140/255, alpha: 1)
+        label.textColor = UIColor(red: 80/255, green: 80/255, blue: 80/255, alpha: 1)
         label.textAlignment = .center
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
@@ -427,6 +497,10 @@ class ViewController: UIViewController {
         view.backgroundColor = hotPink
         preloadSounds()
         allQuestions = QuestionLoader.load()
+        // Check GitHub for newer questions; a quiz already started keeps its own copy.
+        QuestionLoader.refreshFromServer { [weak self] fresh in
+            self?.allQuestions = fresh
+        }
         // Kick off the server fetch immediately so today's question IDs are
         // cached before the user taps Daily Challenge.
         DailyChallengeManager.prefetchTodaysChallenge()
@@ -442,7 +516,7 @@ class ViewController: UIViewController {
     private func startBirdBounce() {
         birdImageView.layer.removeAllAnimations()
         UIView.animate(withDuration: 1.2, delay: 0, options: [.repeat, .autoreverse, .curveEaseInOut]) {
-            self.birdImageView.transform = CGAffineTransform(translationX: 0, y: -8)
+            self.birdImageView.transform = CGAffineTransform(translationX: 0, y: -14)
         }
     }
 
@@ -476,61 +550,73 @@ class ViewController: UIViewController {
         let completed   = DailyChallengeManager.hasCompletedToday
         let streak      = StreakManager.currentStreak
         let flameOrange = UIColor(red: 1.0, green: 0.59, blue: 0.0, alpha: 1)
-        let flameCfg    = UIImage.SymbolConfiguration(pointSize: 18, weight: .semibold)
-
-        func flameRun() -> NSAttributedString {
-            let flame = UIImage(systemName: "flame.fill", withConfiguration: flameCfg)?
-                .withTintColor(flameOrange, renderingMode: .alwaysOriginal)
-            let att = NSTextAttachment(); att.image = flame
-            return NSAttributedString(attachment: att)
-        }
 
         if completed {
-            // ── Done state: frosted card, "Done for the day  🔥 3" ──
-            dailyChallengeButton.isEnabled = false
-            dailyChallengeButton.backgroundColor = UIColor.white.withAlphaComponent(0.15)
-            dailyChallengeButton.layer.borderColor = UIColor.white.withAlphaComponent(0.35).cgColor
+            // ── Done state: hide button, show flame-left / text-right layout ──
+            dailyChallengeButton.isHidden = true
+            dailyChallengeCompletedView.isHidden = false
 
-            let attrs: [NSAttributedString.Key: Any] = [
-                .font: ViewController.nunito(20, weight: "Bold"),
-                .foregroundColor: UIColor.white
-            ]
-            let title = NSMutableAttributedString(string: "Done for the day", attributes: attrs)
+            // Flame image
+            let flameCfg = UIImage.SymbolConfiguration(pointSize: 44, weight: .semibold)
+            completedFlameImageView.image = UIImage(systemName: "flame.fill", withConfiguration: flameCfg)?
+                .withTintColor(flameOrange, renderingMode: .alwaysOriginal)
+
+            // Streak number below flame
             if streak > 0 {
-                title.append(NSAttributedString(string: "   ", attributes: attrs))
-                title.append(flameRun())
-                title.append(NSAttributedString(string: "\(streak)", attributes: attrs))
+                completedStreakLabel.isHidden = false
+                completedStreakLabel.attributedText = NSAttributedString(string: "\(streak)", attributes: [
+                    .font: ViewController.nunito(42, weight: "Bold"),
+                    .foregroundColor: UIColor.white
+                ])
+            } else {
+                completedStreakLabel.isHidden = true
             }
-            dailyChallengeButton.setAttributedTitle(title, for: .normal)
-            dailyChallengeButton.setAttributedTitle(title, for: .disabled)
 
-        } else if streak > 0 {
-            // ── Streak active: "Daily challenge  🔥 3" ──
-            dailyChallengeButton.isEnabled = true
-            dailyChallengeButton.backgroundColor = .clear
-            dailyChallengeButton.layer.borderColor = UIColor.white.cgColor
-
+            // Two-line text on the right
+            let font = ViewController.nunito(14, weight: "Regular")
             let attrs: [NSAttributedString.Key: Any] = [
-                .font: ViewController.nunito(20, weight: "Bold"),
-                .foregroundColor: UIColor.white
+                .font: font,
+                .foregroundColor: UIColor.white.withAlphaComponent(0.9)
             ]
-            let title = NSMutableAttributedString(string: "Daily challenge   ", attributes: attrs)
-            title.append(flameRun())
-            title.append(NSAttributedString(string: "  \(streak)", attributes: attrs))
-            dailyChallengeButton.setAttributedTitle(title, for: .normal)
+            let para = NSMutableParagraphStyle()
+            para.lineSpacing = 2
+            let text = NSMutableAttributedString(
+                string: "Daily challenge complete.\nPlay again tomorrow.", attributes: attrs)
+            text.addAttribute(.paragraphStyle, value: para, range: NSRange(location: 0, length: text.length))
+            completedTextLabel.attributedText = text
 
         } else {
-            // ── No streak, not played: plain button ──
+            // ── Not yet played: show button, hide completion view ──
+            dailyChallengeButton.isHidden = false
+            dailyChallengeCompletedView.isHidden = true
             dailyChallengeButton.isEnabled = true
             dailyChallengeButton.backgroundColor = .clear
             dailyChallengeButton.layer.borderColor = UIColor.white.cgColor
+
+            let flameCfg = UIImage.SymbolConfiguration(pointSize: 24, weight: .semibold)
+            func flameRun() -> NSAttributedString {
+                let flame = UIImage(systemName: "flame.fill", withConfiguration: flameCfg)?
+                    .withTintColor(flameOrange, renderingMode: .alwaysOriginal)
+                let att = NSTextAttachment(); att.image = flame
+                return NSAttributedString(attachment: att)
+            }
 
             let attrs: [NSAttributedString.Key: Any] = [
                 .font: ViewController.nunito(20, weight: "Bold"),
                 .foregroundColor: UIColor.white
             ]
-            dailyChallengeButton.setAttributedTitle(
-                NSAttributedString(string: "Daily challenge", attributes: attrs), for: .normal)
+
+            if streak > 0 {
+                // ── Streak active: "Daily challenge  🔥 3" ──
+                let title = NSMutableAttributedString(string: "Daily challenge  ", attributes: attrs)
+                title.append(flameRun())
+                title.append(NSAttributedString(string: " \(streak)", attributes: attrs))
+                dailyChallengeButton.setAttributedTitle(title, for: .normal)
+            } else {
+                // ── No streak: plain button ──
+                dailyChallengeButton.setAttributedTitle(
+                    NSAttributedString(string: "Daily challenge", attributes: attrs), for: .normal)
+            }
         }
     }
 
@@ -588,7 +674,7 @@ class ViewController: UIViewController {
             button.backgroundColor = hotPink
             button.layer.cornerRadius = 16
             button.setTitleColor(.white, for: .normal)
-            button.titleLabel?.font = ViewController.nunito(24, weight: "Bold")
+            button.titleLabel?.font = ViewController.nunito(23, weight: "Black")
             button.titleLabel?.numberOfLines = 2
             button.titleLabel?.lineBreakMode = .byTruncatingTail
             button.titleLabel?.adjustsFontSizeToFitWidth = true
@@ -607,7 +693,7 @@ class ViewController: UIViewController {
             NSLayoutConstraint.activate([
                 button.leadingAnchor.constraint(equalTo: answersContainerView.leadingAnchor),
                 button.trailingAnchor.constraint(equalTo: answersContainerView.trailingAnchor),
-                button.heightAnchor.constraint(equalToConstant: 64),
+                button.heightAnchor.constraint(equalToConstant: 52),
             ])
 
             if i == 0 {
@@ -621,12 +707,17 @@ class ViewController: UIViewController {
             }
         }
 
+        // Override play button title with properly-sized SF Symbol arrow
+        playButton.setAttributedTitle(
+            ViewController.buttonTitle("Play", fontSize: 20, color: hotPink), for: .normal)
+
         nextButton.addTarget(self, action: #selector(nextTapped), for: .touchUpInside)
         nextButton.addTarget(self, action: #selector(nextTouchDown), for: .touchDown)
         nextButton.addTarget(self, action: #selector(nextTouchUp), for: [.touchUpInside, .touchUpOutside, .touchCancel])
         restartButton.addTarget(self, action: #selector(restartTapped), for: .touchUpInside)
         playButton.addTarget(self, action: #selector(playTapped), for: .touchUpInside)
         dailyChallengeButton.addTarget(self, action: #selector(dailyChallengeTapped), for: .touchUpInside)
+        quizQuitButton.addTarget(self, action: #selector(quizQuitTapped), for: .touchUpInside)
 
         // --- Welcome container ---
         view.addSubview(welcomeContainerView)
@@ -636,10 +727,15 @@ class ViewController: UIViewController {
         welcomeContainerView.addSubview(subtitleLabel)
         welcomeContainerView.addSubview(playButton)
         welcomeContainerView.addSubview(dailyChallengeButton)
+        dailyChallengeCompletedView.addSubview(completedFlameImageView)
+        dailyChallengeCompletedView.addSubview(completedStreakLabel)
+        dailyChallengeCompletedView.addSubview(completedTextLabel)
+        welcomeContainerView.addSubview(dailyChallengeCompletedView)
         // --- Quiz container ---
         quizContainerView.isHidden = true
         view.addSubview(quizContainerView)
         quizContainerView.addSubview(quizPinkHeaderView)
+        quizContainerView.addSubview(quizQuitButton)
         quizContainerView.addSubview(progressLabel)
         quizContainerView.addSubview(scoreCountLabel)
         quizContainerView.addSubview(quizScrollView)
@@ -709,6 +805,27 @@ class ViewController: UIViewController {
             dailyChallengeButton.widthAnchor.constraint(equalToConstant: 280),
             dailyChallengeButton.heightAnchor.constraint(equalToConstant: 55),
 
+            // Completion view — centered under play button, width driven by content
+            dailyChallengeCompletedView.topAnchor.constraint(equalTo: playButton.bottomAnchor, constant: 20),
+            dailyChallengeCompletedView.centerXAnchor.constraint(equalTo: playButton.centerXAnchor),
+            dailyChallengeCompletedView.bottomAnchor.constraint(equalTo: completedTextLabel.bottomAnchor),
+
+            // Flame: top-left of the block
+            completedFlameImageView.leadingAnchor.constraint(equalTo: dailyChallengeCompletedView.leadingAnchor),
+            completedFlameImageView.topAnchor.constraint(equalTo: dailyChallengeCompletedView.topAnchor),
+            completedFlameImageView.widthAnchor.constraint(equalToConstant: 44),
+            completedFlameImageView.heightAnchor.constraint(equalToConstant: 44),
+
+            // Streak number: right of flame, vertically centred on the flame image
+            completedStreakLabel.leadingAnchor.constraint(equalTo: completedFlameImageView.trailingAnchor, constant: -2),
+            completedStreakLabel.centerYAnchor.constraint(equalTo: completedFlameImageView.centerYAnchor),
+
+            // Text: fixed width so the block has a known total width to center
+            completedTextLabel.leadingAnchor.constraint(equalTo: completedStreakLabel.trailingAnchor, constant: 12),
+            completedTextLabel.trailingAnchor.constraint(equalTo: dailyChallengeCompletedView.trailingAnchor),
+            completedTextLabel.topAnchor.constraint(equalTo: dailyChallengeCompletedView.topAnchor),
+            completedTextLabel.widthAnchor.constraint(equalToConstant: 195),
+
 
             // Quiz container fills entire view
             quizContainerView.topAnchor.constraint(equalTo: view.topAnchor),
@@ -723,14 +840,17 @@ class ViewController: UIViewController {
             quizPinkHeaderView.trailingAnchor.constraint(equalTo: quizContainerView.trailingAnchor),
             quizPinkHeaderView.bottomAnchor.constraint(equalTo: speechBubbleView.bottomAnchor, constant: 140),
 
-            // Progress label (top left) - in safe area
-            progressLabel.topAnchor.constraint(equalTo: quizContainerView.safeAreaLayoutGuide.topAnchor, constant: 12),
-            progressLabel.leadingAnchor.constraint(equalTo: quizContainerView.leadingAnchor, constant: 20),
+            // Quit button (top left)
+            quizQuitButton.topAnchor.constraint(equalTo: quizContainerView.safeAreaLayoutGuide.topAnchor, constant: 12),
+            quizQuitButton.leadingAnchor.constraint(equalTo: quizContainerView.leadingAnchor, constant: 20),
+
+            // Progress label (centered)
+            progressLabel.centerYAnchor.constraint(equalTo: quizQuitButton.centerYAnchor),
+            progressLabel.centerXAnchor.constraint(equalTo: quizContainerView.centerXAnchor),
 
             // Score count label (top right)
-            scoreCountLabel.centerYAnchor.constraint(equalTo: progressLabel.centerYAnchor),
+            scoreCountLabel.centerYAnchor.constraint(equalTo: quizQuitButton.centerYAnchor),
             scoreCountLabel.trailingAnchor.constraint(equalTo: quizContainerView.trailingAnchor, constant: -20),
-            scoreCountLabel.leadingAnchor.constraint(greaterThanOrEqualTo: progressLabel.trailingAnchor, constant: 8),
 
             // Scroll view below progress, above sticky next button
             quizScrollView.topAnchor.constraint(equalTo: progressLabel.bottomAnchor, constant: 2),
@@ -828,7 +948,7 @@ class ViewController: UIViewController {
 
             // "out of" label below score number
             scoreOutOfLabel.centerXAnchor.constraint(equalTo: scoreRingView.centerXAnchor),
-            scoreOutOfLabel.topAnchor.constraint(equalTo: scoreLabel.bottomAnchor, constant: 0),
+            scoreOutOfLabel.topAnchor.constraint(equalTo: scoreLabel.bottomAnchor, constant: -10),
 
             // Score subtitle
             scoreSubtitleLabel.topAnchor.constraint(equalTo: scoreRingView.bottomAnchor, constant: 24),
@@ -928,6 +1048,16 @@ class ViewController: UIViewController {
         startQuiz()
     }
 
+    @objc private func quizQuitTapped() {
+        birdImageView.layer.removeAllAnimations()
+        birdImageView.transform = .identity
+        transition(from: quizContainerView, to: welcomeContainerView)
+        updateDailyChallengeStatus()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.65) {
+            self.startBirdBounce()
+        }
+    }
+
     @objc private func dailyChallengeTapped() {
         guard !DailyChallengeManager.hasCompletedToday else { return }
         playAgainSound()
@@ -960,11 +1090,11 @@ class ViewController: UIViewController {
 
         progressLabel.text = "\(currentIndex + 1)/\(totalQuestions)"
         let qPara = NSMutableParagraphStyle()
-        qPara.lineSpacing = 6
+        qPara.lineSpacing = 0
         qPara.alignment = .center
         questionLabel.attributedText = NSAttributedString(string: question.question, attributes: [
             .paragraphStyle: qPara,
-            .font: questionLabel.font as Any,
+            .font: ViewController.nunito(20, weight: "Bold"),
             .foregroundColor: questionLabel.textColor as Any
         ])
 
@@ -977,11 +1107,16 @@ class ViewController: UIViewController {
         // Shuffle answer order
         shuffledAnswerIndices = Array(0..<question.answers.count).shuffled()
 
+        let ansAttrs: [NSAttributedString.Key: Any] = [
+            .font: ViewController.nunito(23, weight: "Black"),
+            .foregroundColor: UIColor.white
+        ]
         for (i, button) in answerButtons.enumerated() {
             // Reset to default pink bg, white text, no icon
-            button.setTitle(question.answers[shuffledAnswerIndices[i]], for: .normal)
+            button.setAttributedTitle(
+                NSAttributedString(string: question.answers[shuffledAnswerIndices[i]], attributes: ansAttrs),
+                for: .normal)
             button.backgroundColor = hotPink
-            button.setTitleColor(.white, for: .normal)
             button.setImage(nil, for: .normal)
             button.layer.cornerRadius = 16
             button.isEnabled = true
@@ -1189,14 +1324,12 @@ class ViewController: UIViewController {
         }
 
         // Show next button
-        let nextAttrs: [NSAttributedString.Key: Any] = [
-            .font: ViewController.nunito(18, weight: "Bold"),
-            .foregroundColor: UIColor.white
-        ]
         if currentIndex < totalQuestions - 1 {
-            nextButton.setAttributedTitle(NSAttributedString(string: "Next question \u{2192}", attributes: nextAttrs), for: .normal)
+            nextButton.setAttributedTitle(
+                ViewController.buttonTitle("Next question", fontSize: 18, color: .white), for: .normal)
         } else {
-            nextButton.setAttributedTitle(NSAttributedString(string: "See results \u{2192}", attributes: nextAttrs), for: .normal)
+            nextButton.setAttributedTitle(
+                ViewController.buttonTitle("See results", fontSize: 18, color: .white), for: .normal)
         }
         nextButton.isHidden = false
 
@@ -1246,18 +1379,14 @@ class ViewController: UIViewController {
             DailyChallengeManager.recordScore(score)
             StreakManager.recordCompletion()
             scoreSubtitleLabel.text = scoreMessage()
-            let restartAttrs: [NSAttributedString.Key: Any] = [
-                .font: ViewController.nunito(18, weight: "Bold"),
-                .foregroundColor: UIColor.white
-            ]
-            restartButton.setAttributedTitle(NSAttributedString(string: "\u{21BB} Back to menu", attributes: restartAttrs), for: .normal)
+            restartButton.setAttributedTitle(
+                ViewController.buttonTitle("Back to menu", fontSize: 18, color: .white,
+                                           symbol: "arrow.counterclockwise", iconFirst: true, iconY: -1), for: .normal)
         } else {
             scoreSubtitleLabel.text = scoreMessage()
-            let restartAttrs: [NSAttributedString.Key: Any] = [
-                .font: ViewController.nunito(18, weight: "Bold"),
-                .foregroundColor: UIColor.white
-            ]
-            restartButton.setAttributedTitle(NSAttributedString(string: "\u{21BB} Play again", attributes: restartAttrs), for: .normal)
+            restartButton.setAttributedTitle(
+                ViewController.buttonTitle("Play again", fontSize: 18, color: .white,
+                                           symbol: "arrow.counterclockwise", iconFirst: true, iconY: -1), for: .normal)
         }
 
         // Show bird and play sound based on score
@@ -1284,7 +1413,12 @@ class ViewController: UIViewController {
 
     @objc private func restartTapped() {
         updateDailyChallengeStatus()
+        // Reset bird to stationary so it visibly "starts" bouncing after the screen fades in
+        birdImageView.layer.removeAllAnimations()
+        birdImageView.transform = .identity
         transition(from: scoreContainerView, to: welcomeContainerView)
-        startBirdBounce()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.65) {
+            self.startBirdBounce()
+        }
     }
 }
