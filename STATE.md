@@ -50,9 +50,11 @@ Home screen and quiz screens look unchanged.
 file). The copy inside the app is only the safety net; refresh it at each App Store build. After editing
 question *wording*: regenerate daily challenges (see Daily challenges).
 
-**Heads-up:** Jill's local folder has unsaved screen edits (button sizes, daily-challenge completed view, Info.plist
-font path / display name change) that are not part of this branch. The Info.plist change drops the app name "Volo"
-and the `Fonts/` path — check before committing those.
+**Heads-up (found 11 Nov):** GitHub was BEHIND the App Store app. Edits made 31 May–2 Jun (smaller button
+padding, daily-challenge "completed" view, font path fix so Nunito loads, display name set in project settings,
+iPhone-only) were never committed. They are now saved on branch `shipped-app-edits`, and Step 1 is built on top
+of it, so building from Step 1 keeps the shipped look. **Merge `shipped-app-edits` first, then Step 1** (Step 1
+contains both, so merging Step 1 alone also works). Simulator check: Nunito shows on home and quiz screens.
 
 **NEXT:** step 2, map after each answer. **Switch to Opus for the map work** (and decide the OPEN question:
 real Apple map vs illustrated maps).
