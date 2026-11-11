@@ -11,7 +11,8 @@ Build in this order, one step at a time, tested between each:
 
 1. **Questions load from GitHub** (like the daily challenges already do), with a new optional
    `place` field per question. ✅ DONE — merged to `main` and tested live 11 Nov (not yet in an App Store build; see "Step 1 — status").
-2. **Map after each answer** — the answer's place shown on a map with a pin.
+2. **Map after each answer** — the answer's place shown on a map with a pin. 🔨 PART 1 BUILT 11 Nov (map card in the app);
+   part 2 = add places to questions. See "Step 2 — status".
 3. **Drill by topic** — pick one region/category to quiz on.
 4. **Progress map** — regions coloured by how well they're known (from the spaced-repetition stats).
 5. **Map questions** ("Which pin is Rully?") and **region outlines** where good open data exists.
@@ -64,12 +65,36 @@ and any daily challenge using it falls back to a random pick → regenerate dail
 project settings, iPhone-only) were never committed. They are now on `main` (came in with PR #1). Branches
 `shipped-app-edits` and `step1-questions-from-github` are merged and can be deleted.
 
-**NEXT:** step 2, map after each answer, Apple map (decided above). Use Opus for map work.
-- Build the card for real: shown only when the question has a `place`, hidden otherwise; no map = layout as today.
-- Card height/position to settle on the phone: in the mock it sat under the feedback and needed a small scroll.
-- Add `place` to a first batch of questions (e.g. Burgundy) in `content/questions.json` so there is something to see.
-- Offline: the map area is blank without signal; the quiz itself still works.
-- Mock-up code (throwaway, local only): branch `mock-map`, `.claude/worktrees/mock-map`.
+**NEXT:** step 2 part 2 — see "Step 2 — status" below.
+
+## Step 2 — status (11 Nov 2026)
+**Part 1 done (branch `step2-map-after-answer`, not merged, not on the phone):**
+- `PlaceMapCard.swift`: muted Apple map in a rounded card (pink edge), Volo-pink pin with the wine-glasses
+  icon and the place name. Shows about Dijon→Lyon around the pin. Pinch to zoom; no dragging, so a swipe
+  over the map still scrolls the page.
+- Shown under the feedback ONLY when the question has a `place`. No place → no map, no gap: exactly as before.
+- Fix: after answering, the page now scrolls far enough to show the whole map (it measured too early).
+- Testing aid (DEBUG builds only, never in the App Store app): launch argument `-skipQuestionRefresh`.
+
+**Tested in the simulator** with a sample file (the 36 Burgundy questions, 17 with places; never uploaded):
+map after a right answer (Meursault), after a wrong answer (Montagny, map moves to the new place),
+Moulin-à-Vent; question without a place shows no map and no gap. Look and feel unchanged otherwise.
+
+**Nobody sees a map yet:** no question on GitHub has a `place`, and the App Store app doesn't have this code.
+
+**Left to decide / test:**
+- Zoom: at this zoom Rully, Mercurey and Montagny look like the same spot. Could zoom in closer
+  (village level) — Jill's call after trying it.
+- Offline: map area blank without signal (not yet checked on screen).
+- On the phone (after merge + TestFlight).
+
+**Part 2 — add places (content only, GitHub web UI or Claude drafts):** draft places used for the test,
+for Jill to check before adding to `content/questions.json` (lat, lon):
+Rully 46.875, 4.746 · Mercurey 46.840, 4.716 · Montagny 46.717, 4.702 · Meursault 46.977, 4.770 ·
+Pouilly-Fuissé 46.283, 4.745 · Saint-Véran 46.255, 4.725 · Roche de Solutré 46.297, 4.718 ·
+Chablis 47.815, 3.798 · Mâcon 46.307, 4.832 · Moulin-à-Vent 46.190, 4.740.
+Only questions ABOUT one place get a `place` (e.g. "Which village produces only white wine?" → Montagny);
+general ones ("typical Pinot Noir characteristics") get none. Adding `place` doesn't change question IDs.
 
 ## Step 1 — the original brief
 Today `winestudyios/questions.json` is bundled, so every content change needs an App Store build.
