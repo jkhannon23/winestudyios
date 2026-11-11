@@ -10,8 +10,9 @@ the plan below gives it life, mostly through maps.
 Build in this order, one step at a time, tested between each:
 
 1. **Questions load from GitHub** (like the daily challenges already do), with a new optional
-   `place` field per question. ✅ BUILT 11 Nov on branch `step1-questions-from-github` — waiting for Jill to test and merge (see "Step 1 — status").
-2. **Map after each answer** — the answer's place shown on a map with a pin.
+   `place` field per question. ✅ DONE — merged to `main` and tested live 11 Nov (not yet in an App Store build; see "Step 1 — status").
+2. **Map after each answer** — the answer's place shown on a map with a pin. 🔨 PART 1 BUILT 11 Nov (map card in the app);
+   part 2 = add places to questions. See "Step 2 — status".
 3. **Drill by topic** — pick one region/category to quiz on.
 4. **Progress map** — regions coloured by how well they're known (from the spaced-repetition stats).
 5. **Map questions** ("Which pin is Rully?") and **region outlines** where good open data exists.
@@ -20,10 +21,13 @@ Alongside, no code: **rebalance the question bank** (see Content below), adding 
 are written or checked.
 
 **NOT NOW (Jill):** short-answer practice, exam countdown.
-**OPEN:** map look — real Apple map (MapKit) or simple illustrated maps in Volo's colours.
+**DECIDED (Jill, 11 Nov):** map look = **real Apple map (MapKit)**, muted style, Volo-pink pin with the
+wine-glasses icon, rounded card under the feedback. Chosen over a drawn map after seeing both as simulator
+mock-ups (drawn = more Volo, but only shows where in France, not where in Burgundy; needs a drawing per region).
+Drawn close-ups can still be added region by region later; the `place` data is the same.
 
 ## Step 1 — status (11 Nov 2026)
-**Done (branch `step1-questions-from-github`, not merged, not on the phone):**
+**Done (merged to `main` 11 Nov, PR #1; not yet on the phone or in an App Store build):**
 - `content/questions.json` created (identical to the bundled file: 460 questions, no wording changed, so
   all question IDs and spaced-repetition history are unchanged). The bundled `winestudyios/questions.json`
   stays as the last-resort fallback.
@@ -33,31 +37,63 @@ are written or checked.
 - Checks (whole file rejected if any fails): valid JSON list, at least 20 questions, every question has text,
   exactly 4 non-empty answers, correct index 0–3, feedback present, no two questions with the same text.
 - `place` is optional. A broken `place` (bad numbers, wrong shape) is dropped quietly and the question stays.
+  No question has a `place` yet.
 - `generate_daily_challenges.py` reads `content/questions.json` (falls back to the bundled file if missing).
+- The App Store app is unaffected: it never reads `content/`.
 
-**Tested:** checks vs good/broken files (13 cases, all pass); simulator: bundled fallback (GitHub 404 before
-the file exists), saved copy used, broken saved copy ignored → bundled used; generator reads the new file.
-Home screen and quiz screens look unchanged.
+**Tested:**
+- Checks vs good/broken files (13 cases, all pass).
+- Simulator, before merge: bundled fallback (GitHub 404), saved copy used, broken saved copy ignored → bundled.
+- Simulator, after merge: app downloads the live file and saves an identical copy. Jill edited a question on
+  GitHub → app picked it up on next launch; Jill undid it → app picked that up too. File on `main` is back
+  to the original.
+- Generator reads the new file. Home and quiz screens look like the App Store version (Nunito, close button).
 
-**Left to test (after merge, when the file is live on GitHub):**
-1. Merge the branch → `content/questions.json` appears on `main`.
-2. In the simulator: edit one question's *answer text* in the GitHub web UI, relaunch twice → the change shows
-   (first launch downloads, second launch uses the saved copy; a quiz in progress is not affected).
-3. Airplane mode → quiz still works. Upload a deliberately broken file → app keeps the old questions.
-4. Then TestFlight build, since old app versions don't have this.
+**Not tested:** a deliberately broken file uploaded to GitHub itself (only tested with broken files planted
+in the simulator); a real phone. Next App Store build: TestFlight first, then check a quiz on the phone.
 
-**How Jill edits questions from now on:** edit/upload `content/questions.json` on GitHub (that is the live
-file). The copy inside the app is only the safety net; refresh it at each App Store build. After editing
-question *wording*: regenerate daily challenges (see Daily challenges).
+**GitHub delay:** after a commit, `raw.githubusercontent.com` can serve the OLD file for up to ~5 minutes.
+So a fix shows in the app on the first launch after that, not instantly. Nothing to do about it.
 
-**Heads-up (found 11 Nov):** GitHub was BEHIND the App Store app. Edits made 31 May–2 Jun (smaller button
-padding, daily-challenge "completed" view, font path fix so Nunito loads, display name set in project settings,
-iPhone-only) were never committed. They are now saved on branch `shipped-app-edits`, and Step 1 is built on top
-of it, so building from Step 1 keeps the shipped look. **Merge `shipped-app-edits` first, then Step 1** (Step 1
-contains both, so merging Step 1 alone also works). Simulator check: Nunito shows on home and quiz screens.
+**How Jill edits questions from now on:** edit `content/questions.json` on GitHub (pencil icon → commit to
+`main`). That is the live file. The copy inside the app is only the safety net; refresh it at each App Store build.
+Editing answers or feedback is safe. Editing question *wording* changes that question's ID: its history resets
+and any daily challenge using it falls back to a random pick → regenerate daily challenges afterwards.
 
-**NEXT:** step 2, map after each answer. **Switch to Opus for the map work** (and decide the OPEN question:
-real Apple map vs illustrated maps).
+**Heads-up (found 11 Nov, now fixed):** GitHub was behind the App Store app. Edits made 31 May–2 Jun
+(smaller button padding, daily-challenge "completed" view, font path fix so Nunito loads, display name set in
+project settings, iPhone-only) were never committed. They are now on `main` (came in with PR #1). Branches
+`shipped-app-edits` and `step1-questions-from-github` are merged and can be deleted.
+
+**NEXT:** step 2 part 2 — see "Step 2 — status" below.
+
+## Step 2 — status (11 Nov 2026)
+**Part 1 done (branch `step2-map-after-answer`, not merged, not on the phone):**
+- `PlaceMapCard.swift`: muted Apple map in a rounded card (pink edge), Volo-pink pin with the wine-glasses
+  icon and the place name. Zoom: about 50 km across (Jill chose closer over wide, 11 Nov), so nearby
+  villages (Rully, Mercurey, Givry, Montagny) show as different spots; pinch out for the bigger picture. Pinch to zoom; no dragging, so a swipe
+  over the map still scrolls the page.
+- Shown under the feedback ONLY when the question has a `place`. No place → no map, no gap: exactly as before.
+- Fix: after answering, the page now scrolls far enough to show the whole map (it measured too early).
+- Testing aid (DEBUG builds only, never in the App Store app): launch argument `-skipQuestionRefresh`.
+
+**Tested in the simulator** with a sample file (the 36 Burgundy questions, 17 with places; never uploaded):
+map after a right answer (Meursault), after a wrong answer (Montagny, map moves to the new place),
+Moulin-à-Vent; question without a place shows no map and no gap. Look and feel unchanged otherwise.
+
+**Nobody sees a map yet:** no question on GitHub has a `place`, and the App Store app doesn't have this code.
+
+**Left to decide / test:**
+- Offline: map area blank without signal (not yet checked on screen).
+- On the phone (after merge + TestFlight).
+
+**Part 2 — add places (content only, GitHub web UI or Claude drafts):** draft places used for the test,
+for Jill to check before adding to `content/questions.json` (lat, lon):
+Rully 46.875, 4.746 · Mercurey 46.840, 4.716 · Montagny 46.717, 4.702 · Meursault 46.977, 4.770 ·
+Pouilly-Fuissé 46.283, 4.745 · Saint-Véran 46.255, 4.725 · Roche de Solutré 46.297, 4.718 ·
+Chablis 47.815, 3.798 · Mâcon 46.307, 4.832 · Moulin-à-Vent 46.190, 4.740.
+Only questions ABOUT one place get a `place` (e.g. "Which village produces only white wine?" → Montagny);
+general ones ("typical Pinot Noir characteristics") get none. Adding `place` doesn't change question IDs.
 
 ## Step 1 — the original brief
 Today `winestudyios/questions.json` is bundled, so every content change needs an App Store build.

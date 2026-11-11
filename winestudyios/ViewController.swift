@@ -402,6 +402,14 @@ class ViewController: UIViewController {
         return view
     }()
 
+    // Map with a pin on the question's place, under the feedback. Hidden (zero height)
+    // when the question has no place, so the screen looks exactly as before.
+    private let placeMapCard = PlaceMapCard()
+    private static let placeMapHeight: CGFloat = 160
+    private static let placeMapGap: CGFloat = 14
+    private lazy var placeMapHeightConstraint = placeMapCard.heightAnchor.constraint(equalToConstant: 0)
+    private lazy var placeMapGapConstraint = feedbackLabel.bottomAnchor.constraint(equalTo: placeMapCard.topAnchor, constant: 0)
+
     private let nextButton: UIButton = {
         let button = UIButton(type: .custom)
         let attrs: [NSAttributedString.Key: Any] = [
@@ -498,8 +506,16 @@ class ViewController: UIViewController {
         preloadSounds()
         allQuestions = QuestionLoader.load()
         // Check GitHub for newer questions; a quiz already started keeps its own copy.
-        QuestionLoader.refreshFromServer { [weak self] fresh in
-            self?.allQuestions = fresh
+        #if DEBUG
+        // Testing only: "-skipQuestionRefresh" keeps the saved/bundled questions (no GitHub download).
+        let skipRefresh = ProcessInfo.processInfo.arguments.contains("-skipQuestionRefresh")
+        #else
+        let skipRefresh = false
+        #endif
+        if !skipRefresh {
+            QuestionLoader.refreshFromServer { [weak self] fresh in
+                self?.allQuestions = fresh
+            }
         }
         // Kick off the server fetch immediately so today's question IDs are
         // cached before the user taps Daily Challenge.
@@ -748,6 +764,8 @@ class ViewController: UIViewController {
         quizContentView.addSubview(answersContainerView)
         feedbackContainerView.addSubview(feedbackExclamationImageView)
         feedbackContainerView.addSubview(feedbackLabel)
+        feedbackContainerView.addSubview(placeMapCard)
+        placeMapCard.isHidden = true
         quizContentView.addSubview(feedbackContainerView)
         quizContentView.addSubview(quizBirdImageView)
         quizContainerView.addSubview(nextButton)
@@ -911,7 +929,11 @@ class ViewController: UIViewController {
             feedbackLabel.topAnchor.constraint(equalTo: feedbackContainerView.topAnchor, constant: 8),
             feedbackLabel.leadingAnchor.constraint(equalTo: feedbackExclamationImageView.trailingAnchor, constant: 16),
             feedbackLabel.trailingAnchor.constraint(equalTo: feedbackContainerView.trailingAnchor, constant: -8),
-            feedbackLabel.bottomAnchor.constraint(equalTo: feedbackContainerView.bottomAnchor, constant: -8),
+            placeMapGapConstraint,
+            placeMapCard.leadingAnchor.constraint(equalTo: feedbackContainerView.leadingAnchor, constant: 8),
+            placeMapCard.trailingAnchor.constraint(equalTo: feedbackContainerView.trailingAnchor, constant: -8),
+            placeMapCard.bottomAnchor.constraint(equalTo: feedbackContainerView.bottomAnchor, constant: -8),
+            placeMapHeightConstraint,
 
             // Next button — sticky bar pinned above the progress dots, outside the scroll view
             nextButton.centerXAnchor.constraint(equalTo: quizContainerView.centerXAnchor),
@@ -1315,6 +1337,17 @@ class ViewController: UIViewController {
             .font: feedbackLabel.font as Any,
             .foregroundColor: feedbackLabel.textColor as Any
         ])
+        // Map with the answer's place, if the question has one.
+        if let place = question.place {
+            placeMapCard.show(place)
+            placeMapCard.isHidden = false
+            placeMapHeightConstraint.constant = ViewController.placeMapHeight
+            placeMapGapConstraint.constant = -ViewController.placeMapGap
+        } else {
+            placeMapCard.isHidden = true
+            placeMapHeightConstraint.constant = 0
+            placeMapGapConstraint.constant = 0
+        }
         feedbackContainerView.isHidden = false
         feedbackContainerView.alpha = 0
         feedbackContainerView.transform = CGAffineTransform(translationX: 0, y: -13)
@@ -1334,7 +1367,8 @@ class ViewController: UIViewController {
         nextButton.isHidden = false
 
         // Safety net: if the content is taller than the scroll view, scroll the feedback into view.
-        quizContentView.layoutIfNeeded()
+        // Lay out the scroll view (not just its content) so the page height includes the map.
+        quizScrollView.layoutIfNeeded()
         let feedbackRect = quizScrollView.convert(feedbackContainerView.bounds, from: feedbackContainerView)
         quizScrollView.scrollRectToVisible(feedbackRect, animated: true)
     }
