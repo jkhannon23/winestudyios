@@ -27,6 +27,10 @@ are written or checked.
   view). Note: today the app only keeps today's daily-challenge score and the streak; past scores are not
   stored yet, so tracking starts from the version that adds it.
 
+**TO FIX (Jill):**
+- **Sounds need to be reconsidered** (Jill, 11 Nov). Sounds are part of the look and feel, so nothing changes
+  without Jill choosing; start by listing where each sound plays (correct, wrong, next, play again, win, fail).
+
 **RELEASE PLAN (Jill, 11 Nov):** no new App Store version until the app is much more robust. Meanwhile
 test on Jill's phone with **Volo Dev** (see below), not through the App Store.
 **DECIDED (Jill, 11 Nov):** map look = **real Apple map (MapKit)**, muted style, Volo-pink pin with the
@@ -41,6 +45,8 @@ Drawn close-ups can still be added region by region later; the `place` data is t
   build settings; only the two Debug lines in `project.pbxproj` changed.
 - Same icon for both; the name under the icon tells them apart.
 - To put it on the phone: plug in the phone (or same Wi-Fi), Developer Mode on, pick the phone in Xcode, Run.
+- ✅ Installed on Jill's iPhone 11 Nov; Jill confirmed it looks right and sits next to the real Volo.
+  Test installs stop opening after about a year → just reinstall.
 
 ## Step 1 — status (11 Nov 2026)
 **Done (merged to `main` 11 Nov, PR #1; not yet on the phone or in an App Store build):**
