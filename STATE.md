@@ -70,7 +70,8 @@ project settings, iPhone-only) were never committed. They are now on `main` (cam
 ## Step 2 — status (11 Nov 2026)
 **Part 1 done (branch `step2-map-after-answer`, not merged, not on the phone):**
 - `PlaceMapCard.swift`: muted Apple map in a rounded card (pink edge), Volo-pink pin with the wine-glasses
-  icon and the place name. Shows about Dijon→Lyon around the pin. Pinch to zoom; no dragging, so a swipe
+  icon and the place name. Zoom: about 50 km across (Jill chose closer over wide, 11 Nov), so nearby
+  villages (Rully, Mercurey, Givry, Montagny) show as different spots; pinch out for the bigger picture. Pinch to zoom; no dragging, so a swipe
   over the map still scrolls the page.
 - Shown under the feedback ONLY when the question has a `place`. No place → no map, no gap: exactly as before.
 - Fix: after answering, the page now scrolls far enough to show the whole map (it measured too early).
@@ -83,8 +84,6 @@ Moulin-à-Vent; question without a place shows no map and no gap. Look and feel 
 **Nobody sees a map yet:** no question on GitHub has a `place`, and the App Store app doesn't have this code.
 
 **Left to decide / test:**
-- Zoom: at this zoom Rully, Mercurey and Montagny look like the same spot. Could zoom in closer
-  (village level) — Jill's call after trying it.
 - Offline: map area blank without signal (not yet checked on screen).
 - On the phone (after merge + TestFlight).
 

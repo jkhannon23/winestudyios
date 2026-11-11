@@ -15,7 +15,7 @@ final class PlaceMapCard: UIView, MKMapViewDelegate {
     private static let edgePink = UIColor(red: 247/255, green: 195/255, blue: 222/255, alpha: 1)
 
     /// How much area the map shows around the pin (degrees of latitude/longitude).
-    private static let span = MKCoordinateSpan(latitudeDelta: 2.2, longitudeDelta: 2.2)
+    private static let span = MKCoordinateSpan(latitudeDelta: 0.5, longitudeDelta: 0.5)
 
     private let mapView = MKMapView()
     private let pin = MKPointAnnotation()
