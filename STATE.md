@@ -21,10 +21,26 @@ Alongside, no code: **rebalance the question bank** (see Content below), adding 
 are written or checked.
 
 **NOT NOW (Jill):** short-answer practice, exam countdown.
+
+**IDEAS FOR LATER (Jill, not yet ordered):**
+- **Score tracker** — see your past scores over time, and see the days you missed (a calendar or streak
+  view). Note: today the app only keeps today's daily-challenge score and the streak; past scores are not
+  stored yet, so tracking starts from the version that adds it.
+
+**RELEASE PLAN (Jill, 11 Nov):** no new App Store version until the app is much more robust. Meanwhile
+test on Jill's phone with **Volo Dev** (see below), not through the App Store.
 **DECIDED (Jill, 11 Nov):** map look = **real Apple map (MapKit)**, muted style, Volo-pink pin with the
 wine-glasses icon, rounded card under the feedback. Chosen over a drawn map after seeing both as simulator
 mock-ups (drawn = more Volo, but only shows where in France, not where in Burgundy; needs a drawing per region).
 Drawn close-ups can still be added region by region later; the `place` data is the same.
+
+## Volo Dev — test copy on Jill's phone (11 Nov 2026)
+- Test builds (Xcode "Debug", what Run in Xcode puts on the phone) are now a separate app: name **Volo Dev**,
+  app id `jill.winestudyios.dev`. They sit NEXT TO the real Volo, with their own progress/streak.
+- App Store builds (Archive → "Release") are unchanged: **Volo**, `jill.winestudyios`. Checked with Xcode's
+  build settings; only the two Debug lines in `project.pbxproj` changed.
+- Same icon for both; the name under the icon tells them apart.
+- To put it on the phone: plug in the phone (or same Wi-Fi), Developer Mode on, pick the phone in Xcode, Run.
 
 ## Step 1 — status (11 Nov 2026)
 **Done (merged to `main` 11 Nov, PR #1; not yet on the phone or in an App Store build):**
@@ -68,7 +84,7 @@ project settings, iPhone-only) were never committed. They are now on `main` (cam
 **NEXT:** step 2 part 2 — see "Step 2 — status" below.
 
 ## Step 2 — status (11 Nov 2026)
-**Part 1 done (branch `step2-map-after-answer`, not merged, not on the phone):**
+**Part 1 done (merged to `main` 11 Nov, PR #2; not yet on the phone):**
 - `PlaceMapCard.swift`: muted Apple map in a rounded card (pink edge), Volo-pink pin with the wine-glasses
   icon and the place name. Zoom: about 50 km across (Jill chose closer over wide, 11 Nov), so nearby
   villages (Rully, Mercurey, Givry, Montagny) show as different spots; pinch out for the bigger picture. Pinch to zoom; no dragging, so a swipe
