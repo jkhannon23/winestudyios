@@ -20,7 +20,10 @@ Alongside, no code: **rebalance the question bank** (see Content below), adding 
 are written or checked.
 
 **NOT NOW (Jill):** short-answer practice, exam countdown.
-**OPEN:** map look — real Apple map (MapKit) or simple illustrated maps in Volo's colours.
+**DECIDED (Jill, 11 Nov):** map look = **real Apple map (MapKit)**, muted style, Volo-pink pin with the
+wine-glasses icon, rounded card under the feedback. Chosen over a drawn map after seeing both as simulator
+mock-ups (drawn = more Volo, but only shows where in France, not where in Burgundy; needs a drawing per region).
+Drawn close-ups can still be added region by region later; the `place` data is the same.
 
 ## Step 1 — status (11 Nov 2026)
 **Done (merged to `main` 11 Nov, PR #1; not yet on the phone or in an App Store build):**
@@ -61,9 +64,12 @@ and any daily challenge using it falls back to a random pick → regenerate dail
 project settings, iPhone-only) were never committed. They are now on `main` (came in with PR #1). Branches
 `shipped-app-edits` and `step1-questions-from-github` are merged and can be deleted.
 
-**NEXT:** step 2, map after each answer. Use Opus for map work. First decide the OPEN question: real Apple map
-(MapKit) vs simple illustrated maps in Volo's colours. Questions need `place` added for pins to show; start with
-one region (e.g. Burgundy) so there is something to see. Alternative in parallel: rebalance the question bank.
+**NEXT:** step 2, map after each answer, Apple map (decided above). Use Opus for map work.
+- Build the card for real: shown only when the question has a `place`, hidden otherwise; no map = layout as today.
+- Card height/position to settle on the phone: in the mock it sat under the feedback and needed a small scroll.
+- Add `place` to a first batch of questions (e.g. Burgundy) in `content/questions.json` so there is something to see.
+- Offline: the map area is blank without signal; the quiz itself still works.
+- Mock-up code (throwaway, local only): branch `mock-map`, `.claude/worktrees/mock-map`.
 
 ## Step 1 — the original brief
 Today `winestudyios/questions.json` is bundled, so every content change needs an App Store build.
