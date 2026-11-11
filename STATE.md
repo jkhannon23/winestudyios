@@ -10,7 +10,7 @@ the plan below gives it life, mostly through maps.
 Build in this order, one step at a time, tested between each:
 
 1. **Questions load from GitHub** (like the daily challenges already do), with a new optional
-   `place` field per question. ← START HERE
+   `place` field per question. ✅ BUILT 11 Nov on branch `step1-questions-from-github` — waiting for Jill to test and merge (see "Step 1 — status").
 2. **Map after each answer** — the answer's place shown on a map with a pin.
 3. **Drill by topic** — pick one region/category to quiz on.
 4. **Progress map** — regions coloured by how well they're known (from the spaced-repetition stats).
@@ -22,7 +22,42 @@ are written or checked.
 **NOT NOW (Jill):** short-answer practice, exam countdown.
 **OPEN:** map look — real Apple map (MapKit) or simple illustrated maps in Volo's colours.
 
-## Step 1 — questions from GitHub
+## Step 1 — status (11 Nov 2026)
+**Done (branch `step1-questions-from-github`, not merged, not on the phone):**
+- `content/questions.json` created (identical to the bundled file: 460 questions, no wording changed, so
+  all question IDs and spaced-repetition history are unchanged). The bundled `winestudyios/questions.json`
+  stays as the last-resort fallback.
+- App (`Question.swift`, one line in `ViewController.swift`): quiz starts at once from the saved copy on the
+  phone, else the bundled one; in the background it downloads the GitHub file and, only if it passes every
+  check, saves it for next time and uses it. A quiz already started keeps its own questions.
+- Checks (whole file rejected if any fails): valid JSON list, at least 20 questions, every question has text,
+  exactly 4 non-empty answers, correct index 0–3, feedback present, no two questions with the same text.
+- `place` is optional. A broken `place` (bad numbers, wrong shape) is dropped quietly and the question stays.
+- `generate_daily_challenges.py` reads `content/questions.json` (falls back to the bundled file if missing).
+
+**Tested:** checks vs good/broken files (13 cases, all pass); simulator: bundled fallback (GitHub 404 before
+the file exists), saved copy used, broken saved copy ignored → bundled used; generator reads the new file.
+Home screen and quiz screens look unchanged.
+
+**Left to test (after merge, when the file is live on GitHub):**
+1. Merge the branch → `content/questions.json` appears on `main`.
+2. In the simulator: edit one question's *answer text* in the GitHub web UI, relaunch twice → the change shows
+   (first launch downloads, second launch uses the saved copy; a quiz in progress is not affected).
+3. Airplane mode → quiz still works. Upload a deliberately broken file → app keeps the old questions.
+4. Then TestFlight build, since old app versions don't have this.
+
+**How Jill edits questions from now on:** edit/upload `content/questions.json` on GitHub (that is the live
+file). The copy inside the app is only the safety net; refresh it at each App Store build. After editing
+question *wording*: regenerate daily challenges (see Daily challenges).
+
+**Heads-up:** Jill's local folder has unsaved screen edits (button sizes, daily-challenge completed view, Info.plist
+font path / display name change) that are not part of this branch. The Info.plist change drops the app name "Volo"
+and the `Fonts/` path — check before committing those.
+
+**NEXT:** step 2, map after each answer. **Switch to Opus for the map work** (and decide the OPEN question:
+real Apple map vs illustrated maps).
+
+## Step 1 — the original brief
 Today `winestudyios/questions.json` is bundled, so every content change needs an App Store build.
 - Fetch the questions from `https://raw.githubusercontent.com/jkhannon23/winestudyios/main/content/questions.json`
   (new folder `content/`, so old app versions keep using their bundled copy untouched).

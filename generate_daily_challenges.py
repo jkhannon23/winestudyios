@@ -119,9 +119,11 @@ def main():
     args = parser.parse_args()
 
     script_dir = os.path.dirname(os.path.abspath(__file__))
-    questions_path = os.path.join(
-        script_dir, "winestudyios", "questions.json"
-    )
+    # The live file the app downloads. Fall back to the copy bundled in the app
+    # only if the live file doesn't exist yet.
+    questions_path = os.path.join(script_dir, "content", "questions.json")
+    if not os.path.exists(questions_path):
+        questions_path = os.path.join(script_dir, "winestudyios", "questions.json")
 
     with open(questions_path, encoding="utf-8") as f:
         questions = json.load(f)

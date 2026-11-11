@@ -497,6 +497,10 @@ class ViewController: UIViewController {
         view.backgroundColor = hotPink
         preloadSounds()
         allQuestions = QuestionLoader.load()
+        // Check GitHub for newer questions; a quiz already started keeps its own copy.
+        QuestionLoader.refreshFromServer { [weak self] fresh in
+            self?.allQuestions = fresh
+        }
         // Kick off the server fetch immediately so today's question IDs are
         // cached before the user taps Daily Challenge.
         DailyChallengeManager.prefetchTodaysChallenge()
