@@ -165,7 +165,12 @@
         ],
         "correctAnswerIndex": 1,
         "feedback": "Made with Nebbiolo in Piedmont, Italy, the Barbaresco DOCG must be aged for 2 years (26 months) before release, with 9 months in oak.",
-        "category": "Italy"
+        "category": "Italy",
+        "place": {
+            "name": "Barbaresco",
+            "lat": 44.726,
+            "lon": 8.082
+        }
     },
     {
         "question": "Which of the following is the most widely planted white grape variety in Australia?",
@@ -501,7 +506,12 @@
         ],
         "correctAnswerIndex": 0,
         "feedback": "The thin-skinned and highly acidic Corvina is the primary grape used in Valpolicella in the northern Italian region of Veneto, along with Corvinone and other blending grapes.",
-        "category": "Italy"
+        "category": "Italy",
+        "place": {
+            "name": "Valpolicella",
+            "lat": 45.517,
+            "lon": 10.886
+        }
     },
     {
         "question": "Frascati DOC is a blend of which grapes?",
@@ -513,7 +523,12 @@
         ],
         "correctAnswerIndex": 2,
         "feedback": "Frascati DOC is made in the hills south of Rome with Malvasia and Trebbiano. The vineyards are cooled by small lakes and altitude.",
-        "category": "Italy"
+        "category": "Italy",
+        "place": {
+            "name": "Frascati",
+            "lat": 41.809,
+            "lon": 12.68
+        }
     },
     {
         "question": "Which wine is considered the best in the region of Basilicata?",
@@ -525,7 +540,12 @@
         ],
         "correctAnswerIndex": 2,
         "feedback": "Aglianico del Vulture DOC, made with Aglianico grown on the high plains surrounding the extinct volcano of Monte Vulture, is considered the best wine in Basilicata.",
-        "category": "Italy"
+        "category": "Italy",
+        "place": {
+            "name": "Vulture",
+            "lat": 40.927,
+            "lon": 15.672
+        }
     },
     {
         "question": "What is the traditional grape variety of Rueda?",
@@ -681,7 +701,12 @@
         ],
         "correctAnswerIndex": 1,
         "feedback": "Alto Adige, located in the foothills of the Alps and centered around the town of Bolzano, is the wine region furthest north in Italy.",
-        "category": "Italy"
+        "category": "Italy",
+        "place": {
+            "name": "Alto Adige",
+            "lat": 46.498,
+            "lon": 11.355
+        }
     },
     {
         "question": "What is the most important white grape in Alto Adige?",
@@ -693,7 +718,12 @@
         ],
         "correctAnswerIndex": 0,
         "feedback": "Pinot Grigio is the most important white grape in Alto Adige. It is used to make dry wines with light to medium body, high acidity, and flavors of citrus and green fruit.",
-        "category": "Italy"
+        "category": "Italy",
+        "place": {
+            "name": "Alto Adige",
+            "lat": 46.498,
+            "lon": 11.355
+        }
     },
     {
         "question": "Which black grape are most red wines made from in Alto Adige?",
@@ -705,7 +735,12 @@
         ],
         "correctAnswerIndex": 0,
         "feedback": "Most red wines in Alto Adige are made with Schiava, which produces light fruity wines with low to medium tannins and flavors of plums and raspberries.",
-        "category": "Italy"
+        "category": "Italy",
+        "place": {
+            "name": "Alto Adige",
+            "lat": 46.498,
+            "lon": 11.355
+        }
     },
     {
         "question": "What are the primary grapes grown in Trentino?",
@@ -717,7 +752,12 @@
         ],
         "correctAnswerIndex": 0,
         "feedback": "Chardonnay and Pinot Grigio are the primary grapes grown in Trentino which has a slightly warmer climate than nearby Alto Adige.",
-        "category": "Italy"
+        "category": "Italy",
+        "place": {
+            "name": "Trentino",
+            "lat": 46.068,
+            "lon": 11.121
+        }
     },
     {
         "question": "In which wine region is the town of Bolzano located?",
@@ -729,7 +769,12 @@
         ],
         "correctAnswerIndex": 3,
         "feedback": "Bolzano is located in Alto Adige in the foothills of the Alps in northern Italy. Vineyards are planted in terraces along the Adige river.",
-        "category": "Italy"
+        "category": "Italy",
+        "place": {
+            "name": "Bolzano",
+            "lat": 46.498,
+            "lon": 11.355
+        }
     },
     {
         "question": "What are the two most planted black grape varieties in Trentino?",
@@ -741,7 +786,12 @@
         ],
         "correctAnswerIndex": 2,
         "feedback": "Grown mostly on the valley floor and mid-slope, Merlot and Teroldego are the most planted black grape varieties in Trentino.",
-        "category": "Italy"
+        "category": "Italy",
+        "place": {
+            "name": "Trentino",
+            "lat": 46.068,
+            "lon": 11.121
+        }
     },
     {
         "question": "What best describes wines produced from the Teroldego grape?",
@@ -765,7 +815,12 @@
         ],
         "correctAnswerIndex": 0,
         "feedback": "Pinot Grigio and Merlot are the most planted grape varieties in Friuli-Venezia Giulia and are used to produce rich, ripe wines.",
-        "category": "Italy"
+        "category": "Italy",
+        "place": {
+            "name": "Friuli-Venezia Giulia",
+            "lat": 46.063,
+            "lon": 13.235
+        }
     },
     {
         "question": "Which region produces some of the richest Pinot Grigio in Italy?",
@@ -777,7 +832,12 @@
         ],
         "correctAnswerIndex": 3,
         "feedback": "Friuli-Venezia Giulia produces some of the richest medium and full-bodied Pinot Grigio wines in Italy with flavors of juicy peach and tropical fruit.",
-        "category": "Italy"
+        "category": "Italy",
+        "place": {
+            "name": "Friuli-Venezia Giulia",
+            "lat": 46.063,
+            "lon": 13.235
+        }
     },
     {
         "question": "What black grape variety is planted the most in Friuli-Venezia Giulia?",
@@ -789,7 +849,12 @@
         ],
         "correctAnswerIndex": 1,
         "feedback": "Merlot is the most planted black grape variety in Friuli-Venezia Giulia. It is used to make medium-bodied wines with medium acidity, flavors of ripe red fruit, and often spice from oak.",
-        "category": "Italy"
+        "category": "Italy",
+        "place": {
+            "name": "Friuli-Venezia Giulia",
+            "lat": 46.063,
+            "lon": 13.235
+        }
     },
     {
         "question": "Collio DOC comes from which wine region?",
@@ -801,7 +866,12 @@
         ],
         "correctAnswerIndex": 0,
         "feedback": "In the hills of Friuli-Venezia Giulia, Collio and Colli Orientali DOC are noted for producing concentrated premium whites and Colli Orientali is also known for reds.",
-        "category": "Italy"
+        "category": "Italy",
+        "place": {
+            "name": "Collio",
+            "lat": 45.956,
+            "lon": 13.468
+        }
     },
     {
         "question": "What is the second most planted grape variety in Argentina?",
@@ -5289,7 +5359,12 @@
         ],
         "correctAnswerIndex": 1,
         "feedback": "Made exclusively from Nebbiolo in Piedmont, Barolo DOCG must be aged for a minimum of 3 years (38 months) before release, of which 18 months must be in oak. Riserva requires 5 years total.",
-        "category": "Italy"
+        "category": "Italy",
+        "place": {
+            "name": "Barolo",
+            "lat": 44.611,
+            "lon": 7.943
+        }
     },
     {
         "question": "Which grape variety is used to produce Amarone della Valpolicella?",
@@ -5301,7 +5376,12 @@
         ],
         "correctAnswerIndex": 1,
         "feedback": "Amarone della Valpolicella is made primarily from Corvina, along with Corvinone and Rondinella. The grapes are dried for several months before fermentation using the passito method, which concentrates sugars and flavors, resulting in a rich, full-bodied, and highly alcoholic dry wine.",
-        "category": "Italy"
+        "category": "Italy",
+        "place": {
+            "name": "Valpolicella",
+            "lat": 45.517,
+            "lon": 10.886
+        }
     },
     {
         "question": "What is the primary grape variety in Vino Nobile di Montepulciano DOCG?",
@@ -5313,7 +5393,12 @@
         ],
         "correctAnswerIndex": 1,
         "feedback": "Vino Nobile di Montepulciano is made primarily from Sangiovese, known locally as Prugnolo Gentile. Montepulciano is a town in Tuscany, not a grape variety — a common source of confusion with the Montepulciano d'Abruzzo DOC, which is made from the Montepulciano grape.",
-        "category": "Italy"
+        "category": "Italy",
+        "place": {
+            "name": "Montepulciano",
+            "lat": 43.099,
+            "lon": 11.787
+        }
     },
     {
         "question": "Which Tuscan DOCG produces Sangiovese-dominant wines in the Maremma coastal area?",
@@ -5325,7 +5410,12 @@
         ],
         "correctAnswerIndex": 0,
         "feedback": "Morellino di Scansano DOCG is located in the Maremma coastal area of Tuscany. It is made from at least 85% Sangiovese, known locally as Morellino. The Riserva must be aged for at least 2 years before release, while the non-Riserva does not need to age in wood and can be released the following spring.",
-        "category": "Italy"
+        "category": "Italy",
+        "place": {
+            "name": "Scansano",
+            "lat": 42.688,
+            "lon": 11.33
+        }
     },
     {
         "question": "What grape variety is Sagrantino di Montefalco DOCG made from?",
@@ -5337,7 +5427,12 @@
         ],
         "correctAnswerIndex": 2,
         "feedback": "Sagrantino di Montefalco DOCG is made exclusively from Sagrantino, a grape variety native to Umbria in central Italy. The thick-skinned grape produces deeply colored wines with high tannins.",
-        "category": "Italy"
+        "category": "Italy",
+        "place": {
+            "name": "Montefalco",
+            "lat": 42.892,
+            "lon": 12.652
+        }
     },
     {
         "question": "Fino and Manzanilla Sherries are best described as which style?",

@@ -135,6 +135,19 @@ Today `winestudyios/questions.json` is bundled, so every content change needs an
 - `generate_daily_challenges.py` should read `content/questions.json` once it exists.
 - Jill works in the GitHub web UI only: content updates = upload the edited file and commit to `main`.
 
+## Step 2 part 2 — Italy places (12 Nov, branch `step2-italy-places`)
+Jill picked Italy next because she can check it without her books. 19 of the 20 Italy questions in
+`content/questions.json` now have a `place` (rule: the question is about one place; the pin is that place).
+Pins (lat, lon): Alto Adige 46.498, 11.355 (on Bolzano; 3 questions) · Bolzano (same spot; 1) ·
+Trentino 46.068, 11.121 (on Trento; 2) · Friuli-Venezia Giulia 46.063, 13.235 (on Udine; 3) ·
+Collio 45.956, 13.468 (on Cormons) · Valpolicella 45.517, 10.886 (on San Pietro in Cariano; 2) ·
+Barolo 44.611, 7.943 · Barbaresco 44.726, 8.082 · Frascati 41.809, 12.680 · Vulture 40.927, 15.672
+(on Rionero in Vulture) · Montepulciano 43.099, 11.787 · Scansano 42.688, 11.330 (Morellino) ·
+Montefalco 42.892, 12.652 (Sagrantino).
+No pin: "What best describes Teroldego wines?" (a grape question).
+Tested in the simulator: Friuli pin shows; file passes the app's checks.
+**TO CHECK (Jill):** every pin; whole-region questions (Alto Adige, Trentino, Friuli) pin the main town.
+
 ## Content — the question bank (460 questions, 11 Nov)
 All four-option multiple choice. By category: Spain 46, Burgundy 36, USA 36, Chile 33, Australia 31,
 Loire 29, Rhône 29, Bordeaux 28, Germany 27, Argentina 24, **Italy 20**, South Africa 19, Austria 17,
