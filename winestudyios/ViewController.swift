@@ -32,6 +32,7 @@ class ViewController: UIViewController {
     private let totalQuestions = 10
 
     private var allQuestions: [Question] = []
+    private static let pinsOnlyKey = "debugPinsOnly"
     private var quizQuestions: [Question] = []
     private var currentIndex = 0
     private var score = 0
@@ -509,6 +510,11 @@ class ViewController: UIViewController {
         #if DEBUG
         // Testing only: "-skipQuestionRefresh" keeps the saved/bundled questions (no GitHub download).
         let skipRefresh = ProcessInfo.processInfo.arguments.contains("-skipQuestionRefresh")
+        // Testing only: "-pinsOnlyOn" / "-pinsOnlyOff" turn the "map questions only" switch on/off.
+        // It is remembered, so it stays on when the app is reopened from the home screen.
+        let launchArgs = ProcessInfo.processInfo.arguments
+        if launchArgs.contains("-pinsOnlyOn") { UserDefaults.standard.set(true, forKey: Self.pinsOnlyKey) }
+        if launchArgs.contains("-pinsOnlyOff") { UserDefaults.standard.set(false, forKey: Self.pinsOnlyKey) }
         #else
         let skipRefresh = false
         #endif
@@ -1092,7 +1098,15 @@ class ViewController: UIViewController {
             quizQuestions = DailyChallengeManager.questionsForToday(from: allQuestions, count: totalQuestions)
         } else {
             // Spaced-repetition: mix due-for-review weak items with new questions.
-            quizQuestions = QuestionStatsManager.selectQuiz(from: allQuestions, count: totalQuestions)
+            var pool = allQuestions
+            #if DEBUG
+            // Testing only (never in the App Store app): play only questions that show a map.
+            if UserDefaults.standard.bool(forKey: Self.pinsOnlyKey) {
+                let withPlaces = allQuestions.filter { $0.place != nil }
+                if !withPlaces.isEmpty { pool = withPlaces }
+            }
+            #endif
+            quizQuestions = QuestionStatsManager.selectQuiz(from: pool, count: totalQuestions)
         }
         guard !quizQuestions.isEmpty else { return } // JSON failed to load
         currentIndex = 0

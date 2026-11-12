@@ -98,6 +98,11 @@ project settings, iPhone-only) were never committed. They are now on `main` (cam
 - Shown under the feedback ONLY when the question has a `place`. No place → no map, no gap: exactly as before.
 - Fix: after answering, the page now scrolls far enough to show the whole map (it measured too early).
 - Testing aid (DEBUG builds only, never in the App Store app): launch argument `-skipQuestionRefresh`.
+- **"Map questions only" switch** (12 Nov, DEBUG/Volo Dev only): launch once with `-pinsOnlyOn` and Play uses
+  only questions with a `place` (every answer shows a map); it is remembered until a launch with `-pinsOnlyOff`.
+  Daily challenge is not affected. Turned ON on Jill's phone 12 Nov
+  (`xcrun devicectl device process launch --device <phone> jill.winestudyios.dev -- -pinsOnlyOn`). Ask Claude to turn it off.
+  It goes away by itself when step 3 (drill by topic) gives a proper way to pick questions.
 
 **Tested in the simulator** with a sample file (the 36 Burgundy questions, 17 with places; never uploaded):
 map after a right answer (Meursault), after a wrong answer (Montagny, map moves to the new place),
