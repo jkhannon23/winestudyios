@@ -9,7 +9,12 @@
         ],
         "correctAnswerIndex": 1,
         "feedback": "Rully is 1 of 4 village appellations in Burgundy's Côte Chalonnaise (Rully, Mercurey, Givry, Montagny). More white (Chardonnay) than red wine (Pinot Noir) is produced here, and it is important for sparkling wines.",
-        "category": "Burgundy"
+        "category": "Burgundy",
+        "place": {
+            "name": "Rully",
+            "lat": 46.875,
+            "lon": 4.746
+        }
     },
     {
         "question": "Pays Nantais in the Loire Valley has a reputation for wines made from which grape variety?",
@@ -345,7 +350,12 @@
         ],
         "correctAnswerIndex": 2,
         "feedback": "Pouilly-Fuissé is a famous village appellation in the Mâconnais subregion of southern Burgundy. Chardonnay is planted on limestone slopes and is used to make rich, ripe wines that are considered a great value for premium White Burgundy. Toasted oak is common.",
-        "category": "Burgundy"
+        "category": "Burgundy",
+        "place": {
+            "name": "Pouilly-Fuissé",
+            "lat": 46.283,
+            "lon": 4.745
+        }
     },
     {
         "question": "The village of Saint-Véran is located in which region?",
@@ -357,7 +367,12 @@
         ],
         "correctAnswerIndex": 2,
         "feedback": "Saint-Véran is a famous village appellation in the Mâconnais subregion of southern Burgundy that produces only Chardonnays, many of which are rich and ripe.",
-        "category": "Burgundy"
+        "category": "Burgundy",
+        "place": {
+            "name": "Saint-Véran",
+            "lat": 46.255,
+            "lon": 4.725
+        }
     },
     {
         "question": "Where is the Roche de Solutré located?",
@@ -369,7 +384,12 @@
         ],
         "correctAnswerIndex": 2,
         "feedback": "The Roche de Solutré is a limestone escarpment (a long, steep slope or cliff) in Mâconnais on which some of the richest and ripest Chardonnays in Burgundy are grown. The black grape varieties Gamay and Pinot Noir are also grown here.",
-        "category": "Burgundy"
+        "category": "Burgundy",
+        "place": {
+            "name": "Roche de Solutré",
+            "lat": 46.297,
+            "lon": 4.718
+        }
     },
     {
         "question": "How many villages are Beaujolais villages?",
@@ -1653,7 +1673,12 @@
         ],
         "correctAnswerIndex": 2,
         "feedback": "Spring frosts, often as late as May, are a particular problem in Chablis. Summer hailstorms that can damage crops are also a problem in Burgundy.",
-        "category": "Burgundy"
+        "category": "Burgundy",
+        "place": {
+            "name": "Chablis",
+            "lat": 47.815,
+            "lon": 3.798
+        }
     },
     {
         "question": "What is a particular problem in Burgundy?",
@@ -1701,7 +1726,12 @@
         ],
         "correctAnswerIndex": 3,
         "feedback": "Chablis lies furthest north in Burgundy in the valley of the River Serein. The highest quality vineyards face south.",
-        "category": "Burgundy"
+        "category": "Burgundy",
+        "place": {
+            "name": "Chablis",
+            "lat": 47.815,
+            "lon": 3.798
+        }
     },
     {
         "question": "What is a major challenge in Chablis?",
@@ -1713,7 +1743,12 @@
         ],
         "correctAnswerIndex": 2,
         "feedback": "Frost is a major challenge in Chablis where both sprinklers and heaters are used to provide warmth in the vineyards.",
-        "category": "Burgundy"
+        "category": "Burgundy",
+        "place": {
+            "name": "Chablis",
+            "lat": 47.815,
+            "lon": 3.798
+        }
     },
     {
         "question": "Which grapes are permitted in the village appellation of Chablis?",
@@ -1725,7 +1760,12 @@
         ],
         "correctAnswerIndex": 0,
         "feedback": "Only Chardonnay is permitted in Chablis in northern Burgundy, where frost is a problem and both sprinklers and heaters are used in the vineyards.",
-        "category": "Burgundy"
+        "category": "Burgundy",
+        "place": {
+            "name": "Chablis",
+            "lat": 47.815,
+            "lon": 3.798
+        }
     },
     {
         "question": "Which wine region is located in the valley of the Serein river?",
@@ -1737,7 +1777,12 @@
         ],
         "correctAnswerIndex": 0,
         "feedback": "Chablis is located in the valley of the Serein river in the north of Burgundy. Lesser vineyards here are classified as Petit Chablis.",
-        "category": "Burgundy"
+        "category": "Burgundy",
+        "place": {
+            "name": "Chablis",
+            "lat": 47.815,
+            "lon": 3.798
+        }
     },
     {
         "question": "What region forms the heartland of Burgundy?",
@@ -1761,7 +1806,12 @@
         ],
         "correctAnswerIndex": 0,
         "feedback": "Givry is the smallest of four village appellations in Côte Chalonnaise in Burgundy, whereas the Côte de Beaune is in the Côte d'Or. Givry has a reputation for red wine.",
-        "category": "Burgundy"
+        "category": "Burgundy",
+        "place": {
+            "name": "Givry",
+            "lat": 46.782,
+            "lon": 4.743
+        }
     },
     {
         "question": "What is one of the three villages in Côte de Beaune with the highest reputation for white wines?",
@@ -1773,7 +1823,12 @@
         ],
         "correctAnswerIndex": 0,
         "feedback": "Meursault, Puligny Montrachet, and Chassagne-Montrachet share the highest reputation for white wines in Côte de Beaune.",
-        "category": "Burgundy"
+        "category": "Burgundy",
+        "place": {
+            "name": "Meursault",
+            "lat": 46.977,
+            "lon": 4.77
+        }
     },
     {
         "question": "Which of these appellations may, by its rules, only produce red wines?",
@@ -1809,7 +1864,12 @@
         ],
         "correctAnswerIndex": 2,
         "feedback": "Meursault is in Côte d'Or. The four village appellations of Côte Chalonnaise are Rully, Montagny, Givry, and Mercurey.",
-        "category": "Burgundy"
+        "category": "Burgundy",
+        "place": {
+            "name": "Meursault",
+            "lat": 46.977,
+            "lon": 4.77
+        }
     },
     {
         "question": "Which village produces only white wine?",
@@ -1821,7 +1881,12 @@
         ],
         "correctAnswerIndex": 1,
         "feedback": "Only white wines are produced in Montagny in Burgundy. Chardonnay is the main grape variety.",
-        "category": "Burgundy"
+        "category": "Burgundy",
+        "place": {
+            "name": "Montagny",
+            "lat": 46.71,
+            "lon": 4.68
+        }
     },
     {
         "question": "Which village is important for sparkling wine?",
@@ -1833,7 +1898,12 @@
         ],
         "correctAnswerIndex": 0,
         "feedback": "Rully in Burgundy is important for sparkling wine and generally produces more white wines than red.",
-        "category": "Burgundy"
+        "category": "Burgundy",
+        "place": {
+            "name": "Rully",
+            "lat": 46.875,
+            "lon": 4.746
+        }
     },
     {
         "question": "The reds of which village have the highest reputation?",
@@ -1845,7 +1915,12 @@
         ],
         "correctAnswerIndex": 2,
         "feedback": "The red wines of Mercurey in Burgundy have the highest reputation.",
-        "category": "Burgundy"
+        "category": "Burgundy",
+        "place": {
+            "name": "Mercurey",
+            "lat": 46.84,
+            "lon": 4.716
+        }
     },
     {
         "question": "From which grape variety are most red wines in Mâconnais made?",
@@ -1869,7 +1944,12 @@
         ],
         "correctAnswerIndex": 0,
         "feedback": "The white wines from the Mâcon Villages are known for their value. The wines can come from a number of villages, including Lugny which is renowned for its Mâcon-Lugny Chardonnay.",
-        "category": "Burgundy"
+        "category": "Burgundy",
+        "place": {
+            "name": "Mâcon",
+            "lat": 46.307,
+            "lon": 4.832
+        }
     },
     {
         "question": "Which is not a village in Côte de Nuits?",
@@ -1881,7 +1961,12 @@
         ],
         "correctAnswerIndex": 3,
         "feedback": "Gevrey-Chambertin, Vougeot, Vosne-Romanée, and Nuits-Saint-Georges are in Côte de Nuits. Volnay is in the Côte de Beaune.",
-        "category": "Burgundy"
+        "category": "Burgundy",
+        "place": {
+            "name": "Volnay",
+            "lat": 47.0,
+            "lon": 4.776
+        }
     },
     {
         "question": "The climate in Beaujolais is similar to the climate in which appellation?",
@@ -1941,7 +2026,12 @@
         ],
         "correctAnswerIndex": 3,
         "feedback": "Montagny is a white wine appellation in the Côte Chalonnaise in Burgundy. Brouilly, Morgon, Fleurie, and Moulin-à-Vent are 4 of the 10 Beaujolais Crus with their own appellation that have the highest production.",
-        "category": "Burgundy"
+        "category": "Burgundy",
+        "place": {
+            "name": "Montagny",
+            "lat": 46.71,
+            "lon": 4.68
+        }
     },
     {
         "question": "What can be said of the wines produced in Moulin-à-Vent?",
@@ -1953,7 +2043,12 @@
         ],
         "correctAnswerIndex": 2,
         "feedback": "The wines made in the Beaujolais Crus of Moulin-à-Vent and Morgon are more structured and can benefit from bottle aging. The wines made in Brouilly and Fleurie are made in a more perfumed style.",
-        "category": "Burgundy"
+        "category": "Burgundy",
+        "place": {
+            "name": "Moulin-à-Vent",
+            "lat": 46.194,
+            "lon": 4.743
+        }
     },
     {
         "question": "What is the typical method of pruning in Beaujolais?",
@@ -5385,7 +5480,12 @@
         ],
         "correctAnswerIndex": 2,
         "feedback": "Like all Chablis appellations, Grand Cru must be made exclusively from Chardonnay. Chablis is located in the valley of the River Serein in northern Burgundy, where the best wines come from south-facing vineyards planted on the hillsides, and are known for their concentration and ripeness.",
-        "category": "Burgundy"
+        "category": "Burgundy",
+        "place": {
+            "name": "Chablis",
+            "lat": 47.815,
+            "lon": 3.798
+        }
     },
     {
         "question": "How are Petit Chablis wines typically described?",
@@ -5397,7 +5497,12 @@
         ],
         "correctAnswerIndex": 2,
         "feedback": "Petit Chablis wines made exclusively from Chardonnay are typically austere with high acidity and green fruit flavors. Petit Chablis refers to the lesser vineyards in the appellation which can be found in the flatter areas and on north-facing slopes.",
-        "category": "Burgundy"
+        "category": "Burgundy",
+        "place": {
+            "name": "Chablis",
+            "lat": 47.815,
+            "lon": 3.798
+        }
     },
     {
         "question": "What is the minimum Prädikat level in Germany at which grapes must be affected by botrytis?",

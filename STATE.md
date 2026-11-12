@@ -12,7 +12,7 @@ Build in this order, one step at a time, tested between each:
 1. **Questions load from GitHub** (like the daily challenges already do), with a new optional
    `place` field per question. ✅ DONE — merged to `main` and tested live 11 Nov (not yet in an App Store build; see "Step 1 — status").
 2. **Map after each answer** — the answer's place shown on a map with a pin. 🔨 PART 1 BUILT 11 Nov (map card in the app);
-   part 2 = add places to questions. See "Step 2 — status".
+   part 2 = add places to questions: Burgundy done 12 Nov, waiting on Jill's check. See "Step 2 — status".
 3. **Drill by topic** — pick one region/category to quiz on.
 4. **Progress map** — regions coloured by how well they're known (from the spaced-repetition stats).
 5. **Map questions** ("Which pin is Rully?") and **region outlines** where good open data exists.
@@ -87,7 +87,7 @@ and any daily challenge using it falls back to a random pick → regenerate dail
 project settings, iPhone-only) were never committed. They are now on `main` (came in with PR #1). Branches
 `shipped-app-edits` and `step1-questions-from-github` are merged and can be deleted.
 
-**NEXT:** step 2 part 2 — see "Step 2 — status" below.
+**NEXT:** see "Step 2 — status" below.
 
 ## Step 2 — status (11 Nov 2026)
 **Part 1 done (merged to `main` 11 Nov, PR #2; not yet on the phone):**
@@ -109,13 +109,25 @@ Moulin-à-Vent; question without a place shows no map and no gap. Look and feel 
 - Offline: map area blank without signal (not yet checked on screen).
 - On the phone (after merge + TestFlight).
 
-**Part 2 — add places (content only, GitHub web UI or Claude drafts):** draft places used for the test,
-for Jill to check before adding to `content/questions.json` (lat, lon):
-Rully 46.875, 4.746 · Mercurey 46.840, 4.716 · Montagny 46.717, 4.702 · Meursault 46.977, 4.770 ·
+**Part 2 — Burgundy places added (12 Nov, branch `step2-burgundy-places`):** 21 of the 36 Burgundy
+questions in `content/questions.json` now have a `place`. Jill chose to add them first and check them
+later in Volo Dev with her reference books (only Volo Dev reads this file; the App Store app never does).
+Pins (lat, lon): Chablis 47.815, 3.798 (7 questions) · Rully 46.875, 4.746 (2) · Montagny 46.710, 4.680 (2) ·
+Meursault 46.977, 4.770 (2) · Mercurey 46.840, 4.716 · Givry 46.782, 4.743 · Volnay 47.000, 4.776 ·
 Pouilly-Fuissé 46.283, 4.745 · Saint-Véran 46.255, 4.725 · Roche de Solutré 46.297, 4.718 ·
-Chablis 47.815, 3.798 · Mâcon 46.307, 4.832 · Moulin-à-Vent 46.190, 4.740.
-Only questions ABOUT one place get a `place` (e.g. "Which village produces only white wine?" → Montagny);
-general ones ("typical Pinot Noir characteristics") get none. Adding `place` doesn't change question IDs.
+Mâcon 46.307, 4.832 (for "Mâcon Villages") · Moulin-à-Vent 46.194, 4.743.
+Montagny and Volnay were moved from the first draft (Montagny was on Buxy; Volnay was ~2 km north).
+Rule: a question gets a pin only when its answer is a place; the pin is where that place really is
+(so "Which village is not in Beaujolais? → Montagny" shows Montagny up north). General questions get none.
+Adding `place` doesn't change question IDs.
+Tested in the simulator with the new file: Mâcon pin shows; a no-pin question shows no map; whole file
+passes the app's checks (460 questions, 21 with places).
+
+**TO CHECK (Jill, with reference books, in Volo Dev):** every pin above, and whether to keep the two
+judgement calls: Mâcon Villages → pin on Mâcon town; "not in Beaujolais → Montagny" has a pin.
+To fix a pin: edit its `lat`/`lon` in `content/questions.json` on GitHub (or ask Claude).
+
+**NEXT:** after Jill's check, places for the next region (pick one).
 
 ## Step 1 — the original brief
 Today `winestudyios/questions.json` is bundled, so every content change needs an App Store build.
