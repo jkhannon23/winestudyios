@@ -26,6 +26,10 @@ are written or checked.
 - **Score tracker** — see your past scores over time, and see the days you missed (a calendar or streak
   view). Note: today the app only keeps today's daily-challenge score and the streak; past scores are not
   stored yet, so tracking starts from the version that adds it.
+- **Difficulty level** (Jill, 12 Nov) — choose easier or harder quizzes. Note: questions have no difficulty
+  today. Options when we get to it: tag each question (a new optional field, like `place`; Jill or Claude
+  drafts, Jill checks), or work it out from how often people get each question wrong (the app only knows
+  this per phone, so it starts thin). Decide what "harder" means first (e.g. detail questions vs basics).
 
 **TO FIX (Jill):**
 - **Sounds need to be reconsidered** (Jill, 11 Nov). Sounds are part of the look and feel, so nothing changes
