@@ -33,8 +33,9 @@ final class PlaceMapCard: UIView, MKMapViewDelegate {
         mapView.showsCompass = false
         mapView.isRotateEnabled = false
         mapView.isPitchEnabled = false
-        // Pinch to zoom is allowed; dragging is off so a swipe over the map still scrolls the page.
-        mapView.isScrollEnabled = false
+        // Pinch to zoom and drag to slide (Jill, 12 Nov). A swipe that starts on the map moves the map;
+        // swipe above or below it to scroll the page. Each new answer re-centres on its pin.
+        mapView.isScrollEnabled = true
         mapView.delegate = self
         mapView.translatesAutoresizingMaskIntoConstraints = false
         addSubview(mapView)

@@ -93,8 +93,9 @@ project settings, iPhone-only) were never committed. They are now on `main` (cam
 **Part 1 done (merged to `main` 11 Nov, PR #2; not yet on the phone):**
 - `PlaceMapCard.swift`: muted Apple map in a rounded card (pink edge), Volo-pink pin with the wine-glasses
   icon and the place name. Zoom: about 50 km across (Jill chose closer over wide, 11 Nov), so nearby
-  villages (Rully, Mercurey, Givry, Montagny) show as different spots; pinch out for the bigger picture. Pinch to zoom; no dragging, so a swipe
-  over the map still scrolls the page.
+  villages (Rully, Mercurey, Givry, Montagny) show as different spots; pinch out for the bigger picture. Pinch to zoom
+  and drag to slide (sliding added 12 Nov after Jill tried it on her phone; before, dragging was off). A swipe that
+  starts on the map moves the map; swipe above/below it to scroll the page. Each new answer re-centres on its pin.
 - Shown under the feedback ONLY when the question has a `place`. No place → no map, no gap: exactly as before.
 - Fix: after answering, the page now scrolls far enough to show the whole map (it measured too early).
 - Testing aid (DEBUG builds only, never in the App Store app): launch argument `-skipQuestionRefresh`.
